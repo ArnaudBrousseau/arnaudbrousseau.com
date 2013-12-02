@@ -1,0 +1,290 @@
+
+/* 
+ * CSS based on H5BP, slightly edited.
+ * Credits to the whole H5BP team.
+ * Guys, you rock :) 
+ */
+
+
+/****************************************
+*********** CSS Normalizing *************
+*****************************************
+** CSS normalizing fills the small gaps 
+** between browser's default stylesheets.
+** This approach is better than CSS reset
+** since it keeps the default styles.  
+****************************************/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.42; } /* Slighly bigger line height. Because 42 my friend! */
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* Links supercharged */
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; background-color: black; color: lime; /* Wooohoo, MATRIX! */ }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 0; } /* no right margin for def lists */
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+/* Forms */
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Clearfix on steroids */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/******************
+Let's style baby !
+*******************/
+
+body { background-color:#9FE6FD; }
+
+header, footer{
+    height:35px;
+    position:relative;
+    font-family:Georgia, serif;
+    font-size:16px;
+    font-weight:bold;
+    background-color:#fff;
+    border-bottom:2px #333 solid;
+}
+
+header a#html5-logo{z-index: 99; display:block; width:48px; height: 54px; position: absolute; top: 31px; right: 5px;}
+header a#html5-logo:hover{border-bottom:0;}
+header:after { content: ''; position: absolute; width: 100%; height: 35px; border-bottom: 1px dashed #333; left: 0; top : 3px; }
+
+footer{ border-top:2px #333 solid; }
+footer:after { content: ''; position: absolute; width: 100%; height: 35px; border-top: 1px dashed #333; left: 0; bottom : 3px; }
+footer h2 { font-size: 12px; font-style: italic; position: absolute; right: 0; top: 0; padding-right: 25px; }
+
+header h1, footer h1{
+    height:87px;
+    width:186px;
+    margin:auto;
+    position:relative;
+    text-align:center;
+    z-index:42;
+}
+footer h1{ margin-top: -49px; }
+a.view-source { text-align:center; margin: 5px auto; display: block; font-family: monospace; font-size: 11px; color: #333; }
+
+/* Main section */
+#main{
+    width:680px;
+    margin:90px auto;
+    background: transparent url('/img/illustration-surf.png') top left no-repeat;
+}
+h1.title{
+    font-size:37.2px;
+    font-weight: bold;
+    font-family:Georgia, serif;
+    margin-bottom:9px;
+}
+p.intro{
+    font-size:18px;
+    margin-bottom:18px;
+    width:420px;
+    margin-left:260px;
+}
+p.social{
+    clear:both;
+    text-align:center;
+    padding: 18px;
+    margin: 0 0 18px 0;
+    border-top:1px #333 solid;
+    border-bottom: 1px #333 solid;
+}
+.social a {
+  display: inline-block;
+  width: 88px;
+  height: 54px;
+  margin-right: 18px;
+}
+.social a span{
+  display:none;
+}
+.social .github {
+  background: transparent url('/img/social-github.png') top center no-repeat;
+}
+.social .linkedin {
+  background: transparent url('/img/social-linkedin.png') top center no-repeat;
+}
+.social .googleplus {
+  background: transparent url('/img/social-googleplus.png') top center no-repeat;
+}
+.social .flickr {
+  background: transparent url('/img/social-flickr.png') top center no-repeat;
+}
+.social .twitter {
+  background: transparent url('/img/social-twitter.png') top center no-repeat;
+}
+article{
+    position:relative;
+    margin-top: 54px;
+}
+article h1{
+    height:34px;
+    margin-bottom: 27px;
+    font-size:14px;
+    line-height:34px;
+    padding-left:1em;
+    font-style:italic;
+    color: #fff;
+    background: transparent url('/img/articleH1BG.png') top left no-repeat;
+}
+article aside{
+    background: transparent url('/img/sectionTopLinkBG.png') top right no-repeat;
+    height:34px;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+a.online, a.offline{
+    display:block;
+    color:#333;
+    width: 55px;
+    font-weight: bold;
+    text-decoration:none;
+    text-align:center;
+    border-bottom:2px solid #333;
+    border-top:2px solid #333;
+    margin-top:-2px;
+}
+a.online:hover{
+    border-width:4px;
+    margin-top:-4px;
+    color: #333;
+}
+a.online:active{
+    border-color:#000;
+    color: #333;
+}
+a.offline{
+  cursor:default;
+  color: #3488A4;
+  border: none;
+}
+a.toTop{
+    width: 30px;
+    position: absolute;
+    top: 2px;
+    right: -20px;
+    color: #fff;
+    font-size:18px;
+    font-weight: bold;
+    text-align: right;
+    text-decoration:none;
+    padding-right: 25px;
+}
+article .story{
+    width: 300px;
+    padding-left: 40px;
+    margin-bottom: 27px;
+}
+article dl{
+    position:absolute;
+    font-size: 12px;
+    top: 62px;
+    line-height: 18px;
+    left : 400px;
+    width: 230px;
+    padding-left: 10px;
+    border-left: 5px solid #333;
+}
+article dt{ font-weight: bold;}
+
+/* Illustration section : general settings */
+.illustration { width: 640px;  margin: 0 auto; padding: 10px 0; }
+.illustration span, .illustration img { display: block; }
+.illustration img { border: 9px #fff solid;}
+.illustration span { border: 1px #999 solid; }
+
+/* Very very basic grid system to display images */
+.grid, .grid-2 { clear: both; overflow: hidden; margin-bottom: 20px; }
+.cell { float: left; display: inline; margin: 0 10px; position: relative; }
+.grid .cell { width: 620px; }
+.grid-2 .cell { width: 300px; }
+
+/* View source button, for the bravest */
+#view-source { display: none; }
+body.view-source > * { display: none; }
+body.view-source #view-source { display: block !important; }
+
+/* Print styles */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
