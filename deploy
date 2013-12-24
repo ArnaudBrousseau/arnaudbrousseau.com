@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -avzhr --delete out/ osmoz@ftp.240plan.ovh.net:~/arnaudbrousseau/
