@@ -11,6 +11,12 @@
         Feel free to look around. If you spot something interesting, weird or
         awesome or outright wrong don't hesitate to contact me. I don't bite.
         I'm <first-name>.<last-name>@gmail.com.
+
+        Oh and if you're wondering: this site is static, built with DocPad.
+        Check out how: https://github.com/ArnaudBrousseau/arnaudbrousseau.com
+
+        FYI this site was last generated on:
+        <%- @site.date %> (how precise! I know.)
         ***********************************************************************
         -->
         <meta name="description" content="<%= @document.description %>" />
