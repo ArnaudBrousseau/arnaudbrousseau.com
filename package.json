@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "docpad-plugin-eco": "~2.0.3",
-    "docpad-plugin-marked": "~2.2.0"
+    "docpad-plugin-marked": "~2.2.0",
+    "docpad-plugin-moment": "~2.0.2"
   }
 }
