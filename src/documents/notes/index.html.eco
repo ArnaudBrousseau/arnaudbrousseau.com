@@ -1,0 +1,14 @@
+---
+title: "Notes"
+layout: "base"
+activeNavItem: "notes"
+---
+<ul>
+    <% for note in @getCollection('html').findAll({pageType:'note'}).toJSON(): %>
+        <li>
+            <a href="<%= note.url %>">
+                <%= note.title %>
+            </a>
+        </li>
+    <% end %>
+</ul>

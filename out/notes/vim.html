@@ -1,0 +1,26 @@
+<p>Here are some nice tips and tricks I learned while practicing VIM at work or at
+home.</p>
+<h2 id="setting-vim-s-syntax-highlighter-to-a-particular-language">Setting VIM&#39;s syntax highlighter to a particular language</h2>
+<p>The answer is a single command: <code>setf</code><br>(<code>setf markdown</code>, <code>setf javascript</code>, etc)</p>
+<h2 id="look-up-docs-about-a-function-a-command-anything">Look up docs about a function, a command, anything</h2>
+<p>When your cursor is on a word, press shift+K.</p>
+<h2 id="delete-efficiently">Delete efficiently</h2>
+<p><code>dtx</code> =&gt; <strong>d</strong>eletes un<strong>t</strong>il <code>x</code> (NOT including character <code>x</code>). It&#39;s super useful to delete until the next parens. For instance: <code>dt)</code> or <code>dt{</code><br><code>ctx</code> =&gt; lets you go to insert mode after deletion (<strong>c</strong>hange vs <strong>d</strong>elete)</p>
+<h2 id="ctags">Ctags</h2>
+<p>Ctags are pretty old fashioned but they work surprisingly well. I use them
+mostly at work when diving into unfamiliar Python code.<br><code>ctrl+]</code> lets you lookup a symbol, <code>ctrl+T</code> brings you back to where you were.</p>
+<h2 id="autocomplete">Autocomplete</h2>
+<p>Vim has native autocomplete!<br><code>ctrl+N</code> to trigger autocomplete and <code>ctrl+N</code>/<code>ctrl+P</code> to iterate over
+suggestions. By default Vim searches the current file and opened buffers.</p>
+<h2 id="editing-multiple-files">Editing multiple files</h2>
+<p>You can start Vim and tell it to open multiple files <code>vim file1 file2 file2</code>.</p>
+<p>Better still: when inside of Vim you can tell it to edit a bunch of files.<br>Let&#39;s say I want to edit all my <code>.scss</code> file. I&#39;d type <code>:args
+path/to/css/files/*.scss</code>. Magic! Now I can do edits, and type <code>:wnext</code> to save
+and switch to the next file in the list. I can also type <code>:args</code> to see which
+files have/have not been edited yet.</p>
+<p>Last tip about this: <code>vim -p path/to/css/files/*.scss</code> will open a Vim session
+with all <code>.scss</code> files, each one opened in a different tab. How awesome is
+that.</p>
+<h2 id="personal-vimrc">Personal .vimrc</h2>
+<p>Each vim user has to have his/her personal .vimrc. I open sourced mine on
+Github, over there: <a href="https://github.com/ArnaudBrousseau/dotfiles/blob/master/vimrc">https://github.com/ArnaudBrousseau/dotfiles/blob/master/vimrc</a></p>

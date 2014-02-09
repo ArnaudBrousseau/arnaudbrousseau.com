@@ -98,54 +98,76 @@ td { vertical-align: top; }
 Let's style baby !
 *******************/
 
-body { background-color:#9FE6FD; }
+body { background-color:#9fe6fd; }
 
-header, footer{
-    height:35px;
-    position:relative;
-    font-family:Georgia, serif;
-    font-size:16px;
-    font-weight:bold;
-    background-color:#fff;
-    border-bottom:2px #333 solid;
+header, footer {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 12px;
+    text-align: center;
+    color: #222;
 }
 
-header a#html5-logo{z-index: 99; display:block; width:48px; height: 54px; position: absolute; top: 31px; right: 5px;}
-header a#html5-logo:hover{border-bottom:0;}
-header:after { content: ''; position: absolute; width: 100%; height: 35px; border-bottom: 1px dashed #333; left: 0; top : 3px; }
-
-footer{ border-top:2px #333 solid; }
-footer:after { content: ''; position: absolute; width: 100%; height: 35px; border-top: 1px dashed #333; left: 0; bottom : 3px; }
-footer h2 { font-size: 12px; font-style: italic; position: absolute; right: 0; top: 0; padding-right: 25px; }
-
-header h1, footer h1{
-    height:87px;
-    width:186px;
-    margin:auto;
-    position:relative;
-    text-align:center;
-    z-index:42;
+footer {
+    font-weight: bold;
+    padding: 9px;
+    border-bottom: 5px #222 solid;
 }
-footer h1{ margin-top: -49px; }
-a.view-source { text-align:center; margin: 5px auto; display: block; font-family: monospace; font-size: 11px; color: #333; }
+footer h1 { font-size: 40px; line-height: 40px; margin: 0; }
+footer a:visited { color: #222; }
+footer p { margin: 0; }
 
 /* Main section */
-#main{
+#main {
     width:680px;
-    margin:90px auto;
-    background: transparent url('/img/illustration-surf.png') top left no-repeat;
+    margin:60px auto;
 }
+
+.nav-container {
+    text-align: center;
+    border-top: 5px #222 solid;
+}
+
+.nav-link {
+    color: #222;
+    font-family: 'PT Serif', Georgia, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: -1px 9px 0 9px;
+    background: #fff;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 0 0 4px 4px;
+    border: 1px #222 solid;
+    transition-property: background-color, color, text-shadow;
+    transition-duration: .3s;
+}
+
+.nav-link:visited { color: #222; }
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+    background-color: #444;
+    text-shadow: 0 -2px #222;
+    transition-property: background-color, color, text-shadow;
+    transition-duration: .3s;
+}
+
 h1.title{
-    font-size:37.2px;
+    font-size:40px;
     font-weight: bold;
-    font-family:Georgia, serif;
+    font-family: 'PT Serif', Georgia, serif;
     margin-bottom:9px;
 }
 p.intro{
-    font-size:18px;
-    margin-bottom:18px;
-    width:420px;
-    margin-left:260px;
+    margin-top: -100px;
+    font-size: 18px;
+    margin-bottom: 18px;
+    width: 420px;
+    padding-left: 260px;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0) url('/img/illustration-surf.png') bottom left no-repeat;
 }
 p.social{
     clear:both;
@@ -159,7 +181,7 @@ p.social{
   display: inline-block;
   width: 88px;
   height: 54px;
-  margin-right: 18px;
+  margin: 0 9px;
 }
 .social a span{
   display:none;

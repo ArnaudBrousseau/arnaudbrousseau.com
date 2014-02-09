@@ -1,0 +1,30 @@
+<h2 id="initial-idea">Initial idea</h2>
+<p>Plot Fitbit data using Firefly, a plotting library recently open sourced by Yelp.</p>
+<h2 id="install-steps">Install steps</h2>
+<p>As of now, the install process is still a bit rough, but nothing you can&#39;t get away with.</p>
+<pre><code>git clone https://github.com/Yelp/firefly.git
+git submodule update --init
+sudo easy_install tornado
+sudo easy_install pyyaml
+sudo easy_install simplejson
+sudo easy_install tornado
+</code></pre><p>And then, you need to install RDDTool. This library is a pain to install if
+you&#39;re on MAC OS X. Here&#39;s what I did:</p>
+<ul>
+<li>Go to <a href="http://www.macports.org/install.php#pkg">http://www.macports.org/install.php#pkg</a> and download the version that suits your OS X version</li>
+<li>Install mac port</li>
+<li>run &quot;sudo port install rrdtool&quot;. This will take care of all the dependancies not installed on your system</li>
+<li>sudo port build rrdtool, which will give you a build version</li>
+<li><code>cd /opt/local/var/macports/build/*_net_rrdtool/rrdtool/work/rrdtool-1.4.7/bindings/python/</code></li>
+<li>sudo /opt/local/bin/python setup.py build</li>
+<li>sudo /opt/local/bin/python setup.py install</li>
+<li>sudo port install rrdtool</li>
+</ul>
+<p>Once that&#39;s done, you can hopefully run Firefly with the following:</p>
+<p>  python -m firefly.main --testing -c firefly.yaml.example</p>
+<p>I personnaly had issues with the python version I was running. If you&#39;re in some
+trouble see this SO thread: <a href="http://stackoverflow.com/questions/12658141/python-cannot-import-urandom-module-os-x">http://stackoverflow.com/questions/12658141/python-cannot-import-urandom-module-os-x</a></p>
+<h2 id="troubles">Troubles</h2>
+<p>The value returned by socket.getfqdn() was awfully wrong for me. I had to hardcode stuff in main.
+(firefly/main.py)
+Also, even after doing that, the json encoding in the index template would cause everything to fail once again. I had to harcode things again here.</p>

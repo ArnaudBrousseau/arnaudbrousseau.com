@@ -1,0 +1,21 @@
+<h2 id="what-is-devicepixelratio-">What is devicePixelRatio?</h2>
+<p>&quot;devicePixelRatio&quot; is a JavaScript property used to determine the pixel density of a device.</p>
+<h2 id="why-does-that-matter-">Why does that matter?</h2>
+<p>As a web developer working on a mobile product (disclaimer: I work for Yelp on
+the mobile site team), I care a lot about how websites are displayed on mobile
+devices.
+Very often we fallback to JS to serve the best experience for each device, and
+there are a couple of areas where JS is required if you want to take advantage
+of the new display capabilities.</p>
+<ol>
+<li><p>Responsive images
+Example: <a href="http://menacingcloud.com/?c=highPixelDensityDisplays">http://menacingcloud.com/?c=highPixelDensityDisplays</a></p>
+</li>
+<li><p>Canvas based interaction
+<a href="http://www.html5rocks.com/en/tutorials/canvas/hidpi/">http://www.html5rocks.com/en/tutorials/canvas/hidpi/</a></p>
+</li>
+<li><p>Many other reasons including image loading, browser height sniffing, etc.</p>
+</li>
+</ol>
+<h2 id="nexus7-what-did-you-do-buddy-">Nexus7: what did you do buddy?</h2>
+<p>Nexus7 reports a devicePixelRatio value of 1.3250000476837158. You read right.</p>

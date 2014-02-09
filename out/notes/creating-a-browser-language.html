@@ -1,0 +1,100 @@
+<h2 id="context">Context</h2>
+<p>During a Hackathon, a coworker and me decided to tackle the problem of creating
+a new language which runs in the browser. Our end goal: be able to write script
+elements in our language and have the  browser run it for us, in realtime.</p>
+<h2 id="goals">Goals</h2>
+<p>None of us is a static compiler/JIT expert so the way we went about it is:</p>
+<ul>
+<li>Create a toy language and its toy lexer/compiler</li>
+<li>Make our toy language compile to <a href="http://llvm.org/">LLVM</a></li>
+<li>Use LLVM&#39;s tools to take advantage of the JIT</li>
+<li>Run our language is Chrome (29+) thanks to <a href="http://www.chromium.org/nativeclient/pnacl">PNaCl</a></li>
+</ul>
+<p>Hackathons at Yelp last 2 days. That&#39;s not much time. To prepare ourselves for
+these 48 hours and to make them as productive as they could be, we set up our
+environment first.</p>
+<h2 id="setting-up-llvm-environment">Setting up LLVM environment</h2>
+<p>I&#39;m usually developing on a MacBoook, so I tried first to setup llvm and
+friends on my local machine. Huge failure, for which I don&#39;t have a solution
+yet.</p>
+<h3 id="on-osx">On OSX</h3>
+<p>MacOSX makes you install XCode to install compiler tools like gcc or g++.
+Com&#39;on Apple, really?<br>XCode also comes with some version of llvm installed. As a result executing
+<code>locate llvm | wc -l</code> yields <code>610</code> on my machine. Basically some sort of tools
+for llvm is installed with XCode and each version of the iPhone simulator, and
+also macports. No idea why those were here in the first place.</p>
+<p>Since I had no idea what version of the tools I should go with I decided to go
+the hard route and install everything from source in my homedir, following
+instructions from the <a href="http://llvm.org/docs/GettingStarted.html">LLVM getting started
+page</a></p>
+<pre class="brush:plain">
+    cd ~/bin/
+    mkdir llvm
+    cd llvm/
+    svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm
+    cd llvm/tools/
+    svn co http://llvm.org/svn/llvm-project/cfe/trunk clang
+    cd ../projects/
+    svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
+    svn co http://llvm.org/svn/llvm-project/test-suite/trunk test-suite
+    cd ../../
+    mkdir build
+    cd build/
+    ../llvm/configure --prefix=/Users/abrousse/bin/llvm
+    make -j10
+</pre>
+
+<p>The listing above generated lots of output, consumed lots of my CPU, and ended with an error:</p>
+<pre class="brush:plain">
+    /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_malloc_mac.cc:19:10: fatal error: 'CoreFoundation/CFBase.h' file not found
+    #include <CoreFoundation/CFBase.h>
+             ^
+      COMPILE:   clang_darwin/asan_osx_dynamic/i386: /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_posix.cc
+      COMPILE:   clang_darwin/asan_osx_dynamic/i386: /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_preinit.cc
+      COMPILE:   clang_darwin/asan_osx_dynamic/i386: /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_report.cc
+      COMPILE:   clang_darwin/asan_osx_dynamic/i386: /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_rtl.cc
+      COMPILE:   clang_darwin/asan_osx_dynamic/i386: /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_stack.cc
+      COMPILE:   clang_darwin/asan_osx_dynamic/i386: /Users/abrousse/bin/llvm/llvm/projects/compiler-rt/lib/asan/asan_stats.cc
+    1 error generated.
+    make[5]: *** [/Users/abrousse/bin/llvm/build/tools/clang/runtime/compiler-rt/clang_darwin/asan_osx_dynamic/i386/SubDir.lib__asan/asan_malloc_mac.o] Error 1
+    make[5]: *** Waiting for unfinished jobs....
+    make[4]: *** [BuildRuntimeLibraries] Error 2
+    rm /Users/abrousse/bin/llvm/build/Debug+Asserts/lib/clang/3.4/lib/darwin/.dir
+    make[3]: *** [compiler-rt/.makeall] Error 2
+    make[2]: *** [all] Error 1
+    make[1]: *** [clang/.makeall] Error 2
+    make: *** [all] Error 1
+</pre>
+
+<p>So, fuckit. Another dead end. I&#39;m suspecting all revisions from clang, llvm and
+other projects aren&#39;t tested together that often. I think something to try next
+would be checking out release-tagged revisions instead of the latest master
+from each project. WHY THE HELL DON&#39;T THEY HAVE SUBMODULES? That drives me
+nuts.</p>
+<h3 id="on-ubuntu">On Ubuntu</h3>
+<p>Solution for me was to install things from a Ubuntu VM. Package management is
+saner, and installing llvm is a piece of cake:</p>
+<pre class="brush:plain">
+    sudo apt-get install llvm
+</pre>
+
+<p>All done! Just check that the output of <code>llvm --version</code> gives you 3.0 and
+you&#39;re good to go.</p>
+<h3 id="back-to-osx">Back to OSX</h3>
+<p>Back to OSX. I tried what&#39;s on the <a href="http://llvm.org/releases/download.html">release
+page</a>, where they have precompiled
+binaries for OSX. On my version of OSX (10.7.5), LLVM 3.3 didn&#39;t work properly.
+Building the 3.0 tools worked properly with what&#39;s in
+<a href="https://github.com/bukzor/hackathon2013.7">https://github.com/bukzor/hackathon2013.7</a> (check out the <code>macosx branch</code>).</p>
+<h2 id="goals-2-0">Goals 2.0</h2>
+<p><em>End goal: Do hypercube animation by writing a <code>&lt;script src=&quot;woot.bl&quot; type=&quot;application/x-bogolisp&quot;&gt;...&lt;/script&gt;</code></em></p>
+<p>Sub-goals:</p>
+<ul>
+<li>(optional) Chrome extension to parse and evaluate what&#39;s in the script tags</li>
+<li>Lexer with tests -- converts string to tokens, also known as scanner</li>
+<li>Parser with tests -- converts tokens to AST</li>
+<li>Runtime/Interpreter -- Uses AST to run the program in the browser</li>
+<li>(optional) Compiler -- converts AST to asm.js</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>We worked in the open, at <a href="https://github.com/bukzor/hackathon2013.7">https://github.com/bukzor/hackathon2013.7</a>.<br>Wanna try it out? <a href="http://bukzor.github.io/hackathon2013.7/">http://bukzor.github.io/hackathon2013.7/</a></p>
