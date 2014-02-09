@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'HTML5DevConf 2013'
+title: "HTML5DevConf 2013"
+layout: "note"
+pageType: "note"
 ---
 ## From Grassroots to Green Pastures<br>★☆☆☆☆
 **Christos Georgiopoulos, Intel**

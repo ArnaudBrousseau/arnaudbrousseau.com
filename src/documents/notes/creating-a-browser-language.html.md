@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'Creating a Browser Language'
+title: "Creating a Browser Language"
+layout: "note"
+pageType: "note"
 ---
 ## Context
 During a Hackathon, a coworker and me decided to tackle the problem of creating

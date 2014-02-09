@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'Secrets Of The JavaScript Ninja'
+title: "Secrets Of The JavaScript Ninja"
+layout: "note"
+pageType: "note"
 ---
 ## What Is This Book? Who Is It For?
 [Secrets Of The JavaScript Ninja](http://www.manning.com/resig/) is designed

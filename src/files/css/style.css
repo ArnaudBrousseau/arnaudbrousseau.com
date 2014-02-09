@@ -2,7 +2,7 @@
 /* 
  * CSS based on H5BP, slightly edited.
  * Credits to the whole H5BP team.
- * Guys, you rock :) 
+ * You guys rock <3
  */
 
 
@@ -100,6 +100,10 @@ Let's style baby !
 
 body { background-color:#9fe6fd; }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', Georgia, serif;
+}
+
 header, footer {
     font-family: 'PT Serif', Georgia, serif;
     font-size: 12px;
@@ -154,12 +158,16 @@ footer p { margin: 0; }
     transition-duration: .3s;
 }
 
-h1.title{
+.title {
     font-size:40px;
     font-weight: bold;
     font-family: 'PT Serif', Georgia, serif;
-    margin-bottom:9px;
 }
+
+.homepage-title {
+    margin-bottom: 9px;
+}
+
 p.intro{
     margin-top: -100px;
     font-size: 18px;
@@ -201,21 +209,20 @@ p.social{
 .social .twitter {
   background: transparent url('/img/social-twitter.png') top center no-repeat;
 }
-article{
+.lab-details {
     position:relative;
     margin-top: 54px;
 }
-article h1{
+.lab-details h1 {
     height:34px;
     margin-bottom: 27px;
     font-size:14px;
     line-height:34px;
     padding-left:1em;
-    font-style:italic;
     color: #fff;
     background: transparent url('/img/articleH1BG.png') top left no-repeat;
 }
-article aside{
+.lab-details aside{
     background: transparent url('/img/sectionTopLinkBG.png') top right no-repeat;
     height:34px;
     width: 180px;
@@ -261,12 +268,12 @@ a.toTop{
     text-decoration:none;
     padding-right: 25px;
 }
-article .story{
+.lab-details .story{
     width: 300px;
     padding-left: 40px;
     margin-bottom: 27px;
 }
-article dl{
+.lab-details dl{
     position:absolute;
     font-size: 12px;
     top: 62px;
@@ -276,7 +283,7 @@ article dl{
     padding-left: 10px;
     border-left: 5px solid #333;
 }
-article dt{ font-weight: bold;}
+.lab-details dt{ font-weight: bold;}
 
 /* Illustration section : general settings */
 .illustration { width: 640px;  margin: 0 auto; padding: 10px 0; }
@@ -290,10 +297,28 @@ article dt{ font-weight: bold;}
 .grid .cell { width: 620px; }
 .grid-2 .cell { width: 300px; }
 
-/* View source button, for the bravest */
-#view-source { display: none; }
-body.view-source > * { display: none; }
-body.view-source #view-source { display: block !important; }
+/* Now let's style out notes */
+.note-title {
+    margin-bottom: 0px;
+}
+.note-subtitle {
+    font-size: 11px;
+    line-height: 5px;
+    text-align: right;
+    background: #222;
+    padding-right: 11px;
+    margin: 0;
+}
+.note-subtitle-content {
+    display: inline-block;
+    background: #9fe6fd ;
+    padding: 0 11px;
+}
+
+.note-content {
+    font-size: 16px;
+    margin: 60px auto;
+}
 
 /* Print styles */
 @media print {

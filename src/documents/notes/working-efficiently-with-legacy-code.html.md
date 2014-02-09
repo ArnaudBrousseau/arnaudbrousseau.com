@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'Working Efficiently With Legacy Code'
+title: "Working Efficiently With Legacy Code"
+layout: "note"
+pageType: "note"
 ---
 
 This is my summary of the book "Working Effectively with Legacy Code" by

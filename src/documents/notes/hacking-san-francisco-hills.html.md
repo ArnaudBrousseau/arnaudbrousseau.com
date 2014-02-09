@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'Hacking San Francisco Hills'
+title: "Hacking San Francisco Hills"
+layout: "note"
+pageType: "note"
 ---
 ## So What Are We Building?
 

@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'WTF is Nexus7 doing with devicePixelRatio?'
+title: "WTF is Nexus7 doing with devicePixelRatio?"
+layout: "note"
+pageType: "note"
 ---
 What is devicePixelRatio?
 -------------------------

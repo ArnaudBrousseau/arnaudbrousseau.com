@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'Vim Tips'
+title: "Vim Tips"
+layout: "note"
+pageType: "note"
 ---
 
 Here are some nice tips and tricks I learned while practicing VIM at work or at

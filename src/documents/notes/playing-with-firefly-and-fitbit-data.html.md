@@ -1,6 +1,7 @@
 ---
-pageType: 'note'
-title: 'Playing with Firefly and Fitbit data'
+title: "Playing with Firefly and Fitbit data"
+layout: "note"
+pageType: "note"
 ---
 
 ## Initial idea
