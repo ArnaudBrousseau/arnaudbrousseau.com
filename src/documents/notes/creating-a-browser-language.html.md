@@ -1,5 +1,6 @@
 ---
 title: "Creating a Browser Language"
+date: 2013-10-23
 layout: "note"
 pageType: "note"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "WTF is Nexus7 doing with devicePixelRatio?"
+date: 2012-07-24
 layout: "note"
 pageType: "note"
 ---

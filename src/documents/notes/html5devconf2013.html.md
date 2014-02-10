@@ -1,5 +1,6 @@
 ---
 title: "HTML5DevConf 2013"
+date: 2013-10-23
 layout: "note"
 pageType: "note"
 ---

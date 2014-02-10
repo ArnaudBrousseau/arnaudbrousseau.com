@@ -1,5 +1,6 @@
 ---
 title: "Vim Tips"
+date: 2014-02-09
 layout: "note"
 pageType: "note"
 ---
