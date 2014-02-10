@@ -371,8 +371,19 @@ a.toTop {
   color: #0f192a;
   background: #fff;
   border-radius: 2px;
-  border: 1px solid #d0deff;
+  border: 1px solid #e6e6e6;
 }
+
+blockquote {
+    background: #FFF;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    font-style: italic;
+    border: 1px solid #e6e6e6;
+    border-left: 5px solid #0f192a;
+    border-radius: 2px;
+}
+blockquote p { display: inline; }
 
 /* Print styles */
 @media print {
