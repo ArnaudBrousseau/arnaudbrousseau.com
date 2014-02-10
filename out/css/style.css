@@ -349,6 +349,13 @@ a.toTop {
     margin: 60px auto;
 }
 
+.note-content img {
+    display: block;
+    max-width: 100%;
+    border: 1px #d0deff solid;
+    border-radius: 2px;
+}
+
 .note-content .syntaxhighlighter {
     font-size: 12px !important;
     border-radius: 2px;
