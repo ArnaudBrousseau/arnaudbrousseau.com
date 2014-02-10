@@ -10,13 +10,14 @@ Plot Fitbit data using Firefly, a plotting library recently open sourced by Yelp
 
 ## Install steps
 As of now, the install process is still a bit rough, but nothing you can't get away with.
-
+<pre class="brush:plain">
     git clone https://github.com/Yelp/firefly.git
     git submodule update --init
     sudo easy_install tornado
     sudo easy_install pyyaml
     sudo easy_install simplejson
     sudo easy_install tornado
+</pre>
 
 And then, you need to install RDDTool. This library is a pain to install if
 you're on MAC OS X. Here's what I did:
@@ -32,12 +33,15 @@ you're on MAC OS X. Here's what I did:
 
 Once that's done, you can hopefully run Firefly with the following:
 
+<pre class="brush:plain">
   python -m firefly.main --testing -c firefly.yaml.example
+</pre>
 
 I personnaly had issues with the python version I was running. If you're in some
 trouble see this SO thread: http://stackoverflow.com/questions/12658141/python-cannot-import-urandom-module-os-x
 
 ## Troubles
-The value returned by socket.getfqdn() was awfully wrong for me. I had to hardcode stuff in main.
-(firefly/main.py)
-Also, even after doing that, the json encoding in the index template would cause everything to fail once again. I had to harcode things again here.
+The value returned by `socket.getfqdn()` was awfully wrong for me. I had to
+hardcode stuff in main.(`firefly/main.py`)  
+Also, even after doing that, the json encoding in the index template would
+cause everything to fail once again. I had to harcode things again there.

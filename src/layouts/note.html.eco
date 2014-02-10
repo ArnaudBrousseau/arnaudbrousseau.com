@@ -14,3 +14,16 @@ activeNavItem: "notes"
 <div class="note-content">
     <%- @content %>
 </div>
+
+<link href="/css/shCoreMidnight.css" rel="stylesheet" type="text/css" />
+<script src="/js/shCore.js" type="text/javascript"></script>
+<script src="/js/shAutoloader.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+        'js jscript javascript  /js/shBrushJScript.js',
+        'python                 /js/shBrushPython.js',
+        'plain                  /js/shBrushPlain.js',
+        'css                    /js/shBrushCss.js'
+    );
+    SyntaxHighlighter.all();
+</script>
