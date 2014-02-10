@@ -4,7 +4,11 @@ activeNavItem: "notes"
 ---
 <h1 class="title note-title"><%= @document.title %></h1>
 <p class="note-subtitle">
-    <em class="note-subtitle-content">Last edited on <time datetime="<%= @document.computerDate %>"><%= @document.humanDate %></time></em>
+    <em class="note-subtitle-content">Last edited on
+        <time datetime="<%= @document.computerDate %>"><%= @document.humanDate %></time>
+        by
+        <a href="https://google.com/+ArnaudBrousseau?rel=author" target="_blank" rel="author">Arnaud Brousseau</a>
+    </em>
 </p>
 
 <div class="note-content">
