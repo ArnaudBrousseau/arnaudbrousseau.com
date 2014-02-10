@@ -9,10 +9,10 @@
 /****************************************
 *********** CSS Normalizing *************
 *****************************************
-** CSS normalizing fills the small gaps 
+** CSS normalizing fills the small gaps
 ** between browser's default stylesheets.
 ** This approach is better than CSS reset
-** since it keeps the default styles.  
+** since it keeps the default styles.
 ****************************************/
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
@@ -97,7 +97,7 @@ td { vertical-align: top; }
 Let's style baby !
 *******************/
 
-body { background-color:#9fe6fd; }
+body { background-color:#edf2ff; }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'PT Serif', Georgia, serif;
@@ -174,7 +174,7 @@ p.intro {
     width: 420px;
     padding-left: 260px;
     padding-top: 100px;
-    background: rgba(0, 0, 0, 0) url('/img/illustration-surf.png') bottom left no-repeat;
+    background: transparent url('/img/illustration-surf.png') bottom left no-repeat;
 }
 p.social {
     clear:both;
@@ -340,7 +340,7 @@ a.toTop {
 .note-subtitle a { color: #222; }
 .note-subtitle-content {
     display: inline-block;
-    background: #9fe6fd ;
+    background: #edf2ff ;
     padding: 0 11px;
 }
 
