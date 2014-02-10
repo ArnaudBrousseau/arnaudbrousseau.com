@@ -3,12 +3,13 @@ title: "Notes"
 layout: "base"
 activeNavItem: "notes"
 ---
-<ul>
+<ul class="notes-index">
     <% for note in @getCollection('html').findAll({pageType:'note'}).toJSON(): %>
-        <li>
+        <li class="notes-list-item">
             <a href="<%= note.url %>">
                 <%= note.title %>
             </a>
+            <em>&mdash; Last edited on <time><%= note.humanDate %></time> &mdash;</em>
         </li>
     <% end %>
 </ul>

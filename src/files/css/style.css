@@ -296,9 +296,38 @@ a.toTop {
 .grid .cell { width: 620px; }
 .grid-2 .cell { width: 300px; }
 
+/* Notes index list */
+.notes-index {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 24px;
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.notes-list-item a,
+.notes-list-item a:visited {
+    color: #222;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.notes-list-item a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #444;
+}
+
+.notes-list-item em {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
 /* Now let's style out notes */
 .note-title {
     margin-bottom: 0px;
+    text-align: center;
 }
 .note-subtitle {
     font-size: 11px;
