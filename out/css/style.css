@@ -352,7 +352,7 @@ a.toTop {
 .note-content img {
     display: block;
     max-width: 100%;
-    border: 1px #d0deff solid;
+    border: 1px #999 solid;
     border-radius: 2px;
 }
 
@@ -361,6 +361,7 @@ a.toTop {
     border-radius: 2px;
     padding: 4px 0;
     margin-left: -10px;
+    border: 1px #fff solid;
 }
 .note-content .syntaxhighlighter .toolbar { display: none !important; }
 
