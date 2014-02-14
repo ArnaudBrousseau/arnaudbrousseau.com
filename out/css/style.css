@@ -252,26 +252,15 @@ a.online:active {
 }
 a.offline {
   cursor:default;
-  color: #3488A4;
   border: none;
 }
-a.toTop {
-    width: 30px;
-    position: absolute;
-    top: 2px;
-    right: -20px;
-    color: #fff;
-    font-size:18px;
-    font-weight: bold;
-    text-align: right;
-    text-decoration:none;
-    padding-right: 25px;
-}
+
 .lab-details .story {
     width: 300px;
     padding-left: 40px;
     margin-bottom: 27px;
 }
+
 .lab-details dl {
     position:absolute;
     font-size: 12px;
@@ -295,6 +284,12 @@ a.toTop {
 .cell { float: left; display: inline; margin: 0 10px; position: relative; }
 .grid .cell { width: 620px; }
 .grid-2 .cell { width: 300px; }
+
+.index {
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+}
 
 /* Notes index list */
 .notes-index {
@@ -322,6 +317,27 @@ a.toTop {
     display: block;
     font-size: 11px;
     margin-bottom: 20px;
+}
+
+/* Labs index */
+.labs-list-item {
+    display: inline-block;
+    margin: 10px;
+}
+.labs-list-item a {
+    border: 1px #999 solid;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    background: #FFF;
+    text-decoration: none;
+    color: #222;
+    border-radius: 2px;
+}
+.labs-list-item .caption {
+    font-size: 16px;
+    padding-top: 10px;
+    display: block;
 }
 
 /* Now let's style out notes */
@@ -372,15 +388,15 @@ a.toTop {
   color: #0f192a;
   background: #fff;
   border-radius: 2px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #999;
 }
 
 blockquote {
-    background: #FFF;
+    background: #fff;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     font-style: italic;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #999;
     border-left: 5px solid #0f192a;
     border-radius: 2px;
 }

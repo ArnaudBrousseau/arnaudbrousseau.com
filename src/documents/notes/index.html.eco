@@ -3,7 +3,7 @@ title: "Notes"
 layout: "base"
 activeNavItem: "notes"
 ---
-<ul class="notes-index">
+<ul class="index notes-index">
     <% for note in @getCollection('html').findAll({pageType:'note'}, [{date:-1}]).toJSON(): %>
         <li class="notes-list-item">
             <a href="<%= note.url %>">
