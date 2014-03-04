@@ -13,5 +13,3 @@ activeNavItem: "labs"
         </li>
     <% end %>
 </ul>
-
-

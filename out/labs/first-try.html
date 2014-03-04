@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Wanna climb/avoid SF hills?</title>
+
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
+    #sf-hills-baby { height: 100%; }
+  </style>
+  
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+
+    function initialize() {
+
+      var map = new google.maps.Map(document.getElementById('sf-hills-baby'), {
+        center: new google.maps.LatLng(37.762708,-122.43516),
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      var altitudeLayer = new google.maps.FusionTablesLayer({
+        query: {
+          select: 'longitude',
+          from: '1eC7gBQuMMWF-dVZ33YPKFHYO9Jg9Ju-yKkDCPxg',
+          where: 'altitude > 10.0'
+        },
+        styles: [
+        {
+          markerOptions: { iconName: 'small_green'},
+          where: 'altitude < 50.0'
+        }, 
+        {
+          markerOptions: { iconName: 'small_yellow'},
+          where: 'altitude >= 50.0 and altitude < 100.0'
+        },
+        {
+          markerOptions: { iconName: 'small_red'},
+          where: 'altitude > 100.0'
+        }]
+      });
+      altitudeLayer.setMap(map);
+    }
+  </script>
+
+</head>
+<body onload="initialize()">
+  <div id="sf-hills-baby">Loading...</div>
+</body>
+</html>

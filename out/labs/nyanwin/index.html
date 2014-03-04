@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <title>Nyanwin!</title>
+    <style>
+      html {background-color: #003366;}
+      img {position: absolute; left: 0; top: 0;}
+    </style>
+  </head>
+  <body>
+    <img src="nyanwin.gif">
+    <script>
+      /**
+       * Just a bit of fun with Nyanwin
+       */
+      var screenWidth = window.innerWidth;
+      var leftOffset = 0;
+      
+      var moveNyanwin = function() {
+        if (leftOffset < screenWidth) {
+          document.getElementsByTagName('img')[0].style.left = leftOffset + "px";
+          leftOffset += 3;
+        } else {
+          document.getElementsByTagName('img')[0].style.left = "-400px";
+          leftOffset = -400;
+          screenWidth = window.innerWidth; //Someone trying to resize their browser?
+        }
+      };
+      
+      // Go Darwin, Gooooooo
+      window.setInterval(moveNyanwin, 20);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Mobile App vs Web App</title>
+  <meta name="description" content="">
+  <meta name="author" content="Arnaud Brousseau">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="main" role="main">
+      <form method="post">
+        <fieldset id="skills">
+          <legend>Skills</legend>
+          
+          <p class="intro">
+            Rate your skills in the following programming languages
+          </p>
+          
+          <label for="skills-html" >HTML</label>
+          <input type="range" id="skills-html" min="0" max="4" value="0" data-hint="skills" min="0"/>
+          <label for="skills-css">CSS</label>
+          <input type="range" id="skills-css" min="0" max="4" value="0" data-hint="skills"/>
+          <label for="skills-javascript">JavaScript</label>
+          <input type="range" id="skills-javascript" min="0" max="4" value="0" data-hint="skills"/>
+          <label for="skills-java">Java</label>
+          <input type="range" id="skills-java" min="0" max="4" value="0" data-hint="skills"/>
+          <label for="skills-objc">Obj-C</label>
+          <input type="range" id="skills-objc" min="0" max="4" value="0" data-hint="skills"/>
+          <label for="skills-python">Python</label>
+          <input type="range" id="skills-python" min="0" max="4" value="0" data-hint="skills"/>
+          <label for="skills-csharp">C#</label>
+          <input type="range" id="skills-csharp" min="0" max="4" value="0" data-hint="skills"/>
+          <label for="skills-c">C/C++</label>
+          <input type="range" id="skills-c" min="0" max="4" value="0" data-hint="skills"/>
+        </fieldset>
+        
+        <fieldset id="money">
+          <legend>Monetizing Strategy</legend>
+          
+          <label for="money-importance">How important is it to make money with your application?</label>
+          <input type="range" id="money-importance" min="0" max="4" value="2" data-hint="money-importance"/>
+          
+          <p class="intro">Do you plan to make money... (you can combine several solutions)</p>
+          <label for="money-ads">...from advertising?</label>
+          <input type="range" id="money-ads" min="0" max="4" value="2" data-hint="money-strategy"/>
+          <label for="money-paid">...from paid application download?</label>
+          <input type="range" id="money-paid" min="0" max="4" value="2" data-hint="money-strategy"/>
+          <label for="money-premium">...from premium subscriptions?</label>
+          <input type="range" id="money-premium" min="0" max="4" value="2" data-hint="money-strategy"/>
+          <label for="money-payments">...from in-app payments?</label>
+          <input type="range" id="money-payments" min="0" max="4" value="2" data-hint="money-strategy"/>
+        </fieldset>
+        
+        <fieldset id="support">
+          <legend>Device Support</legend>
+          
+          <p class="intro">How important is the support for:</p>
+          <label for="support-desktop">Desktop computers</label>
+          <input type="range" id="support-desktop" min="0" max="4" value="2" data-hint="support"/>
+          <label for="support-ios">iOS devices</label>
+          <input type="range" id="support-ios" min="0" max="4" value="2" data-hint="support"/>
+          <label for="support-android">Android devices</label>
+          <input type="range" id="support-android" min="0" max="4" value="2" data-hint="support"/>
+          <label for="support-blackberry">Blackberry</label>
+          <input type="range" id="support-blackberry" min="0" max="4" value="2" data-hint="support"/>
+          <label for="support-symbian">Symbian phones</label>
+          <input type="range" id="support-symbian" min="0" max="4" value="2" data-hint="support"/>
+          <label for="support-windows">Windows phones</label>
+          <input type="range" id="support-windows" min="0" max="4" value="2" data-hint="support"/>
+        </fieldset>
+        
+        <fieldset id="markets">
+          <legend>Market Places</legend>
+          
+          <p class="intro">You want to be available/searchable on: (0 meaning "something prevents my brand from being featured in that market place", and 10 meaning "This market place is a requirement"). <br>Also consider developer fees, general policy and retribution agreements</p>
+          
+          <label for="markets-web">The open Web</label>
+          <input type="range" id="markets-web" min="0" max="4" value="2" data-hint="markets"/>
+          <label for="markets-appstore">Apple AppStore</label>
+          <input type="range" id="markets-appstore" min="0" max="4" value="2" data-hint="markets"/>
+          <label for="markets-android">Google Android Market</label>
+          <input type="range" id="markets-android" min="0" max="4" value="2" data-hint="markets"/>
+          <label for="markets-blackberry">Blackberry App World</label>
+          <input type="range" id="markets-blackberry" min="0" max="4" value="2" data-hint="markets"/>
+          <label for="markets-windows">Windows phone marketplace</label>
+          <input type="range" id="markets-windows" min="0" max="4" value="2" data-hint="markets"/>
+          <label for="markets-ovi">Nokia Ovi Store</label>
+          <input type="range" id="markets-ovi" min="0" max="4" value="2" data-hint="markets"/>
+        </fieldset>
+        
+        <fieldset id="features">
+          <legend>Features</legend>
+          
+          <p class="intro">Does your application...</p>
+          
+          <label for="features-onlinedata">...exchange data with the Web?</label>
+          <input type="range" id="features-onlinedata" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-bluetooth">...exchange data via bluetooth?</label>
+          <input type="range" id="features-bluetooth" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-offline">...have to be available offline?</label>
+          <input type="range" id="features-offline" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-contactlist">...use users' contact list?</label>
+          <input type="range" id="features-contactlist" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-accelerometer">...use accelerometer?</label>
+          <input type="range" id="features-accelerometer" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-notifications">...use push notifications?</label>
+          <input type="range" id="features-notifications" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-location">...need users' locations?</label>
+          <input type="range" id="features-location" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-media">...have to deal with rich media?</label>
+          <input type="range" id="features-media" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-responsive">...require real-time computation/responses?</label>
+          <input type="range" id="features-responsive" min="0" max="4" value="2" data-hint="features"/>
+          <label for="features-computation">...need heavy computation to do its job?</label>
+          <input type="range" id="features-computation" min="0" max="4" value="2" data-hint="features"/>
+
+        </fieldset>
+        <fieldset id="marketing">
+          <legend>Marketing</legend>
+          
+          <p class="intro">How do you plan to advertise your application?</p>
+          
+          <label for="marketing-markets">It will be well-rated/featured on a marketplace</label>
+          <input type="range" id="marketing-markets" min="0" max="4" value="2" data-hint="marketing"/>
+          <label for="marketing-viral">It will go viral</label>
+          <input type="range" id="marketing-viral" min="0" max="4" value="2" data-hint="marketing"/>
+          <label for="marketing-paid">I'll pay for it</label>
+          <input type="range" id="marketing-paid" min="0" max="4" value="2" data-hint="marketing"/>
+          <label for="marketing-website">I will use my already well-known website</label>
+          <input type="range" id="marketing-website" min="0" max="4" value="2" data-hint="marketing"/>
+
+        </fieldset>
+        <fieldset id="project">
+          <legend>Project and branding</legend>
+          
+          <p class="intro">Here are some statements. How much do you agree?</p>
+          
+          <label for="project-deadlines">Deadlines for this project are very tight</label>
+          <input type="range" id="project-deadlines" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-node">JavaScript will rule the world (beginning by our servers)</label>
+          <input type="range" id="project-node" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-importance">This application is crucial for our business</label>
+          <input type="range" id="project-importance" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-complexity">This application is quite simple to build</label>
+          <input type="range" id="project-complexity" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-html5">HTML5 will fill the gap with native APIs, some day</label>
+          <input type="range" id="project-html5" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-ie6">IE6, die!</label>
+          <!-- just for fun because I think everybody agrees -->
+          <input type="range" id="project-ie6" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-ux">UX and design are very important for an application's success</label>
+          <input type="range" id="project-ux" min="0" max="4" value="2" data-hint="agree"/>
+          <label for="project-innovation">I embrace new technologies</label>
+          <input type="range" id="project-innovation" min="0" max="4" value="2" data-hint="agree"/>
+
+        </fieldset>
+        
+        <button id="submit">Please, guide me!</button>
+        
+      </form>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  
+  <!--Include HistoryJS, by B.Lupton: https://github.com/balupton/History.js-->
+  <script>if ( typeof window.JSON === 'undefined' ) { document.write('<script src="js/libs/history/json2.js"><\/script>'); }</script>
+  <script src="js/libs/history/amplify.store.js"></script>
+  <script src="js/libs/history/history.adapter.jquery.js"></script>
+  <script src="js/libs/history/history.js"></script>
+  <script src="js/libs/history/history.html4.js"></script>
+  
+  <!-- jQuery UI since we want support for input[type=range] -->
+  <script src="js/libs/jquery-ui.js"></script>
+  
+  <script defer src="js/hints.js"></script>
+  <script defer src="js/magicalgo.js"></script>
+  <script defer src="js/script.js"></script>
+<!--
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+-->
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

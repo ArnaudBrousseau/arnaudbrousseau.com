@@ -1,0 +1,28 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+#library {
+  display: none;
+}
+
+canvas {
+  -webkit-transform: translateZ(0);
+}
+footer {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white url("../images/happynewyelp.jpg") bottom center no-repeat;
+  border-top: 2px #ab2012 /* That's my color */ solid;
+}
+footer:hover {background-position: top center;}
+footer span { display: none;}

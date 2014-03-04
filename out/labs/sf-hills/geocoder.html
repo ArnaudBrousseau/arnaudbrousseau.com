@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Geocodes the street crossings</title>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="data/north-horizontal.js"></script>
+  <script src="data/north-horizontal-geocoded.js"></script>
+  <script>
+      var geocoder,
+          elevator,
+          textarea;
+            
+      // Initialize the geocoder
+      function initialize() {
+        geocoder = new google.maps.Geocoder();
+        elevator = new google.maps.ElevationService();
+        textarea = document.getElementById('result');
+      }
+
+      // Geocode the address, and create a new marker and InfoWindow at the geocoded location
+      function geocodeCrossing(streetY, streetX) {
+        var address = streetY + ' and ' + streetX + ', San Francisco, CA';
+            lat=null, lng=null;
+        
+        console.log('Now geocoding: ' + address);
+
+        geocoder.geocode( { 'address': address }, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK && results[0]) {
+            console.log('Latitude: ' + results[0].geometry.location.lat());
+            console.log('Longitude: ' + results[0].geometry.location.lng());
+            lat = results[0].geometry.location.lat();
+            lng = results[0].geometry.location.lng();
+            
+            // Now, retrieve the elevation
+            elevationRequest = {'locations': [results[0].geometry.location]}
+            elevator.getElevationForLocations(elevationRequest, function(results, status) {
+              if (status == google.maps.ElevationStatus.OK && results[0]) {
+                insertData(streetY, streetX, lat, lng, results[0].elevation);
+                console.log('Altitude: ' + results[0].elevation);
+              } else {
+                alert("Elevation service failure: " + status);
+              }
+            });
+            
+          } else {
+            console.log("Something went wrong when trying to geocode " + streetX + ',' + streetY+ ': ' + status);
+          }
+        });
+      };
+      
+      // Insert data into the streetCrossingGeocoded object
+      var insertData = function(streetY, streetX, lat, lng, alt) {
+        if (typeof(streetCrossingsGeocoded[streetY]) === "undefined") {
+          streetCrossingsGeocoded[streetY] = [];
+        }
+        streetCrossingsGeocoded[streetY].push({
+          'name': streetX,
+          'lat': lat,
+          'lng': lng,
+          'alt': alt
+        });
+        
+        textarea.textContent = "streetCrossingsGeocoded = " + JSON.stringify(streetCrossingsGeocoded);
+      };
+      
+      // To avoid doing the work twice, we check if our result object has already the info we want
+      var isGeocoded = function(street) {
+        if (typeof(streetCrossingsGeocoded[street]) === "undefined") {
+          return false;
+        }
+        console.log()
+        if (streetCrossingsGeocoded[street].length === streetCrossings[street].length) {
+          return true;
+        }
+        return false;
+      };
+
+      // Now, DO IT! Big scary loop dude.
+      var requestTime = 0,
+          i;
+      (function(){
+        for (street in streetCrossings) {
+          if (streetCrossings.hasOwnProperty(street)) {
+            if (isGeocoded(street)) {
+              console.log('Skipping: ' + street);
+            } else {
+              for (i=0; i<streetCrossings[street].length; i++) {
+                // We don't wanna be kicked out of Gmaps, so delay the geocoding frenzy
+                (function(stY, stX){
+                  setTimeout(function() {
+                    geocodeCrossing(stY, stX);
+                  }, requestTime);
+                })(street, streetCrossings[street][i]);
+                requestTime += 1000;
+              }
+            }
+          }
+        }
+    })();
+    
+    // Since we have some geocoding failures sometimes, we need to be 
+    // able to manually perform some requests.
+    var manualGeocode = function() {
+      var address = document.getElementById('address').value;
+      textarea.textContent += 'Now geocoding: ' + address + "\n";
+
+      geocoder.geocode( { 'address': address }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK && results[0]) {
+          textarea.textContent += 'Latitude: ' + results[0].geometry.location.lat() + "\n";
+          textarea.textContent += 'Longitude: ' + results[0].geometry.location.lng() + "\n";
+          
+          // Now, retrieve the elevation
+          elevationRequest = {'locations': [results[0].geometry.location]}
+          elevator.getElevationForLocations(elevationRequest, function(results, status) {
+            if (status == google.maps.ElevationStatus.OK && results[0]) {
+              textarea.textContent += 'Altitude: ' + results[0].elevation + "\n";
+            } else {
+              textarea.textContent += "Elevation service failure: " + status + "\n";
+            }
+          });
+          
+        } else {
+          textarea.textContent = "Something went wrong when trying to geocode: " + status;
+        }
+      });
+    }
+
+  </script>
+
+</head>
+<body onload="initialize()">
+  Geocoding...
+  <br>
+  <textarea id="result" rows="15" cols="120"></textarea>
+  <br>
+  <br>
+  <label>Address:
+    <input type="text" id="address" />
+  </label>
+  <button onclick="manualGeocode()">Geocode now!</button>
+</body>
+</html>
