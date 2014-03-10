@@ -2,7 +2,7 @@
 title: "Hacking San Francisco Hills"
 date: 2012-06-03
 layout: "note"
-pageType: "note"
+activeNavItem: "notes"
 ---
 ## So What Are We Building?
 

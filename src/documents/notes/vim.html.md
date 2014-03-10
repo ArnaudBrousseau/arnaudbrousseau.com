@@ -2,7 +2,7 @@
 title: "Vim Tips"
 date: 2014-02-09
 layout: "note"
-pageType: "note"
+activeNavItem: "notes"
 ---
 
 Here are some nice tips and tricks I learned while practicing VIM at work or at

@@ -2,7 +2,7 @@
 title: "Playing with Firefly and Fitbit data"
 date: 2012-10-21
 layout: "note"
-pageType: "note"
+activeNavItem: "notes"
 ---
 
 ## Initial idea

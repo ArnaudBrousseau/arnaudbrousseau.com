@@ -2,7 +2,7 @@
 title: "Creating a Browser Language"
 date: 2013-10-23
 layout: "note"
-pageType: "note"
+activeNavItem: "notes"
 ---
 ## Context
 During a Hackathon, a coworker and me decided to tackle the problem of creating

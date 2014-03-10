@@ -2,7 +2,7 @@
 title: "Working Efficiently With Legacy Code"
 date: 2012-09-02
 layout: "note"
-pageType: "note"
+activeNavItem: "notes"
 ---
 
 This is my summary of the book "Working Effectively with Legacy Code" by
