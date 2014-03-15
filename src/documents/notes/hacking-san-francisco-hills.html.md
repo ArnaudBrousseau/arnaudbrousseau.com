@@ -130,7 +130,7 @@ Say I somehow managed to make it work, the current approach has the following fl
   absolute elevation, which doesn't tell if a street is steep or not.
 
 The result I have so far is [not that
-bad](http://ar.no.de/labs/sf-hills-baby/first-try.html), but not what I have in
+bad](/labs/sf-hills/first-try.html), but not what I have in
 mind.
 
 Looks like a perfect time to step back to think again.
@@ -261,8 +261,8 @@ Code to compute color for a given path:
 
 ## Result
 After some amount of data cleaning (Google's geocoder is sometimes not
-accurate, see how sloppy Geary is!) the final result is available at
-http://x61.fr/labs/sf-hills. It's not over (I'm lazy and I have not finished
+accurate, see how sloppy Geary is!) the final result is available [in the labs
+section](/labs/sf-hills/). It's not over (I'm lazy and I have not finished
 all parts of SF yet) but it gives you a pretty good idea of where hills are
 when walking in the popular north eastern part of the city.
 
