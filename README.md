@@ -5,9 +5,6 @@ The site used to be a simple static HTML page. I decided to switch over to
 [DocPad](http://docpad.org).
 
 ## Things to do, still
-- Audit copy across the site
-- Audit links in content and make them point to the right things
-- Make menu links work correctly in notes/labs pages
 - Put the damn thing in production already!
 - Redirect old x61 to new site
 
