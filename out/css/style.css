@@ -97,7 +97,10 @@ td { vertical-align: top; }
 Let's style baby !
 *******************/
 
-body { background-color:#edf2ff; }
+body {
+    font: 16px/1.42 sans-serif;
+    background-color:#edf2ff;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'PT Serif', Georgia, serif;
@@ -232,6 +235,7 @@ p.social {
 
 a.online, a.offline {
     display:block;
+    font-size: 12px;
     color:#333;
     width: 55px;
     font-weight: bold;
