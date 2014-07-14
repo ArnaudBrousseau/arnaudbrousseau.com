@@ -99,7 +99,12 @@ Let's style baby !
 
 body {
     font: 16px/1.42 sans-serif;
-    background-color:#edf2ff;
+    background-color: #ffffff;
+    /**
+     * And SVG background credits goes to:
+     * http://svgeneration.com/generate/Zags?width=66&background=ffffff&color1=f6f6f6&color2=fcfcfc&color3=f9f9f9&
+     **/
+    background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjYnIGhlaWdodD0nMzMnPgoJPGRlZnM+CgkJPGcgaWQ9J2xpbmVzJz4KCQkJPGxpbmUgeDE9JzAnIHkxPScwJyB4Mj0nMTMuMicgeTI9JzE2LjUnIHN0cm9rZS13aWR0aD0nMScgc3Ryb2tlPScjZjZmNmY2Jy8+CgkJCTxsaW5lIHgxPSc5LjknIHkxPScwJyB4Mj0nMjMuMScgeTI9JzE2LjUnIHN0cm9rZS13aWR0aD0nMScgc3Ryb2tlPScjZmNmY2ZjJy8+CgkJCTxsaW5lIHgxPScxOS44JyB5MT0nMCcgeDI9JzMzJyB5Mj0nMTYuNScgc3Ryb2tlLXdpZHRoPScxJyBzdHJva2U9JyNmOWY5ZjknLz4KCQk8L2c+Cgk8L2RlZnM+Cgk8cmVjdCB4PSctMTAlJyB5PSctMTAlJyB3aWR0aD0nMTIwJScgaGVpZ2h0PScxMjAlJyBmaWxsPScjZmZmZmZmJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgeD0nMzMnIHk9JzE2LjUnIC8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgeD0nMzMnIHk9Jy0xNi41JyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAtMSAwIDApJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgIC8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgeD0nMCcgeT0nLTMzJyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAtMSAwIDApJy8+ICAKPC9zdmc+');
 }
 
 h1, h2, h3, h4, h5, h6 {
