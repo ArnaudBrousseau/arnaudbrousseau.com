@@ -365,7 +365,7 @@ a.offline {
 .note-subtitle a { color: #222; }
 .note-subtitle-content {
     display: inline-block;
-    background: #edf2ff ;
+    background: #fff;
     padding: 0 11px;
 }
 
