@@ -6,8 +6,6 @@ activeNavItem: "notes"
 <p class="note-subtitle">
     <em class="note-subtitle-content">Last edited on
         <time datetime="<%= @document.computerDate %>"><%= @document.humanDate %></time>
-        by
-        <a href="https://google.com/+ArnaudBrousseau?rel=author" target="_blank" rel="author">Arnaud Brousseau</a>
     </em>
 </p>
 
