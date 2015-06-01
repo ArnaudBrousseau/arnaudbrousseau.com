@@ -1,12 +1,9 @@
 ---
 title: "VelocityConf 2014"
-date: 2015-05-28
+date: 2015-05-31
 layout: "note"
 activeNavItem: "notes"
 ---
-
-_These notes are still a draft. They will become finalized once Velocity ends
-on Friday. Until then, bear with the typos, rough Engligh and incomplete notes; sorry!_
 
 ## Service Workers, The Practical Bits<br>★★★★☆
 **Patrick Meenan, Google**
@@ -669,7 +666,377 @@ etc.
 
 Mobile clients then make use of HTML5 features like `localStorage` and `appcache` to be able to function in tunnel when technicians do maintenance.
 
-THen talk steered towards how JS is not Java, and how jQuery is great. Wat. It
+Then talk steered towards how JS is not Java, and how jQuery is great. Wat. It
 went downhill from there.
 
 Conclusion: HTML5 is great, let's hope JS gets more standardized. Wow. Really.
+
+## Performance for the next billion<br>★★★★☆
+**Bruce Lawson, Opera**
+
+How will the next billion Internet users come online? Asia, Africa.
+
+Number of people in asia: 4 billions.
+
+Indonesia is the 3rd top user of Facebook, yet they are still stuck with 2G
+connections!
+
+India is also growing super fast from 400 million internet users today to 900
+millions in 2018.
+
+We have more and more low end devices coming online. Those markets aren't
+dominated by iPhones and high end Android devices. Websites have to be
+performant on lower end devices because that's what Asia and Africa use and will
+continue to use.
+
+Apps don't scale in those markets. Websites are the only solution to propagate
+updates faster.<br>
+Solution: installable web apps through web manifest specification. Apple has
+been doing it in a non-standard way for a long time. Now you can do it on
+Android and Opera browsers.
+
+In rich nations, 1-2% of income is spent on internet connectivity.
+In developing nations, up to **10%** of income is spent on connectivity. We
+cannot waste people's money with large images. Instead, serve the right images
+for each device! Use responsive images (`<picture>`, `srcset`.)
+
+Opera mini is a proxy browser used heavily in India/Africa to solve this exact
+problem: get users decent access to the web. How it works? Opera renders
+websites on the server, then proxies rendered websites to low-end devices.
+
+"Doesn't matter how smart your phone is if your network is dumb"
+
+## Great. You're a software company. Now what?<br>★☆☆☆☆
+**Patrick Lightbody, New Relic**
+
+Talk about Chipotle's burrito button on the Apple Watch and how this changes
+everything.
+
+"Every company is now a software company."
+
+History of monitoring:
+- 80s/90s: on the server
+- 2000s: on the apps
+- today: on the users
+- tomorrow: on the business
+
+"Fast isn't enough, we need to delight users."
+
+
+## Twenty Thousand Leagues Inside the optical fiber<br>★★★☆☆
+**Ariya Hidayat, Shape Security**
+
+This talk was about the history of optical fiber.
+
+At first: talk! Sound waves.
+As people are further and further away, they naturally tend to switch to visual
+communication (light waves!) like semaphores, smoke signals, lighting signals.
+
+Bell invented the photophone but instead, telephone took off and radio took over
+the world.
+
+It's not until the invention of Laser light that light-based communication
+became popular again. Very popular. Now optical fiber is what everything runs
+on. The amount of data we can send through one optical fiber is mind-boggling.
+
+How? Since Laser light is monochromatic, modulations (amplitude, frequency) are
+possible, but also multiplexing (by having multiple colors sent through the same
+optical fiber.
+
+"I have seen further, it is by standing on the shoulders of giants." -- Isaac
+Newton.
+
+## Beyond the Hype Cycle<br>★★☆☆☆
+**Shane Evans, HP**
+
+Talk about the entreprise and how HP is helping them move the needle. QA and
+testing budgets have gone up from 18% to 30%. Yet a prime factor that hinders agile in enterprise is lack of testing.
+
+Unicorn, horses and mules (respectively early, mid-range and late adopters).
+Mules are companies engineers hate (late adopters), yet people rely on them more
+than any other company.
+
+How to move forward in enterprise?
+1. Build smarter automation
+2. Address the legacy
+3. Think about process and scalability
+
+## Overcoming the challenges of image delivery<br>★★★☆☆
+**Mohammed Aboui-magd, Akamai**
+
+Users demand better images. Users love images. Web pages are getting heavier and
+heavier.
+
+Number of images served by Akamai per day: 0.75 trillion
+
+If you want to do it right you need a version of an image for each:
+- user agent
+- screen size
+- connection type
+
+That's A LOT of different images to pre-generate, store, manage and serve
+dynamically. How do you manage that complexity?
+
+Akamai does just that. (talk ended on that, no solutions given...kinda sucks.)
+
+
+## Reflections on mountain moving, from the first year of USDS<br>★★★☆☆
+**Mikey Deckerson, US Digital Service administrator**
+
+Talk about bureaucracy. Bureaucracy is a word everyone hates but it's really
+just what happens when a large group of people have to take a decision that
+matters. Saying "my office has no bureaucracy" is like saying "my town has no
+climate". At best, the climate doesn't affect you, but it's still there.
+
+Rules to deal with bureaucracy:
+- The simpler your message/statement the better
+- Open data is rad because other people get to build stuff instead of you
+- Open source is rad because you get to use other people's stuff instead of
+  building it
+- The bigger you can pitch your tent the better. Get as many stakeholders
+  onboard as possible. They will either be part of the solution or part of the
+  problem.
+- Make it possible for people who have been part of the problems to be part of
+  the solution.
+
+Closing wish: apply your human capital to healthcare, education, or energy.
+Those are the things that matter.
+
+## Measurement is not enough<br>★☆☆☆☆
+Buddy brewer, SOASTA
+
+Performance means very different things to different people.
+
+You have to find relationships between the data to establish relationship between people.
+
+## Recruiting for Diversity in Tech<br>★★★☆☆
+**Laine Campbell, Pythian**
+
+Diversity is a goal unto itself
+- assume good intentions
+- create a culture of forgiveness
+- don't be afraid to speak up, call out and engage
+- recognize privileges and implicit biases as real
+
+There are two types of diversity:
+- Inherent diversity (nationality, religious, gender, age, sexual orientation,
+race,...)
+- Aquired diversity (been to military? Which school/university?...)
+
+**Meritocracy is bullshit**. It doesn't work because of implicit biaises. That's
+why a ridiculously small amount number of women lead open source projects.
+People nominate people they're comfortable with. They don't make the choice of
+diversity unless they're forced or at least incentivized to.
+
+Instead, create goals, enforce and track them!
+
+Inbound recruiting is bad for diversity. Do outbound recruiting (meetups, online
+groups, linkedin, ...)
+
+Have a code of conduct and enforce it!
+- mistakes are forgiven when intentions are good
+- hatred, insults and anger get shut down
+- education is encouraged
+- don't let individuals be isolated
+
+Just try it: eliminate names and pictures from applications. Anonymize online
+handles and technical test results. It'll help you build balanced and diverse
+teams.
+
+## Reaching everywhere<br>★★★☆☆
+**Tim Kadleck, Akamai**
+
+This talk was about how Radio Free Europe responsive site was built with
+performance in mind.
+
+Accessing Radio Free europe is punishable by death in certain country like
+Iran.<br>
+Our internet is **not** their internet.
+
+2099KB is the average page size now. This is not acceptable when they are
+accessed over very slow networks.
+
+"The future is already here--it's just not very evenly distributed"
+
+We have to be performant by default. How? Set a performance budget.
+
+20% rule: most people don't notice that it's faster unless it's at least 20%
+faster.
+
+Goal set for Radio Free Europe: visually complete in less than 4000ms.
+
+Tips to feel performance as you develop:
+- Network throttling on your laptop
+- Perf budget enforced at the build process
+- display perf number for every page prominently: green for good, red for bad
+
+Other tools for performance:
+- `grunt-penthouse` for critical CSS (`grunt-critical-css` works too)
+- use SVG sprites. One `<svg>` elements and several `<use>` to include icons
+- progressive enhancement by "cutting the mustard". If cuts the mustard, then
+  use `loadCSS`, `loadJS`. Otherwise, don't bother! This lets you have a high
+  dynamic range (difference between the largest size and the smallest size)
+
+## Mobile image processing<br>★★★★☆
+
+Today, 1.8 billion photos per day are taken.
+They also add up to 62.4% of the average webpage!
+
+We usually don't think about it, but browsers have to perform a lot of work to
+display an image:
+- request
+- decode
+- copy to GPU
+- display
+
+To decode an image, we have to reverse the process of encoding an image. How are
+JPEGS encoded?
+- RGB to YUV
+- Chroma subsamplig
+- CDT quantization
+- Huffman encoding
+
+You can view this on `chrome://tracing` or in Firefox at `about:memory`. Just capture your page loading and search
+for `DecodeAndSampling`.
+
+Decoding images takes a LOT more time to do when images are too big for the
+requested display size. If the size fits: 5ms. If it's twice the size: 30ms. If
+the image is six times bigger: 200-300ms!
+
+Mind your fancy hero images. Please please resize your images!
+
+Badly sized images are impacting:
+- memory
+- battery
+- life of device
+- CPU/GPU overhead
+
+Talk about chroma subsampling. What the heck is this? Interesting stuff (4:4:4
+vs 4:2:2 vs 4:2:0). Basically 4 pixels can be condensed by just taking 2 samples
+of color (or one) within them.
+
+IE led the charge on offloading chroma upsampling (the step that reverses subsampling) to the GPU. With this, decoding images takes less time. Still, resize images!
+
+Takeaways:
+- Resize images
+- use small breakpoints for large images
+- meta viewport is your friend
+- use 4:2:0 subsampling when possible
+- image size divisible by 8 compress better
+
+
+## Building the new fast MSN<br>★★★☆☆
+**Amiya Gupta, Microsoft**
+
+[Link to slides](http://1drv.ms/1JZlYLc)
+
+Several types of optimizations.
+
+Basic:
+- domain sharding
+- concatenation
+- Gzip
+- spriting
+- etc
+
+
+Intermediate:
+- async scripts
+- DNS prefetch
+- single jQuery URL
+- lazy load images below the fold
+
+Advanced. Let's talk about those.
+
+How Microsoft quantifies perceived performance: not speed index, not page phase
+time (rate of change of pixels displayed on the screen over time)
+
+Microsoft's approach to visual metrics:
+- first render
+- hero image render
+- above fold render
+- ad render
+
+Basically, not one number but several, to help narrow down where the regression
+might be. Also, heavy use of user timing markers to identify problems. They are
+displayed in the timeline view in IE's F12 tools.
+
+Lessons learned:
+- network isn't always the bottleneck
+- looking at the waterfall isn't enough
+- CPU cycles spent on repeated layout/styling operations
+- Forced layout operations: the silent killer
+
+What is a forced layout operation? How does it happen?
+1. Invalidate a section of the display tree through DOM or style
+   updates
+2. Read property under that tree when invalidated: e.g.
+   `clientWidth`, `getBoundingClientRect`, etc
+
+How to fix?
+- batch writes together
+- avoid client-side inserts if they can be included server-side (client-side
+  templating is bad for performance. Avoid it!)
+- execute reads before writes
+- schedule read and write operations with `requestAnimationFrame`
+- move operations into the head or outside the DOM whenever possible
+
+Caution! HTTP2 is coming!! With HTTP2 all of the following are anti-patterns:
+- cookie-less domains
+- CSS and JS bundling
+- domain sharding
+- image spriting
+
+## TCP and the lower bound of web performance<br>★★★★★
+**John Rauser, Pinterest**
+
+Talk about how the web works. Very, very good talk. Nicely delivered.
+
+[Link to
+Slides](http://cdn.oreillystatic.com/en/assets/1/event/44/TCP%20and%20the%20Lower%20Bound%20of%20Web%20Performance%20Presentation.pdf)
+
+Stuart Cheshire said:
+- Making more bandwidth is easy
+- Once you have bad latency, you're stuck with it
+
+Let's take the example of Seattle/New York latency. If those two cities were
+linked with a single, continuous piece of optical fiber, the theoretical latency
+would be 37ms.
+
+Now, what's the actual Seattle/NYC latency? 90ms. Only a factor of 2! The point
+is: we've already done a pretty good job at reducing latency. Latency is going
+to be there no matter what we do and what protocol we use.
+
+Now, story about TCP/IP, the protocol which rules the web today.
+
+Early days of the telephone: people were connected to each other physically,
+with operators operating switching. One conversation was going on in each
+circuit.
+
+With a digital form of communication we switched to packet switched networks:
+messages are broken down into packets, and packets of different messages can be
+interleaved into the same circuit. This allows for a lot of multiplexing and a
+better utilization rate of our networking infrastructure.
+
+But there's no free lunch: for packet switched networks, you need congestion
+control!
+
+RFC 793 is the initial TCP/IP RFC: reliability is implemented via ACKs, flow control is implemented through the concept of TCP window.
+
+In October 1986 a series of congestion collapses hit the ARPA net. John Nagles,
+in RFC 896 describes the problem really well. Van Jacobson later on, through his
+research comes up with the concept of TCP slow start.
+
+Later on, delayed ACK is proposed in RFC 813, reasoning being that immediate
+ACKs are a ton of extra overhead in most cases.
+
+RFC 1122 recommends/codified both TCP slow start and delayed ACK, in 1989.
+
+With those two things in place, network latency strictly limits the throughput
+of new TCP connection!
+
+Takeaways:
+- Make sure you set your initial congestion window to more than 3
+- Mind your cookies!
+- Download small assets first
+- Accept the speed of light. It's not going away anytime soon.
