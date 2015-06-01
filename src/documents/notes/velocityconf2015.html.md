@@ -1,5 +1,5 @@
 ---
-title: "VelocityConf 2014"
+title: "VelocityConf 2015"
 date: 2015-05-31
 layout: "note"
 activeNavItem: "notes"
