@@ -411,7 +411,7 @@ blockquote {
     border-left: 5px solid #0f192a;
     border-radius: 2px;
 }
-blockquote p { display: inline; }
+blockquote p { margin: 5px; }
 
 /* Print styles */
 @media print {
