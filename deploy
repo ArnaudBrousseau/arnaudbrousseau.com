@@ -1,2 +1,5 @@
 #!/bin/bash
+echo 'rsyncing to OVH...'
 rsync -avzhr --delete out/ osmoz@ftp.240plan.ovh.net:~/arnaudbrousseau/
+echo 'rsyncing to VPS...'
+rsync -avzhr --delete out/ x61@vps363138.ovh.net:/home/x61/sites/arnaudbrousseau/
