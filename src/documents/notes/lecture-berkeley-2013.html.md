@@ -10,7 +10,7 @@ in November 2013:
 - Speakers: [Jon Madden](https://twitter.com/hyr0) and I spoke, one hour each
 - Context: guest speaker in [Jim Blomo's WEBARCH253](https://github.com/jblomo/webarch253)
 - Subject: the Mobile Web
-- Slides: [go read'em!](https://docs.google.com/a/yelp.com/presentation/d/16ium6cyWYpA17xLZ1H0XBDkrjMhJTBtrbuFIv6TY2zQ/present)
+- Slides: [go read'em!](https://raw.githubusercontent.com/ArnaudBrousseau/mobile-web-lecture-berkeley/master/mobile_web_berkeley.pdf)
 
 The experience was fantastic. I was nervous at first but it went better than I
 expected. You can find the slides and some code samples for this class online:
