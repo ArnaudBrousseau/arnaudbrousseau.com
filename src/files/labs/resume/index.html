@@ -41,8 +41,8 @@
 
         /* Main styles */
         .main ul { list-style-type: none; }
-        .main li::before { content: '» '; font-size: bold; color: #66667f; }
-        .main p {}
+        .main li::before { content: '» '; font-weight: bold; color: #66667f; }
+        .main .tools { font-size: 0.8em; font-weight: bold; }
 
         /* Border effects */
         .xp, .xtra { position: relative; }
@@ -152,17 +152,18 @@
                 </p>
                 <ul>
                     <li>
-                    Testing and deploying Cloudflare's <a href="https://www.cloudflare.com/website-optimization/railgun/" title="Cloudflare Railgun">Railgun</a>, an optimization to speed up communication between Yelp's backend and Cloudflare POPs, which resulted in a 20% end-to-end performance boost for users outside of the continental US.
+                    Testing and deploying <a href="https://www.cloudflare.com/website-optimization/railgun/" title="Cloudflare Railgun">Railgun</a> to compress traffic between Yelp and Cloudflare POPs. This resulted in a 20% end-to-end performance boost for users outside of the continental US.
                     </li>
                     <li>
-                    Building and scaling Yelp Pagelets (see "<a href="https://engineeringblog.yelp.com/2017/07/generating-web-pages-in-parallel-with-pagelets.html" title="Generating Web Pages in Parallel with Pagelets, the Building Blocks of Yelp.com">Generating Web Pages in Parallel with Pagelets, the Building Blocks of Yelp.com</a>"), a server-side optimization which speeds up yelp.com's backend median timings by about 50%.
+                    Building and scaling Yelp Pagelets (see "<a href="https://engineeringblog.yelp.com/2017/07/generating-web-pages-in-parallel-with-pagelets.html" title="Generating Web Pages in Parallel with Pagelets">Generating Web Pages in Parallel with Pagelets</a>"), an optimization which sped up Yelp.com's backend median timings by about 50%.
                     </li>
                     <li>
-                    Designing and implementing a shared network caching proxy to make Yelp service calls faster and more efficient. This service, built using Nginx and Openresty, doubles as a shield and a cache for heavily used internal Yelp services.
+                    Designing and implementing a shared network caching proxy to make Yelp service calls faster and more efficient.
                     </li>
                 </ul>
 
-                <p>In addition to the technical work above, my responsibilities at Yelp today include: code reviews, technical scoping and estimation, goal setting, interviewing, and mentoring.</p>
+                <p>My responsibilities at Yelp today also include code reviews, technical scoping and estimation, goal setting, interviewing, and mentoring.</p>
+                <p class="tools">Tools used: Python, Lua, JavaScript, HAProxy, Nginx, Pyramid, Splunk.</p>
             </article>
 
             <article>
@@ -183,9 +184,10 @@
                         Building up Yelp's mobile website and making it as mobile-friendly as possible. This led to publishing, on Yelp's engineering blog, "<a href="https://engineeringblog.yelp.com/2013/01/mission-beyond-the-mobile-browser.html" title="Mission: beyond the mobile browser">Mission: Beyond The Mobile Browser</a>".
                     </li>
                     <li>
-                    In early 2013 I started developing, across platforms (mobile web, web, native), <a href="https://www.yelp.com/developers/platform" title="Yelp Transaction Platform documentation">Yelp Transaction Platform</a>. I worked with a cross-fonctional team to design the initial web architecture and launch the platform in July 2013 (see "<a href="https://www.yelpblog.com/2013/07/yelp-connects-people-with-great-local-businesses-giving-users-plenty-of-information-to-make-spending-decisions-and-allow" title="Introducing Yelp Platform! Transactions Made Easy, Directly Through Yelp">Introducing Yelp Platform!</a>"). Then I helped it scale from 0 to thousands of orders a day across multiple verticals (see "<a href="https://www.yelpblog.com/2014/10/treat-yo-self-yelp-platform-adds-hotel-and-winery-bookings">Yelp Platform Adds Hotel and Winery Bookings</a>").
+                    Built across platforms (mobile web, web, native), the <a href="https://www.yelp.com/developers/platform" title="Yelp Transaction Platform documentation">Yelp Transaction Platform</a>. I worked with a cross-functional team to design the initial web architecture and launch the platform in July 2013 (see "<a href="https://www.yelpblog.com/2013/07/yelp-connects-people-with-great-local-businesses-giving-users-plenty-of-information-to-make-spending-decisions-and-allow" title="Introducing Yelp Platform! Transactions Made Easy, Directly Through Yelp">Introducing Yelp Platform!</a>"). I helped it scale from 0 to thousands of orders a day across multiple verticals (see "<a href="https://www.yelpblog.com/2014/10/treat-yo-self-yelp-platform-adds-hotel-and-winery-bookings">Yelp Platform Adds Hotel and Winery Bookings</a>").
                     </li>
                 </ul>
+                <p class="tools">Tools used: JavaScript, Python, Google Closure, jQuery, ElasticSearch, Kibana.</p>
             </article>
 
             <article>
@@ -201,14 +203,16 @@
                     <li>Developed part of the interface for <a href="http://www.isearch-project.eu/isearch/" title="I-SEARCH">I-SEARCH</a>, a multimodal search engine</li>
                     <li>Worked with one of Google's patent lawyer to create <a href="https://www.google.com/patents/US8935638" title="Non-textual user input">Non-textual user input (US 8935638 B2)</a></li>
                 </ul>
+            <p class="tools">Tools used: JavaScript, LaTeX, bash, jQuery, Titanium.</p>
             </article>
         </section>
 
         <section class="xtra" id="xtra">
             <h2>Other Work</h2>
             <ul>
+                <li>Talked at Berkeley about performance. See <a href="http://arnaudbrousseau.com/notes/berkeley-tech-talk.html" title="Berkeley Tech Tech">Berkeley Tech Talk</a>.</li>
                 <li>Gave a lecture at Berkeley about the mobile web. Slides and their source are available online: <a href="https://github.com/ArnaudBrousseau/mobile-web-lecture-berkeley" title="Mobile Web Lecture at Berkely">Mobile Web Lecture at Berkeley</a>.</li>
-                <li>Gave a tech talk at UIUC. Slides and source available: <a href="https://github.com/ArnaudBrousseau/uiuc_tech_talk" title="UIUC Tech Talk">UIUC Tech Talk</a>.</li>
+                <li>Talked at UIUC about debugging. See <a href="https://github.com/ArnaudBrousseau/uiuc_tech_talk" title="UIUC Tech Talk">UIUC Tech Talk</a>.</li>
                 <li>Mapped the numerous San Francisco hills with Google's Elevation API to find optimal paths: <a href="http://arnaudbrousseau.com/labs/sf-hills.html" title="San Francisco Hills">San Francisco Hills</a>.</li>
                 <li>A Chrome extension to evaluate Lisp with JavaScript. Why not! Hence <a href="http://arnaudbrousseau.com/labs/bogolisp.html" title="BogoLisp">BogoLisp</a> was born.
                 </li>
