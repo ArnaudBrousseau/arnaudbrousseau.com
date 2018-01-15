@@ -3,3 +3,4 @@
 *.swp
 *.swo
 out
+.node_modules/
