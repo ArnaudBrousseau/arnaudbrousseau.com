@@ -5,11 +5,16 @@ The site used to be a simple static HTML page. It now uses [DocPad](http://docpa
 
 ## Development
 
-Run `node_modules/.bin/docpad run`
+```
+npm install .
+node_modules/.bin/docpad run
+```
 
 ## Deployment
-
-Run `./deploy` (requires credentials)
+(requires credentials!)
+```
+./deploy
+```
 
 ## License
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)  
