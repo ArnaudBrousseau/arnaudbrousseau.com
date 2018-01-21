@@ -53,6 +53,7 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul ul, ol ul, ul ol, ol ol { margin: 0; }
 dd { margin: 0 0 0 0; } /* no right margin for def lists */
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
@@ -372,6 +373,11 @@ a.offline {
 .note-content {
     font-size: 16px;
     margin: 60px auto;
+}
+
+.note-content h1 {
+    font-size: 32px;
+    border-bottom: 1px solid #222;
 }
 
 .note-content img {
