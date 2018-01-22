@@ -18,7 +18,10 @@ relevant once you start working.
 
 # Unix
 
-## Linux hierarchy
+For an awesome rundown of what linux is like under the covers, see [Linux
+Insides](https://www.gitbook.com/book/0xax/linux-insides/details)
+
+## Common directories
 
 If you work in a Linux-based environment, having intuition on
 what goes where generally speaking is a big productivity boost.
