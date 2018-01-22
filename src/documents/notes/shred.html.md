@@ -1,5 +1,5 @@
 ---
-title: "TIL: shred"
+title: "shred(1)"
 date: 2017-05-26
 layout: "note"
 activeNavItem: "notes"
