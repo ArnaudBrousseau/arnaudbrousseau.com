@@ -177,8 +177,9 @@ footer p { margin: 0; }
 }
 
 p.intro {
+    font-family: 'PT Serif', Georgia, serif;
     margin-top: -100px;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 18px;
     width: 420px;
     padding-left: 260px;
@@ -310,14 +311,15 @@ a.offline {
     list-style-type: none;
 }
 
-.notes-list-item a,
-.notes-list-item a:visited {
+/* Link styles */
+a.content-link,
+a.content-link:visited {
     color: #222;
     padding: 2px 4px;
     border-radius: 4px;
 }
 
-.notes-list-item a:hover {
+a.content-link:hover {
     text-decoration: none;
     color: #fff;
     background: #444;

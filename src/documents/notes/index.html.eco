@@ -6,7 +6,7 @@ activeNavItem: "notes"
 <ul class="index notes-index">
     <% for note in @getCollection('html').findAll({layout:'note'}, [{date:-1}]).toJSON(): %>
         <li class="notes-list-item">
-            <a href="<%= note.url %>">
+            <a class="content-link" href="<%= note.url %>">
                 <%= note.title %>
             </a>
             <em>&mdash; <time><%= note.humanDate %></time> &mdash;</em>
