@@ -4,7 +4,7 @@ activeNavItem: "notes"
 ---
 <h1 class="title note-title"><%= @document.title %></h1>
 <p class="note-subtitle">
-    <em class="note-subtitle-content">Last edited on
+    <em class="note-subtitle-content">
         <time datetime="<%= @document.computerDate %>"><%= @document.humanDate %></time>
     </em>
 </p>

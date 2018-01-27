@@ -9,7 +9,7 @@ activeNavItem: "notes"
             <a href="<%= note.url %>">
                 <%= note.title %>
             </a>
-            <em>&mdash; Last edited on <time><%= note.humanDate %></time> &mdash;</em>
+            <em>&mdash; <time><%= note.humanDate %></time> &mdash;</em>
         </li>
     <% end %>
 </ul>
