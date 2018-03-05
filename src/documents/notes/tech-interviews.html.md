@@ -10,11 +10,23 @@ believe that there is a disconnect or misunderstanding happening.
 Candidates (especially fresh graduates) expect to be grilled on fundamental computer
 science questions. I, on the other hand, am looking for my next colleague. Sure
 it's nice to talk about linked list and binary tree traversals but it's only a
-small portion of what a full-stack engineer needs to talk about in his or her
-job. Here's my attempt at listing the topics that are relevant,
-based on my experience as an engineer at Yelp. This includes CS
-fundamentals of course, and also a lot of other fundamentals that are extremely
-relevant once you start working.
+small portion of what software engineers talk about on the job.
+
+This post lists the topics that are relevant to software engineering based on
+what I've experienced at Yelp (and yes, this includes CS fundamentals!). This should hopefully convince you that:
+
+* this list is way too long, both for the candidate (how can you expect them to
+  learn ALL of this?) and the interviewer (how can you expect to probe on all
+  these topics?)
+* it's silly to grill candidates on CS fundamentals over and over since it
+  represents such a small subset of what's relevant day-to-day
+
+Towards the end I'll close with some thoughts on culture fit and "soft"
+questions that you can use to gauge a candidate on whether they are likely to
+be a fit for your team (you can also use this to prepare yourself before
+interviewing!)
+
+Let's start with the big list, roughly organized from backend to frontend.
 
 # Unix
 
@@ -762,6 +774,10 @@ See [this article](https://blog.sessionstack.com/how-javascript-works-event-loop
 
 # Web Frontend
 
+[This repo](https://github.com/yangshun/front-end-interview-handbook) contains
+a good set of questions/answers to quickly go over a lot of the possible
+frontend questions.
+
 ## BEM
 BEM (**B**lock **E**lement **M**odifier) is the name for a convention in CSS class names.
 
@@ -831,6 +847,34 @@ performance between browsers for a given site. Examples:
 
 * v8 for NodeJS and Chrome
 * SpiderMonkey for Firefox
+
+# The non-technical portion of a technical interview
+
+## Mindset
+The main question to answer during an interview is: "would I want to work with
+this person?", "would I be happy to see them sit next to me next week?", "can I
+see them help me with the current projects I'm working on?". I find this
+provides a good guide for a yes/no decision.
+
+## Expectations
+This varies with roles and levels that you hire for, but the attributes I
+generally look for in engineers that I interview are:
+
+* good communication. Not too long, to the point, with a good attitude. The kind that you would want in your daily or weekly meetings
+* positive reaction to questions and followups (not defensive)
+* ability to see one's own mistakes and point them out (not masking them!)
+* ability to say "I don't know" or "I'm not sure" when warranted
+* mentoring/teaching: do you see them teaching you something new?
+
+## Assessment
+To try to evaluate against my expectations, here are some questions:
+
+* What would you want to learn once hired here?
+* How do you release code to production?
+* Can you diagram the ecosystem in which the system you worked on fits?
+* What did you admire most about the best engineers at your previous job?
+* Design your ideal job here
+* What was the last time you failed to do something? Can you elaborate?
 
 # Wrapping up
 You made it through it all! Wow I'm impressed. Thank you so much for reading!
