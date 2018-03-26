@@ -10,7 +10,7 @@
         body {
             font-family: Georgia,"Times New Roman",Times,serif;
             color: #444;
-            margin: 0.5em;
+            margin: 1em;
             max-width: 960px;
         }
         h1, h2, h3, h4, h5, h6 {
@@ -35,7 +35,7 @@
         dt::after {content: " >>> "; font-size: 1.22em; }
 
         /* Layout */
-        .main { display: flex; line-height: 1.3em; margin-top: 2em; }
+        .main { display: flex; line-height: 1.3em; margin-top: 3em; }
         .xp { margin: 0 2em 0 0; flex: 2}
         .xtra { flex: 1; }
 
@@ -69,10 +69,11 @@
         /* Article titles */
         article hgroup h3, article hgroup h4, article hgroup h5 {
             display: inline-block;
-            margin: 0.5em 0;
+            margin: 1em 0 0 0;
         }
-        article hgroup h4::before { content: ' // '; }
-        article hgroup h4::after { content: ' // '; }
+        article hgroup h4::before { content: ' | '; }
+        article hgroup h4::after { content: ' | '; }
+        article p { margin: 0.7em 0 0.3em 0; }
 
         footer {
             border-top: 1px solid #66667f;
@@ -84,6 +85,7 @@
         }
 
         /* No padding on that list since it won't be against a paragraph */
+        .main ul { padding-left: 1em; }
         .xtra ul { padding: 0; }
 
         /* Links */
@@ -109,12 +111,15 @@
 
         @media print {
             @page { margin: 0mm; }
-            body  { color: #000; font-size: 3.2mm; margin: 0.7cm; }
+            html, body  { height: calc(100%)-1in; margin: 0;}
+            body  { color: #000; font-size: 3.2mm; padding: 0.5in; height: 100%, position: relative;}
             .xp h2::before, .xtra h2::before { border: none; }
 
             .main .print-only li::before { display: none; }
             ol.print-only { padding-left: 2em; font-size: 2.6mm; font-family: consolas, monospace; }
             h2.print-only { margin-top: 2em; }
+
+            footer { display: block; width: calc(100% - 1in); position: fixed; bottom: 0.3in;}
         }
     </style>
 </head>
@@ -128,7 +133,7 @@
     <section>
         <dl>
             <dt>Education</dt>
-            <dd>Master in Computer Science at <a href="http://www.eurecom.fr/en" title="EURECOM's official website">EURECOM</a></dd>
+            <dd>M.S. in Computer Science at <a href="http://www.eurecom.fr/en" title="EURECOM's official website">EURECOM</a></dd>
             <dt>Contact</dt>
             <dd>arnaud.brousseau@gmail.com, (+1) 415-336-4184</dd>
             <dt>Immigration Status</dt>
@@ -144,25 +149,25 @@
                 <hgroup>
                     <h3>Tech Lead, Performance</h3>
                     <h4>Yelp, Inc.</h4>
-                    <h5>November 2014 &mdash; present</h5>
+                    <h5>11/2014 &mdash; present</h5>
                 </hgroup>
 
                 <p>
-                    Bootstrapped a Performance team from scratch to address systemic issues in Yelp's SOA. It grew from a single developer (me) to 12 developers nowadays. Recent projects include:
+                    Bootstrapped a Performance team scratch to address systemic issues in Yelp's SOA. It grew from 1 to 12 developers. Most recent projects:
                 </p>
                 <ul>
                     <li>
-                    Testing and deploying <a href="https://www.cloudflare.com/website-optimization/railgun/" title="Cloudflare Railgun">Railgun</a> to compress traffic between Yelp and Cloudflare POPs. This resulted in a 20% end-to-end performance boost for users outside of the continental US.
+                    Designed, implemented, and deployed <a href="https://github.com/Yelp/casper">Yelp Casper</a>, a shared network caching proxy to make internal Yelp service calls more efficient (see "<a href="https://engineeringblog.yelp.com/2018/03/caching-internal-service-calls-at-yelp.html" title="">Caching Internal Service Calls at Yelp</a>".)
                     </li>
                     <li>
-                    Building and scaling Yelp Pagelets (see "<a href="https://engineeringblog.yelp.com/2017/07/generating-web-pages-in-parallel-with-pagelets.html" title="Generating Web Pages in Parallel with Pagelets">Generating Web Pages in Parallel with Pagelets</a>"), an optimization which sped up Yelp.com's backend median timings by about 50%.
+                    Deployed <a href="https://www.cloudflare.com/website-optimization/railgun/" title="Cloudflare Railgun">Railgun</a> to optimize traffic between Yelp and Cloudflare POPs (Point-Of-Presence). This resulted in a 20% end-to-end performance boost for users outside of the continental US.
                     </li>
                     <li>
-                    Designing and implementing a shared network caching proxy to make Yelp service calls faster and more efficient.
+                    Built and scaled Yelp Pagelets (see "<a href="https://engineeringblog.yelp.com/2017/07/generating-web-pages-in-parallel-with-pagelets.html" title="Generating Web Pages in Parallel with Pagelets">Generating Web Pages in Parallel with Pagelets</a>"), an optimization speeding up yelp.com's median timings by about 50%.
                     </li>
                 </ul>
 
-                <p>My responsibilities at Yelp today also include code reviews, technical scoping and estimation, goal setting, interviewing, and mentoring.</p>
+                <p>My responsibilities today also include code reviews, technical scoping and estimation, goal setting, conducting interviews, and mentoring.</p>
                 <p class="tools">Tools used: Python, Lua, JavaScript, HAProxy, Nginx, Pyramid, Splunk.</p>
             </article>
 
@@ -170,21 +175,21 @@
                 <hgroup>
                     <h3>Software Engineer</h3>
                     <h4>Yelp, Inc.</h4>
-                    <h5>February 2012 &mdash; November 2014</h5>
+                    <h5>02/2012 &mdash; 11/2014</h5>
                 </hgroup>
 
                 <p>
-                Built features, fixed bugs and drove improvements on <a href="https://www.yelp.com" title="Yelp's Desktop Site">yelp.com</a> and <a href="https://m.yelp.com" title="Yelp's Mobile Site">m.yelp.com</a>. Examples of projects I worked on:
+                Built features, fixed bugs and drove improvements on <a href="https://www.yelp.com" title="Yelp's Desktop Site">yelp.com</a> and <a href="https://m.yelp.com" title="Yelp's Mobile Site">m.yelp.com</a>:
                 </p>
                 <ul>
                     <li>
-                    Rebuilding <a href="https://www.yelp.com/elite" title="Yelp Elite">Yelp's Elite page</a> and the internal tools associated with it, which are crucial to pick, manage, engage and reward the Yelp Elite Squads (group hardcore Yelp contributors in each city).
+                    Built the <a href="https://www.yelp.com/developers/platform" title="Yelp Transaction Platform documentation">Yelp Transaction Platform</a>, launched it publicly in <a href="https://www.yelpblog.com/2013/07/yelp-connects-people-with-great-local-businesses-giving-users-plenty-of-information-to-make-spending-decisions-and-allow" title="Introducing Yelp Platform! Transactions Made Easy, Directly Through Yelp">July 2013</a> across platforms, and helped it scale to thousands of orders a day across <a href="https://www.yelpblog.com/2014/10/treat-yo-self-yelp-platform-adds-hotel-and-winery-bookings">multiple business verticals</a>.
                     </li>
                     <li>
-                        Building up Yelp's mobile website and making it as mobile-friendly as possible. This led to publishing, on Yelp's engineering blog, "<a href="https://engineeringblog.yelp.com/2013/01/mission-beyond-the-mobile-browser.html" title="Mission: beyond the mobile browser">Mission: Beyond The Mobile Browser</a>".
+                    Core developer on Yelp's mobile website: m.yelp.com (see "<a href="https://engineeringblog.yelp.com/2013/01/mission-beyond-the-mobile-browser.html" title="Mission: beyond the mobile browser">Mission: Beyond The Mobile Browser</a>".)
                     </li>
                     <li>
-                    Built across platforms (mobile web, web, native), the <a href="https://www.yelp.com/developers/platform" title="Yelp Transaction Platform documentation">Yelp Transaction Platform</a>. I worked with a cross-functional team to design the initial web architecture and launch the platform in July 2013 (see "<a href="https://www.yelpblog.com/2013/07/yelp-connects-people-with-great-local-businesses-giving-users-plenty-of-information-to-make-spending-decisions-and-allow" title="Introducing Yelp Platform! Transactions Made Easy, Directly Through Yelp">Introducing Yelp Platform!</a>"). I helped it scale from 0 to thousands of orders a day across multiple verticals (see "<a href="https://www.yelpblog.com/2014/10/treat-yo-self-yelp-platform-adds-hotel-and-winery-bookings">Yelp Platform Adds Hotel and Winery Bookings</a>").
+                    Rebuilt <a href="https://www.yelp.com/elite" title="Yelp Elite">Yelp's Elite page</a> and the associated internal tools to pick, manage, engage, and reward the Yelp Elite Squads.
                     </li>
                 </ul>
                 <p class="tools">Tools used: JavaScript, Python, Google Closure, jQuery, ElasticSearch, Kibana.</p>
@@ -194,14 +199,14 @@
                 <hgroup>
                     <h3>CSE, Research (Co-op)</h3>
                     <h4>Google, Inc.</h4>
-                    <h5>March 2011 &mdash; September 2011</h5>
+                    <h5>03/2011 &mdash; 09/2011</h5>
                 </hgroup>
                 <p>
-                Worked as a Customer Solution Engineer within Google Research. This gave me the opportunity to tackle a variety of problems and technology:
+                Customer Solution Engineer within Google Research:
                 <ul>
-                    <li>Creation of a cross-compiled (iOS, Android) mobile app used by Youtube's marketing department.</li>
-                    <li>Developed part of the interface for <a href="http://www.isearch-project.eu/isearch/" title="I-SEARCH">I-SEARCH</a>, a multimodal search engine</li>
-                    <li>Worked with one of Google's patent lawyer to create <a href="https://www.google.com/patents/US8935638" title="Non-textual user input">Non-textual user input (US 8935638 B2)</a></li>
+                    <li>Built cross-compiled (iOS, Android) apps used by Youtube.</li>
+                    <li>Developed the interface for <a href="http://www.isearch-project.eu/isearch/" title="I-SEARCH">I-SEARCH</a>, a multimodal search engine.</li>
+                    <li>Registered a patent with the USPO: <a href="https://www.google.com/patents/US8935638" title="Non-textual user input">Non-textual user input (US 8935638 B2)</a>.</li>
                 </ul>
             <p class="tools">Tools used: JavaScript, LaTeX, bash, jQuery, Titanium.</p>
             </article>
