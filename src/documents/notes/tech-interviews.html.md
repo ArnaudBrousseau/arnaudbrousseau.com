@@ -840,7 +840,7 @@ Asynchronous: the browser can fetch/execute this script whenever it wants, possi
 <pre class="brush:plain">
    &lt;script src="http://other.origin/user?id=1234&amp;cb=parseResp"&gt;
        // Response from other.origin will be
-       // parseResponse({"name": "Arnaud", "id": 1234, "Rank": 7});
+       // parseResp({"name": "Arnaud", "id": 1234, "Rank": 117});
    &lt;script&gt;
 </pre>
 
