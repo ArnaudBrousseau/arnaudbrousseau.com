@@ -832,6 +832,27 @@ Asynchronous: the browser can fetch/execute this script whenever it wants, possi
 
 [This article](https://www.html5rocks.com/en/tutorials/speed/script-loading/) is a reference.
 
+## Loading Policies
+
+*Same-origin policy*: when a user-agent loads content via XMLHTTPRequest (XHR aka AJAX), the same-origin policy applies. You can only load resources from the same origin than the page from which the script executes on.
+
+*JSONP*, or "JSON with padding". A clever hack to let web developers go around the same-origin policy, taking advantage of the fact that `<script>`s can be loaded cross-origin. Concretely:
+<pre class="brush:html">
+   &lt;script src="http://other.origin/user?id=1234&amp;cb=parseResp"&gt;
+       // Response from other.origin will be
+       // parseResponse({"name": "Arnaud", "id": 1234, "Rank": 7});
+   &lt;script&gt;
+</pre>
+
+*CORS* -- Cross-Origin Resource Sharing. This is a solution to go around the same-origin policy. This is implemented with a preflight request (OPTION request) from the browser to the server behind the origin from which a resource is fetched. The server can then respond with a list of domains for which that resource is allowed. Note: "simple" requests are not subject to CORS (preflight requests aren't performed). "Simple requests" are any POST, HEAD, GET requests with "simple" headers. "Simple headers" are:
+
+* `Accept=*`
+* `Accept-Language=*`
+* `Content-Language=*`
+* `Content-Type=(application/x-www-form-urlencoded|multipart/form-data|text/plain`
+
+CORS is useful for more that XHR-fetched content! CSS fonts or WebGL textures are subject to CORS for instance.
+
 ## How browsers work
 
 ### Overall
