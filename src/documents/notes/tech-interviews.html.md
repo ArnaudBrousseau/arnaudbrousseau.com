@@ -812,25 +812,29 @@ things like icons. It's also nice to know that SVG is nothing but text and very
 readable (just like HTML!). See [this MDN tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started).
 
 ## Script loading
-Basic: this is the most straightforward, but browsers have to stop document
-parsing/building at that point to execute the script.
+Basic: this is the most straightforward, but browsers have to stop HTML
+parsing/building at that point to download and execute the script.
 <pre class="brush:plain">
     &lt;script src="/path/to/my/script"&gt;&lt;/script&gt;
 </pre>
 
-Deferred: you're telling the browser that execution can happen a bit later on, but
-the order of execution should be respected, and the script will be executed
-before `DOMContentLoaded` is fired.
-<pre class="brush:plain">
-    &lt;script defer src="/path/to/my/script"&gt;&lt;/script&gt;
-</pre>
-
-Asynchronous: the browser can fetch/execute this script whenever it wants, possibly out-of-order (whenever download finishes).
+Asynchronous: the browser doesn't halt while dowloading this script. It blocks
+and executes this script when its download completes. Because of the fact that
+download times are unpredictable, `async` scripts aren't guaranteed to run in
+the order they were included on the page.
 <pre class="brush:plain">
     &lt;script async src="/path/to/my/script"&gt;&lt;/script&gt;
 </pre>
 
-[This article](https://www.html5rocks.com/en/tutorials/speed/script-loading/) is a reference.
+Deferred: the browser doesn't halt while downloading this script and `defer`s
+script execution until after the HTML parsing is completed, but before
+`DOMContentLoaded` fires. The order between multiple `defer` scripts should be
+respected, but all are executed after document parsing.
+<pre class="brush:plain">
+    &lt;script defer src="/path/to/my/script"&gt;&lt;/script&gt;
+</pre>
+
+[This article](https://www.html5rocks.com/en/tutorials/speed/script-loading/) is a reference on this topic.
 
 ## Loading Policies
 
