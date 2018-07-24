@@ -323,6 +323,8 @@ UDP on port 53. Some resolvers use TCP. Here's an example:
     ;; MSG SIZE  rcvd: 44
 </pre>
 
+For a great refresher on the basics/specs, head to [powerdns.org:basic](https://powerdns.org/hello-dns/basic.md.html).
+
 # Databases
 ## Document datastores vs. relational DBs vs. graph DBs
 Ultimately what matters during an interview is the knowledge that these 3 types
