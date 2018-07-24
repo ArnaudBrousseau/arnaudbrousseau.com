@@ -266,8 +266,15 @@ Important topics for full-stack developers:
   happens, and TCP slow start.
 * TCP head-of-line blocking: if a packet is lost, no further data is delivered
   until that packet is retransmitted
+* TCP teardown: FIN, FIN-ACK, ACK
 
-See [hbpn.co](https://hpbn.co/building-blocks-of-tcp/) for more details.
+See:
+* [Wikipedia:TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Protocol_operation) for a quick refresher on the basics
+* [hbpn.co:building-blocks-of-tcp](https://hpbn.co/building-blocks-of-tcp/) for more details on how these basics matter for web browsers/sites/users
+* [TCP Puzzlers](https://www.joyent.com/blog/tcp-puzzlers) for some advanced
+  considerations on failure modes: and how the state of TCP can get out of sync
+  between client and server. An example might be a hard power-cycle, or the
+  socket file descriptor not being torn down correctly on either end.
 
 
 ## SSL vs TLS
