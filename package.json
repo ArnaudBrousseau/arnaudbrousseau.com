@@ -19,8 +19,8 @@
     "dev": "node_modules/.bin/docpad-server"
   },
   "devDependencies": {
-    "docpad-plugin-eco": "~2.2.1",
-    "docpad-plugin-marked": "~2.4.0",
+    "docpad-plugin-eco": "~2.3.0",
+    "docpad-plugin-marked": "~2.5.0",
     "docpad-plugin-moment": "~2.0.2"
   }
 }
