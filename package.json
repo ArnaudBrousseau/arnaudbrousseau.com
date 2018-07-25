@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "docpad": "~6.79",
-    "moment": "~> 2.19.3 "
+    "moment": "~> 2.19.3",
+    "fresh": "~> 0.5.2"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
