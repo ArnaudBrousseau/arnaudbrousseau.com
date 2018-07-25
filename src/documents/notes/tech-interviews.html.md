@@ -158,6 +158,9 @@ to brush up your CS fundamentals in Python:
 * Linked List:
   * Node: `self.data`, `self.next`
   * List: items are `Node`s. `self.head` is None to start with. To add a `Node`, either point the head to the new Node, and the `newnode.next` to the old head.
+* Trees:
+  * Binary search trees (treaps)
+  * Balancing search trees, to keep the lookup time under a certain time complexity). See [Tree Rotation](https://en.wikipedia.org/wiki/Tree_rotation) and [these slides](http://web.stanford.edu/class/cs166/lectures/05/Small05.pdf) for more.
 
 ## Heap and stack
 The stack is memory that's always LIFO (**L**ast **I**n **F**irst **O**ut) and
