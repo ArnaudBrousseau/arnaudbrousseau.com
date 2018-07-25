@@ -1,7 +1,7 @@
 {
   "name": "arnaudbrousseau.com",
   "version": "0.2.0",
-  "description": "This is the source to generate what can be found at http://arnaudbrousseau.com",
+  "description": "This is the source to generate what can be found at https://arnaudbrousseau.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/ArnaudBrousseau/arnaudbrousseau.com"
