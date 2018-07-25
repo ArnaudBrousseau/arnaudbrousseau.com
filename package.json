@@ -1,6 +1,6 @@
 {
   "name": "arnaudbrousseau.com",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "This is the source to generate what can be found at https://arnaudbrousseau.com",
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "docpad-plugin-eco": "~2.3.0",
-    "docpad-plugin-marked": "~2.5.0",
-    "docpad-plugin-moment": "~2.0.2"
+    "docpad-plugin-marked": "~2.5.0"
   }
 }

@@ -5,7 +5,7 @@ activeNavItem: "notes"
 <h1 class="title note-title"><%= @document.title %></h1>
 <p class="note-subtitle">
     <em class="note-subtitle-content">
-        <time datetime="<%= @document.computerDate %>"><%= @document.humanDate %></time>
+        <time datetime="<%= @document.date %>"><%= @document.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) %></time>
     </em>
 </p>
 
