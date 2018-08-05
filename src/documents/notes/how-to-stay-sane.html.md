@@ -5,7 +5,7 @@ layout: "note"
 activeNavItem: "notes"
 ---
 
-These are reading notes from ["How to stay sane"](https://www.goodreads.com/book/show/14059029-how-to-stay-sane), a small handy book full of advice. It has good signal-to-noise ratio, which is rare enough in the self-help gendra.
+These are reading notes from ["How to stay sane"](https://www.goodreads.com/book/show/14059029-how-to-stay-sane), a small handy book full of advice. It has good signal-to-noise ratio, which is rare enough in the self-help genre.
 
 ## How to Stay Sane
 
