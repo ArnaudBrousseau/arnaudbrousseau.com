@@ -328,6 +328,28 @@ UDP on port 53. Some resolvers use TCP. Here's an example:
 
 For a great refresher on the basics/specs, head to [powerdns.org:basic](https://powerdns.org/hello-dns/basic.md.html).
 
+## UNIX Networking
+
+It's not that important to know by heart how to code a client or a server from
+scratch in C, but it's important to understand which system calls are involved at a high level.
+
+For a client:
+
+* `getaddrinfo`: get `servinfo` which corresponds to the server we want to connect to
+* `socket`: create a new socket to holds the connection, from `servinfo`
+* `recv`/`send` (on `SOCK_STREAM`-type sockets) or `sendto` and `recvfrom` (on `SOCK_DGRAM`-type sockets): send data to and receive data from the server, via the socket we just created
+
+For a server:
+
+* `getaddrinfo`: get `servinfo` which corresponds to the server's own IP (`hints.ai_flags == AI_PASSIVE`)
+* `socket`: create a socket to hold the connection, from `servinfo`
+* `bind`: to bind the socket to the port chosen (the port info is in `servinfo`)
+* `listen`: start waiting for clients to connect. Each connection is stored by the kernel into a common queue (the "accept queue")
+* `accept`: gets a connection from the accept queue and "accepts" it, by creating a socket and returning its file descriptor
+* `recv`/`send` (on `SOCK_STREAM`-type sockets) or `sendto` and `recvfrom` (on `SOCK_DGRAM`-type sockets): receive data from and send data to a connected client, via the connection's socket file descriptor.
+
+See [Beej's guide](https://beej.us/guide/bgnet/html/single/bgnet.html) for a _way_ more complete picture.
+
 # Databases
 ## Document datastores vs. relational DBs vs. graph DBs
 Ultimately what matters during an interview is the knowledge that these 3 types
