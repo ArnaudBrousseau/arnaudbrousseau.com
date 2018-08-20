@@ -33,11 +33,11 @@
 	<nav>
 
 	    <ul>
-		<a href=""><span>Arnaud Brousseau | Home, sweet home...<span></a>
-		<li><a href=""><span>Home</span></li>
-		<li><a href=""><span>Projets</span></li>
-		<li><a href=""><span>Exp.</span></li>
-		<li><a href=""><span>Contact</span></li>
+		<a rel="noopener" href=""><span>Arnaud Brousseau | Home, sweet home...<span></a>
+		<li><a rel="noopener" href=""><span>Home</span></li>
+		<li><a rel="noopener" href=""><span>Projets</span></li>
+		<li><a rel="noopener" href=""><span>Exp.</span></li>
+		<li><a rel="noopener" href=""><span>Contact</span></li>
 	    </ul>
 
 	</nav>
@@ -56,13 +56,13 @@
 
                 <ul>
 
-                    <li class="head"><a href="#head" title="Revenir en haut de page"><span>Top</span></a></li>
+                    <li class="head"><a rel="noopener" href="#head" title="Revenir en haut de page"><span>Top</span></a></li>
 
-                    <li class="projects"><a href="#projects" title="Regarder les missions effectuées"><span>Missions</span></a></li>
+                    <li class="projects"><a rel="noopener" href="#projects" title="Regarder les missions effectuées"><span>Missions</span></a></li>
 
-                    <li class="skills"><a href="#skills" title="Examiner mes compétences"><span>Xp.</span></a></li>
+                    <li class="skills"><a rel="noopener" href="#skills" title="Examiner mes compétences"><span>Xp.</span></a></li>
 
-                    <li class="contact"><a href="#contact" title="Me contacter"><span>Contact</span></a></li>
+                    <li class="contact"><a rel="noopener" href="#contact" title="Me contacter"><span>Contact</span></a></li>
 
                 </ul>
 

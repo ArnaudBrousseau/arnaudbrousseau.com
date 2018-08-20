@@ -6,9 +6,9 @@ activeNavItem: "labs"
     <h1><%= @document.title %></h1>
     <aside>
         <% if @document.externalLink: %>
-            <a href="<%= @document.externalLink %>" target="_blank" title="See this project online!" class="online">See it ONLINE</a>
+            <a rel="noopener" href="<%= @document.externalLink %>" target="_blank" title="See this project online!" class="online">See it ONLINE</a>
         <% else: %>
-            <a href="#" title="Woops, this is not online anymore. Sorry." class="offline">Currently OFFLINE</a>
+            <a rel="noopener" href="#" title="Woops, this is not online anymore. Sorry." class="offline">Currently OFFLINE</a>
         <% end %>
     </aside>
     <%- @content %>

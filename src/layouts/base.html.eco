@@ -32,9 +32,9 @@
     <body>
         <header>
             <nav class="nav-container">
-                <a href="/" class="nav-link <%= if @document.activeNavItem is 'home' then 'active' %>" title="Go back home">Home</a>
-                <a href="/labs" class="nav-link <%= if @document.activeNavItem is 'labs' then 'active' %>" title="Check out what I've been cooking">Labs</a>
-                <a href="/notes" class="nav-link <%= if @document.activeNavItem is 'notes' then 'active' %>" title="Check out what I've been writting">Notes</a>
+                <a rel="noopener" href="/" class="nav-link <%= if @document.activeNavItem is 'home' then 'active' %>" title="Go back home">Home</a>
+                <a rel="noopener" href="/labs" class="nav-link <%= if @document.activeNavItem is 'labs' then 'active' %>" title="Check out what I've been cooking">Labs</a>
+                <a rel="noopener" href="/notes" class="nav-link <%= if @document.activeNavItem is 'notes' then 'active' %>" title="Check out what I've been writting">Notes</a>
             </nav>
         </header>
 
@@ -48,7 +48,7 @@
             &mdash; &#10084; &mdash;
             <br />
             This is an open-source website.
-            <a class="view-source" href="https://github.com/ArnaudBrousseau/arnaudbrousseau.com" target="_blank" title="Feeling brave enough?">
+            <a rel="noopener" class="view-source" href="https://github.com/ArnaudBrousseau/arnaudbrousseau.com" target="_blank" title="Feeling brave enough?">
               Check out the source, Luke!
             </a>
           </p>
