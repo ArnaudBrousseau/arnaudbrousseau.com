@@ -557,7 +557,7 @@ Use case: Media object
 
 <pre class="brush:plain">
     <div class="media">
-      <a rel="noopener" class="pull-left"></a>
+      <a rel="noopener noreferrer" class="pull-left"></a>
       <div class="media-body"></div>
     </div>
 </pre>

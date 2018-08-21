@@ -6,7 +6,7 @@ activeNavItem: "labs"
 <ul class="index labs-index">
     <% for project in @getCollection('html').findAll({layout:'project'}, [{date:-1}]).toJSON(): %>
         <li class="labs-list-item">
-            <a rel="noopener" href="<%= project.url %>">
+            <a rel="noopener noreferrer" href="<%= project.url %>">
                 <img src="<%= project.caption %>" >
                 <span class="caption"><%= project.title %></span>
             </a>

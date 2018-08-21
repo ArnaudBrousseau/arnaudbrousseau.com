@@ -33,11 +33,11 @@
 	<nav>
 
 	    <ul>
-		<a rel="noopener" href=""><span>Arnaud Brousseau | Home, sweet home...<span></a>
-		<li><a rel="noopener" href=""><span>Home</span></li>
-		<li><a rel="noopener" href=""><span>Projets</span></li>
-		<li><a rel="noopener" href=""><span>Exp.</span></li>
-		<li><a rel="noopener" href=""><span>Contact</span></li>
+		<a rel="noopener noreferrer" href=""><span>Arnaud Brousseau | Home, sweet home...<span></a>
+		<li><a rel="noopener noreferrer" href=""><span>Home</span></li>
+		<li><a rel="noopener noreferrer" href=""><span>Projets</span></li>
+		<li><a rel="noopener noreferrer" href=""><span>Exp.</span></li>
+		<li><a rel="noopener noreferrer" href=""><span>Contact</span></li>
 	    </ul>
 
 	</nav>
@@ -53,13 +53,13 @@
 
                 <ul>
 
-                    <li class="head"><a rel="noopener" href="#head" title="Revenir en haut de page"><span>Top</span></a></li>
+                    <li class="head"><a rel="noopener noreferrer" href="#head" title="Revenir en haut de page"><span>Top</span></a></li>
 
-                    <li class="projects"><a rel="noopener" href="#projects" title="Regarder les missions effectuées"><span>Missions</span></a></li>
+                    <li class="projects"><a rel="noopener noreferrer" href="#projects" title="Regarder les missions effectuées"><span>Missions</span></a></li>
 
-                    <li class="skills"><a rel="noopener" href="#skills" title="Examiner mes compétences"><span>Xp.</span></a></li>
+                    <li class="skills"><a rel="noopener noreferrer" href="#skills" title="Examiner mes compétences"><span>Xp.</span></a></li>
 
-                    <li class="contact"><a rel="noopener" href="#contact" title="Me contacter"><span>Contact</span></a></li>
+                    <li class="contact"><a rel="noopener noreferrer" href="#contact" title="Me contacter"><span>Contact</span></a></li>
 
                 </ul>
 
