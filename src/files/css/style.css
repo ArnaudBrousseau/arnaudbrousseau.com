@@ -130,13 +130,17 @@ footer p { margin: 0; }
 
 /* Main section */
 #main {
-    width:680px;
-    margin:60px auto;
+    width: 680px;
+    margin: 60px auto;
 }
 
-.nav-container {
-    text-align: center;
+header {
     border-top: 5px #222 solid;
+    text-align: center;
+}
+.nav-container {
+    width: 680px;
+    margin: auto;
 }
 
 .nav-link {
