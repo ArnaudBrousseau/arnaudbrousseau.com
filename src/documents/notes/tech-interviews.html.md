@@ -117,7 +117,8 @@ grandchild) process begins performing its normal function.
 * Character device (c) -- `/dev/null`
 
 ## POSIX
-**P**ortable **O**perating **S**ystem **I**nterface (POSIX) is a standard to
+
+<b>P</b>ortable <b>O</b>perating <b>S</b>ystem <b>I</b>nterface (POSIX) is a standard to
 define basic operations such that systems implementing it are compatible (and
 as programmers, working across them seems consistent).
 
@@ -163,7 +164,7 @@ to brush up your CS fundamentals in Python:
   * Balancing search trees, to keep the lookup time under a certain time complexity). See [Tree Rotation](https://en.wikipedia.org/wiki/Tree_rotation) and [these slides](http://web.stanford.edu/class/cs166/lectures/05/Small05.pdf) for more.
 
 ## Heap and stack
-The stack is memory that's always LIFO (**L**ast **I**n **F**irst **O**ut) and
+The stack is memory that's always LIFO (<b>L</b>ast <b>I</b>n <b>F</b>irst <b>O</b>ut) and
 used to keep track of function calls and local variables. The stack is the
 running tally of the current program's execution. To remember this, think about
 the famous `StackOverflow` exception, which occurs when a function recurs into
@@ -250,8 +251,8 @@ reading [RFC7540](https://tools.ietf.org/html/rfc7540)
 ## TCP vs. UDP
 TCP is reliable, it'll retransmit data. UDP isn't and won't.
 
-* TCP: **T**ransmission **C**ontrol **P**rotocol
-* UDP: **U**ser **D**atagram **P**rotocol
+* TCP: <b>T</b>ransmission <b>C</b>ontrol <b>P</b>rotocol
+* UDP: <b>U</b>ser <b>D</b>atagram <b>P</b>rotocol
 
 From the man pages:
 
@@ -281,8 +282,8 @@ See:
 
 
 ## SSL vs TLS
-SSL (**S**ecure **S**ocket **L**ayer) was released by netscape in the 90s. TLS
-(**T**ransport **L**ayer **S**ecurity) is the name SSL took once it was taken
+SSL (<b>S</b>ecure <b>S</b>ocket <b>L</b>ayer) was released by netscape in the 90s. TLS
+(<b>T</b>ransport <b>L</b>ayer <b>S</b>ecurity) is the name SSL took once it was taken
 over by IETF.
 
 For a good overview of the principles behind HTTPS and what actually happens when a TLS connection is established, see [this post](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html).
@@ -300,7 +301,7 @@ For a good overview of the principles behind HTTPS and what actually happens whe
 * Browsers ship with hardcoded lists of certificate authorities (CAs)
 
 ## DNS
-DNS (**D**omain **N**ame **S**ystem) queries are made by browsers to be able to
+DNS (<b>D</b>omain <b>N</b>ame <b>S</b>ystem) queries are made by browsers to be able to
 know which host to establish a connection to. DNS packets are transported over
 UDP on port 53. Some resolvers use TCP. Here's an example:
 
@@ -813,7 +814,7 @@ a good set of questions/answers to quickly go over a lot of the possible
 frontend questions.
 
 ## BEM
-BEM (**B**lock **E**lement **M**odifier) is the name for a convention in CSS class names.
+BEM (<b>B</b>lock <b>E</b>lement <b>M</b>odifier) is the name for a convention in CSS class names.
 
 <pre class="brush:css">
     /** "blocks" are building blocks of a page (reviews, search, sidebar, etc) **/
