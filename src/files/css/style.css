@@ -359,6 +359,12 @@ a.content-link:hover {
 }
 
 /* Now let's style out notes */
+.draft-warning {
+  border: 1px #cb0e0e solid;
+  text-align: center;
+  padding: 5px;
+  background: #ffa4a4;
+}
 .note-title {
     margin-bottom: 0px;
     text-align: center;

@@ -1,0 +1,30 @@
+---
+layout: "base"
+activeNavItem: "notes"
+---
+<h2 class="draft-warning">Hey did you know? THIS IS AN UNPUBLISHED DRAFT!</h2>
+
+<h1 class="title note-title"><%= @document.title %></h1>
+<p class="note-subtitle">
+    <em class="note-subtitle-content">
+        <time datetime="<%= @document.date %>"><%= @document.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) %></time>
+    </em>
+</p>
+
+
+<div class="note-content">
+    <%- @content %>
+</div>
+
+<link href="/css/shCoreMidnight.css" rel="stylesheet" type="text/css" />
+<script src="/js/shCore.js" type="text/javascript"></script>
+<script src="/js/shAutoloader.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+        'js jscript javascript  /js/shBrushJScript.js',
+        'python                 /js/shBrushPython.js',
+        'plain                  /js/shBrushPlain.js',
+        'css                    /js/shBrushCss.js'
+    );
+    SyntaxHighlighter.all();
+</script>
