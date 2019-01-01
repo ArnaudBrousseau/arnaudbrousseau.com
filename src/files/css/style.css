@@ -417,9 +417,11 @@ a.content-link:hover {
  * stays consistent.
  */
 .note-content code {
-  font-size: 20px;
+  background-color: #dcdcdc;
+  background-color: #dcdcdc80;
+  border-radius: 4px;
+  font-size: 18px;
   padding: 2px 2px;
-  color: #b43d3d;
   font-family: "PT Mono", Menlo, "Consolas", "Courier New", monospace;
 }
 
