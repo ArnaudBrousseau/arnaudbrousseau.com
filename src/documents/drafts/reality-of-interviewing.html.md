@@ -5,20 +5,46 @@ layout: "draft"
 activeNavItem: "notes"
 ---
 In October 2018 I quit my engineering job at Yelp. The 6.5 years I spent
-working there were amazing in many ways. I might go into this in a future
-Glassdoor review if I have time. The purpose of this post is to do a bit of
-retrospective on my interviewing experience (all of it: preparation phase,
-interviews, post-interview communication) and write down as many details/tips
-as I can while it's still fresh in my mind.
+working there were amazing in many ways. The purpose of this post is to reflect
+on my interviewing experience (all of it: preparation phase, interviews,
+post-interview communication) and write down as many details/tips as I can
+while it's still fresh in my mind. Hopefully it's useful to somebody out there
+(you?) but if nothing else it'll surely be useful for me next time, when I'm on
+the job market again.
 
 Beware I'm not planning to half-ass this, so get cozy: this is a long read.
 
 # Resume
+There are a lot of strong opinions out there about what should and shouldn't go
+into your resume. My experience, both as someone who screened hundreds of
+resumes and as someone who applied to tens of job postings is that **resumes are
+at best neutral**. If you have an awful resume you probably won't get responses
+when applying. If you fix your resume you'll probably get responses
+and that's the sweet spot. If you build an amazing resume you'll still get
+responses, but it won't help you in any other way.
 
-* Do not attempt to list every single thing
-* Your resume is going to be less important than you think, depending on how you're going about generating leads (more on that later)
-* Make sure LinkedIn is up-to-date
-* Check your online presence. Time to freshen up your personal site if you have one, make sure to dust off old-looking things in your public Twitter, cleanup your Github, etc.
+If you want to be effective with your time do not spend too much time on your
+resume. Give it the attention it deserves and move on quickly. It's much better
+to spend your time on generating leads, finding referrals or brushing up on your
+CS fundamentals (more on that later).
+
+That being said I'm not going to avoid answering. Here are the cardinal sins of
+resumes in my book:
+
+* Proprietary formats. Not everyone has Microsoft Word installed! Stick to PDF.
+* Grammar or spelling mistakes. Given the reduced number of words on a resume,
+  seeing a grammar or spelling mistake is a huge red flag.
+* Labels such as "ninja", "hardcore", "guru" are an immediate turn-off
+* Dead links. If it's on your resume, it should work!
+
+Some other tips:
+
+* Keep it short! People reading your resumes have a limited time (typically 30
+  seconds to 1 minute per resume)
+* Check your online presence (Google yourself!). Time to freshen up your
+  personal site if you have one, make sure to dust off old-looking things in
+  your public Twitter, cleanup your Github, etc.
+
 
 # Lead Generation
 
@@ -60,11 +86,19 @@ The other
 
 # Pick a Language and Stick with it
 
-Coding interviews are basically glorified IQ tests. The good news is that no IQ
-test is perfect and you can "game" the system provided that you know what's
-expected of you. What it comes down to is: save brain computing power. Picking
-a language that you're familiar with and fluent in will save you a lot of
-computing power. Instead of thinking about the best way (or how) to write a class, practice ahead of time. Here's a list of things to practice, applicable to Python (if you pick Java or C++ the specifics will change but the concepts remain the same):
+"Coding interviews are basically glorified IQ tests". That's something I've
+heard directly from an interviewer in our closing Q&A, and I think it's an
+accurate statement.
+
+The good news is that no IQ test is perfect and you can "game" the system
+provided that you know what's expected of you. What it comes down to is: **save
+your brain's computing power**.
+
+Picking a language that you're familiar with and fluent
+in will save you a lot of computing power. Instead of thinking about the best
+way (or how) to write a class, practice ahead of time. Here's a list of things
+to practice, applicable to Python (if you pick Java or C++ the specifics will
+change but the concepts remain the same):
 
 * Write a new class (class declaration, `__init__`, magic methods, inheritance)
 * Instantiate a class, run code (memorize `if __name__ == "__main__"` for instance)
