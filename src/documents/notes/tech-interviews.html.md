@@ -1,5 +1,6 @@
 ---
 title: "The Full Stack Tech Interview"
+featured: "true"
 date: 2018-07-15
 layout: "note"
 activeNavItem: "notes"

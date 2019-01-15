@@ -1,0 +1,66 @@
+---
+title: "Home"
+layout: "base"
+activeNavItem: "home"
+---
+<div class="home">
+  <p class="intro">
+    Welcome to my online home! I'm Arnaud. <br/>
+    I work at <a rel="noopener" href="https://www.coinbase.com">Coinbase</a>, in San Francisco. <br/>
+    I spent years working for <a rel="noopener" href="https://www.yelp.com">Yelp</a> Inc. <br/>
+    resolved to code, debug and think. <br/>
+    <br/>
+    I believe in the web being open.<br/>
+    I believe in the web being free.<br/>
+    "View Page Source"  <br/>
+    I fell in love with the web long ago <br/>
+    I tinker with JavaScript, HTML and CSS. <br/>
+    and since JavaScript  books, tea, and video games.</br>
+    and since JavaScript  books, tea, and video games.</br>
+    <br/>
+    and since JavaScript  books, tea, and video games.</br>
+    and since JavaScript  books, tea, and video games.</br>
+    and since JavaScript  books, tea, and video games.</br>
+  </p>
+
+  <h1 class="title">Popular Notes</h1>
+  <ul class="index notes-index">
+      <% for note in @getCollection('html').findAll({layout:'note', featured: 'true'}, [{date:-1}]).toJSON(): %>
+          <li class="notes-list-item">
+              <a rel="noopener" class="content-link" href="<%= note.url %>">
+                  <%= note.title %>
+              </a>
+          </li>
+      <% end %>
+      <br/>&rarr; <a rel="noopener noreferrer" class="content-link" href="/notes">See All Notes Published Here</a>
+  </ul>
+
+  <h1 class="title">Favorite Projects</h1>
+  <ul class="index labs-index">
+      <% for project in @getCollection('html').findAll({layout:'project', featured: 'true'}, [{date:-1}]).toJSON(): %>
+          <li class="labs-list-item">
+              <a rel="noopener noreferrer" href="<%= project.url %>">
+                  <img src="<%= project.caption %>" >
+                  <span class="caption"><%= project.title %></span>
+              </a>
+          </li>
+      <% end %>
+      <br/>&rarr; <a rel="noopener noreferrer" class="content-link" href="/labs">Visit my Labs for a complete list of projects</a>.
+  </ul>
+
+  <h1 class="title">Find Me Online</h1>
+  <p class="social">
+      <a rel="noopener noreferrer" href="https://twitter.com/arnaudbrousseau" target="_blank" title="Follow me on Twitter :)" class="twitter">
+        <span>Twitter Account</span>
+      </a>
+      <a rel="noopener noreferrer" href="https://github.com/ArnaudBrousseau" target="_blank" title="Wanna check my code on GitHub? Fork it." class="github">
+        <span>My GitHub Profile</span>
+      </a>
+      <a rel="noopener noreferrer" href="https://fr.linkedin.com/in/arnaudbrousseau/en" target="_blank" title="Check me out on LinkedIn" class="linkedin">
+        <span>LinkedIn profile</span>
+      </a>
+      <a rel="noopener noreferrer" href="https://www.flickr.com/arnaudbrousseau" target="_blank" title="See my pics on Flickr" class="flickr">
+        <span>Flickr Profile</span>
+      </a>
+  </p>
+</div>
