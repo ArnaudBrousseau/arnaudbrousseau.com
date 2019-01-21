@@ -45,16 +45,38 @@ Some other tips:
   personal site if you have one, make sure to dust off old-looking things in
   your public Twitter, cleanup your Github, etc.
 
+For reference and transparency, here's [my resume](/labs/resume). Feel free to
+open a pull request [on
+Github](https://github.com/ArnaudBrousseau/arnaudbrousseau.com/blob/master/src/files/labs/resume/index.html)
+if you spot something off ;)
 
-# Lead Generation
 
-* TripleByte
-* Underdog.io
-* Hired
-* Passive recruiter outreach (LinkedIn, email)
-* Referrals
+# Job Application (aka "Lead Generation")
 
-(TODO: write some more words here about each of these options)
+Once you have a resume and a web presence it's time to actually apply for jobs!
+As a software engineer you have a ton of options:
+
+* Passive recruiter outreach: we all have these annoying emails from technical
+  "sourcers" (recruiters). It feels like spam. Most of the time it is. I save
+  the interesting ones into a folder. When my job search started I reached back
+  out and I got interesting leads/contacts from this.
+* Referrals: by far the best, most effective lead-generation tool if you're
+  already working as an engineer. Hit up your friend list on Facebook or lookup
+  people on social media (Twitter, LinkedIn).  Most of the time companies have
+  referral programs in place: if you get the job, the person referring you gets
+  a fixed amount of money. By reaching out they're doing you a favor, and you're
+  potentially doing them a favor!
+* [TripleByte](https://triplebyte.com/): I've used their service successfully
+  and can't recommend it enough. If you're accepted in their program you'll get
+  to go directly to the on-site interview stage with companies that are
+  interested in your profile. That's a huge potential time saving! If you don't
+  get in it's still good practice, and it's free.
+* [Underdog.io](https://underdog.io/): geared towards finding startups. I
+  personally haven't had much success with this but the service seems high
+  quality with quite a lot of startups to choose from.
+* [Hired](https://hired.com/): surprisingly effective for me. Maybe that was
+  luck? I got a lot of companies interested in my profile and high-quality
+  interviews from this platform.
 
 # Have a story
 
@@ -77,13 +99,13 @@ to take away from your answer to their question?
 # Computer Science Fundamentals
 
 I've written about this [previously](/notes/tech-interviews.html): I really
-don't know why Computer Science Fundamentals are such a big focus in the industry. The
-reality of interviewing is that they are the most common denominator across
-companies, roles and level of experience. Love it or hate it, studying CS
-fundamentals is probably the most efficient thing you can do if you are
-prepping for technical interviews because a) it's probably been a while since
-you've done anything with binary trees or linked lists and b) these questions
-come up *all the time*.
+don't know why Computer Science Fundamentals are such a big focus in our
+industry. The reality of interviewing is that they are the most common
+denominator across companies, roles and level of experience. Love it or hate it,
+studying CS fundamentals is the most efficient thing you can do if you
+are prepping for technical interviews because a) it's probably been a while
+since you've done anything with binary trees or linked lists and b) these
+questions come up *all the time*.
 
 So what exactly is considered "CS fundamentals"? Here's my take on it:
 
@@ -112,19 +134,21 @@ The good news is that no IQ test is perfect and you can "game" the system
 provided that you know what's expected of you. What it comes down to is: **save
 as many "CPU cycles" as possible** and use those wisely.
 
-Picking a language that you're fluent in saves you a lot of
-cycles. Instead of thinking about the best way (or how) to write a class, or
-trying to avoid an off-by-one error in a `for` loop or a `range` call, practice
-ahead of time. Here's a list of things to practice, applicable to Python (if you
+Picking a language that you're fluent in saves you a lot of cycles. Instead of
+thinking about the best way (or how) to write a class, or trying to avoid
+off-by-one errors, practice ahead of time so that a high percentage of cycles is
+allocated to thinking about the problem during an actual interview.
+
+Here is a non-exhaustive list of things to practice applicable to Python (if you
 pick Java or C++ the specifics between parenthesis vary but the base concepts
 remain the same):
 
-* Write assertions (use `assert` and use assertion messages!)
-* Write basic "closed" loops (`for i in range(begin, end)`). Make sure you won't get surprised by `range`'s behavior. `begin` is **inclusive**, `end` is **exclusive** so to loop through with i taking values 1, 2, and 3: `for i in range(1, 4)`
-* Write backward loops (`for i in range(end-1, begin-1, -1)`)
-* Write "open" loops (`while some_condition`). Make sure you know how to terminate loops with `break`. Make sure you're familiar with `continue` and its behavior
-* Write a new class (class declaration, `__init__`, magic methods, inheritance)
-* Instantiate a class, run code (memorize `if __name__ == "__main__"` for instance)
+* **Write assertions** (use `assert` and use assertion messages!)
+* **Write basic "closed" loops** (`for i in range(begin, end)`). Make sure you won't get surprised by `range`'s behavior. `begin` is **inclusive**, `end` is **exclusive** so to loop through with i taking values 1, 2, and 3: `for i in range(1, 4)`
+* **Write backward loops** (`for i in range(end-1, begin-1, -1)`)
+* **Write "open" loops** (`while some_condition`). Make sure you know how to terminate loops with `break`. Make sure you're familiar with `continue` and its behavior
+* **Write a new class** (class declaration, `__init__`, magic methods, inheritance)
+* **Instantiate a class, run code** (memorize `if __name__ == "__main__"` for instance)
 * (Python specific) List comprehensions: don't *over*use them, but definitely
   know how they work and where to use them (typically when you want to do
   complex destructuring or filtering). They can save a ton of time
@@ -151,7 +175,7 @@ they're aware of it or not, interviewers will grade you based on:
 ## Coding Kata
 Because there are so many things you'll be judged on aside from coding, don't
 fall into the trap of practicing on too many different problems. What I suggest
-instead: pick a problem and try to solve it in **different settings**, ideally a
+instead: pick a problem and try to solve it in *different settings*, ideally a
 few days apart.
 
 First practice it in the most comfortable setting: with your favorite
@@ -166,7 +190,7 @@ code runs! Finally, practice on paper or a whiteboard, to
 practice handwriting and speaking out loud while you're coding.
 
 If you're interviewing with a company which does whiteboard coding only (Google,
-Facebook, Amazon, probably others) try solving a few problems on the whiteboard
+Facebook, Amazon, others) try solving a few problems on the whiteboard
 first while talking out loud as if a person was listening and judging. And time
 yourself. Afterwards, take what you wrote on paper or whiteboard and type it in
 mindlessly in an editor/IDE. Does it compile/run? Does it do what you want? Make
@@ -184,17 +208,25 @@ notebook to spot trends: are you making a lot of syntax errors? Do you always
 forget to declare variables when they're in a `for` loop? What sort of problems
 are causing you the most grief?
 
-I reviewed my notebook once a week and before each interview. This helped
-me tremendously. Why? Awareness is more than half the battle. There are hundreds
-of potential mistakes people make when coding, but you have your own special weaknesses.  
-Being aware and actively on the lookout for **specific** classes of mistakes
-drastically reduces the chance of making them and leaving them on the whiteboard
-after a quick self-code-review.
+I reviewed my notebook once a week and before each interview. This helped me
+tremendously. Why? Awareness is more than half the battle. There are hundreds of
+potential mistakes people make when coding but you have your own special
+weaknesses.
 
-# Soft skills
+Being aware and actively on the lookout for **specific** types of mistakes
+drastically reduces the chance of making them. With a bit of training you'll
+spot them as soon as they're on your computer screen or whiteboard. Eventually
+you'll probably eliminate them *in your mind*, which means entire classes of
+mistakes/bugs are gone!
+
+# Don't forget about "soft" skills
 
 This was prompted by my preparation for Amazon's and Facebook's interview
-processes. Here are a list of questions/prompts to prepare:
+processes. Soft skills are really important. Most engineers underestimate the
+importance of soft skills in coding interviews and do not prepare effectively as
+a result. Preparing just a little bit puts you ahead of the pack.  It's
+definitely worth investing an afternoon don't you think? Here's a list of
+questions/prompts to prepare:
 
 *   Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome of that choice?
 *   When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow from that experience?
@@ -390,11 +422,227 @@ Another piece of advice that I've heard from mentors and colleagues: try to
 focus on learning and growth early in your career and disregard compensation if
 that's possible for you to do.
 
-# Complete personal TODO list
+That being said: how do you actually go about evaluating your future company,
+manager or teammates during your interviews? Obviously it depends. Teammates,
+managers and engineering cultures are all made of people. A manager who feel
+awful to me might be a great fit for you. Below are **my personal** criteria to
+gauge these things. I encourage you to develop your own and write them down.
 
-Below is the precise list of things I did to prepare myself for interviews last
-year. Beware this is *my* list. Yours will probably vary widely, especially if
-you're interviewing for a different role or for a different set of companies.
+## Evaluating your future manager
+I hate micromanagers. The absolute worst manager would be one who's constantly
+looking over my shoulder and my teammates'. In a manager I'm also looking for
+somebody who's cool-headed and who can provide a good "shield". Concretely this
+means somebody who'll fight to keep the team focused on a minimum number of
+projects, and who will switch things up only when absolutely necessary. The
+third thing I'm looking for: someone who can coach, be understanding and listen.
+
+It's hard to probe for these things directly but I'll tell you my personal
+opinion on what you can look for *in an interview setting*.
+
+The person you are talking to is more likely to be a **bad manager** if they...:
+
+* have a tendency to talk a lot
+* get animated easily, are overly enthusiastic
+* interrupt you at any point
+* have a tendency to focus the discussion instead of opening it up
+* did a lot of impressive technical work in the recent past
+* are first-time managers (sorry, I have to put this in here!)
+
+And here are some positive attributes. The person you are talking to is more
+likely to be a **good manager** if they...:
+
+* ask good questions
+* look interested in the answers. Bonus points for taking notes during interviews
+* tend to stay high-level
+* are terse/concise when they speak
+* feel underwhelming, not that impressive
+* smile, are positive
+* get personal and tend to ask questions "out of the blue" to open up
+  discussion. For example, during your interview: "so who got you interested in
+  computers in the first place?" "have you thought about technical leadership?
+  Is that something you'd like to do down the road?", etc.
+* have a long history of being managers. Bonus points if they've done it at
+  multiple companies. Extra bonus points if they have a non-CS background.
+
+## Interviewing teammates
+Teammates are a bit easier to judge provided that you interview them. What makes
+an ideal teammate to me? Somebody who's willing to spend time to show me the
+ropes and obscure tips to boost my productivity. Somebody who's willing to say
+"I don't know" and learn from me when I can teach them something they don't
+know. Somebody who'll happily take ownership of an idea that isn't their own.
+Somebody who says "hi" when you cross paths in the office or outside (a nod of
+acknowledgment and a smile goes a long way). Somebody who admits to making
+mistakes. No trying to cover them up.
+
+How to evaluate this when you're talking 1-1 to someone? The person you are
+talking to is likely to be a **bad teammate** if they...:
+
+* interrupt you at any point
+* are easily distracted and don't pay attention to what you're saying/writing
+* take the interview process or themselves too seriously
+
+Conversely the person you are talking to is likely to be a **good teammate** if
+they...:
+
+* smile; are enthusiastic when they talk about their job and the team
+* are more interested in hearing about your technical expertise than explaining
+  theirs or the team's
+* are able to give you useful hints (use the power of hindsight here. Sometimes
+  the hint won't feel helpful on the spot, but you'll see its value later on.
+  That's fine and correlates with good teammates in my experience)
+* tend to explain the context of the problem or answers they're giving
+
+## Gauging work culture
+Work culture constantly shifts within a company. Very often it's not consistent
+across teams. Heck, *you* may change and consider a culture "cool" now and
+"awful" in a few years. That's certainly happened to me.
+
+At the time of writing my ideal work culture offers a good work-life balance. I
+want to be able to sleep and spend weekends in the woods when I feel like it. I
+value work cultures with an emphasis on social good will (help each other, be
+positive, teach/learn from your neighbors, etc), (self)-education and
+transparency. See [this post](/notes/values.html) for my values overall.
+
+Now onto how to evaluate this in an interview setting. Some of these criteria
+are self-explanatory; others require that you ask specific questions to your
+interviewers. Most interviewers reserve some time at the end of their interviews
+specifically for this, and an immense majority of recruiters will be happy to
+set up additional calls if you didn't have time to ask all your questions.
+Without further ado, the company you're interviewing for is likely to have a
+**bad culture** if:
+
+* there's only White/Asian males in their 20s/30s on your interview panel
+* a large part of the team-building happens outside of work hours ("the team
+  generally hangs out on Friday nights" -- Ugh. Does this mean if I don't come
+  Friday night I'll miss out?)
+* your interviewers are intimidating (putting pressure on instead of trying to
+  take it off you)
+* there are very few senior engineers and a lot of first-time managers
+* the leadership team has seen a lot of departures in the recent past
+* people pride themselves on working long hours or not taking vacation, even
+  humorously (quick example: me: "when was the last time you took a long
+  holiday? Where did you go?", them: "oh man I haven't taken a long vacation in
+  years!...*chuckles*...yeah the work here is really intense you
+  see, so I tend to take one or two days here and there around long weekends)
+
+Conversely what I'm looking for; the company you're interviewing for is likely
+to have a **good culture** if:
+
+* Teams are fluid -- this means knowledge gets around the company and fewer
+  silos exist
+* There's a default flexible work arrangement (everyone can choose to work
+  from home on given days)
+* There's an established on-call rotation -- if there's a rotation, there's
+  usually runbooks, calendars, and incident response procedures!
+* No code goes to production unless reviewed (cowboy shipping is usually
+  indicative of a brash engineering culture)
+* The company has a good number of non-engineers employees. In my experience
+  this helps balance egos and somewhat limit the nonsense sometimes generated by
+  engineering-first cultures. That's only valid if non-engineers employees
+  interact meaningfully with the rest of the company!  Say if there's a large
+  number of sales people in a different building, or a large number of warehouse
+  workers in a different city, the impact on the work culture you'll experience
+  as an engineer is zero...
+
+# Reflection on interviewing pipelines and processes
+
+When talking about interviewing processes the terms of "false positives" and
+"false negatives" are often used. What are they referring to?
+
+* a "*false positive*" is a person who is hired and isn't a good fit
+* a "*false negative*" is a person who is rejected but would've been a good fit
+
+Most interview processes are heavily skewed towards avoiding false positives at
+all cost. Why? A bad newhire on a software team is usually very costly. But
+rejecting somebody who might have been a good fit isn't. The assumption is that
+more capable candidates will flow through later. That's definitely true for
+Google, Facebook, Amazon, etc. That's why you should not feel bad if you're
+rejected. I've heard that Google employees going through the Google interview
+process have a success rate of 50%. Yup. Half of Google's employee didn't make
+it. Pat yourself in the back if you're rejected and move on to the next one.
+
+What's also crucial in the design of interview processes is the cost associated
+with each stage. Typically cost is multiplied by 10 for each step in the
+pipeline. Phone screen is cheap (tens of dollars, it's just 30mins of a
+recruiter's time). A 1hr Skype call with an engineer + debrief is more costly,
+because of the coordination (hundreds of dollars). A full round of on-site
+interviews, with all of the coordination and travel cost associated with it is
+in the thousands of dollars. Something to keep in mind when you're going through
+interviews and you're rejected: the company may not want to take the financial
+risk associated with on-site interviews, but you may still be a good engineer
+(this is also the result of "optimize for zero false positives")
+
+Having been through a few interviewing pipelines recently, below are some really
+good ideas I've seen.
+
+## Automatically graded coding test
+This saves a ton of time, and can often replace an expensive and biased (because
+it involves the judgment of a single person) "phone screen" or "video call" with
+an engineer.
+
+On that note, try to keep this under 1hr. The "take home assignments" that
+require more than 1.5hrs to complete will cause a lot of good candidates to lose
+interest.
+
+## On-site interviews
+During on-site interviews, focus on what's difficult to assess! In my opinion,
+on-site interviewers should steer clear of coding questions as much as possible.
+The best way to know whether a candidate would be good to work with is to
+simulate working with them! Try pair programming. Try whiteboarding systems. Try
+simulating the experience of finding/fixing a bug together! How about reviewing
+and discussing a piece of real code?
+
+Quite frankly I don't understand why this isn't more common. The fact that
+Google, a company I deeply admire for their ethos and ability to innovate,
+sticks to whiteboarded algorithm questions (for the most part...they do have
+design questions for senior engineers though) is baffling.
+
+## No-surprises interviews
+Interviews do not have to feel like taking an exam. Why not communicate the
+names of the interviewers, their teams, and rough subjects of the interviews
+ahead of time? When I'm working on something new at work or when I'm called to
+go to a meeting with a new group, I'm given notice on the agenda and topic. I
+see no reason why interviews should be different.
+
+A bad schedule example:
+
+> * 9am: meet and greet  
+> * 9:15am-10am: coding interview  
+> * 10am-10:45am: coding interview  
+> * 10:45am-11:30am: design interview  
+> * 11:30am-12:30pm: lunch break  
+> * 12:30pm-1:15pm: coding interview  
+> * 1:15pm-2pm: coding interview  
+> * 2pm-2:15pm: wrap up  
+
+A better example:
+
+> * 9am: recruiter will meet you in the lobby and walk you to your room for the
+> day  
+> * 9:15am-10am: coding interview with Sarah, engineer on the Payments team.
+> This will focus on tree-like structures and performance  
+> * 10am-10:45am: coding interview with John, senior engineer on our
+> Infrastructure team. Focus will be on caches in the context of web
+> applications as well as code quality  
+> * 10:45am-11:30am: design interview with Jane from our data science team.
+> You'll get to talk about data pipelines and associated technical trade-offs  
+> * 11:30am-12:30pm: lunch break  
+> * 12:30pm-1:15pm: coding interview with Noah, engineer on the Platform team.
+> This interview will focus on finding a bug in one of our internal web
+> frameworks used in our microservices fleet  
+> * 1:15pm-1:30pm: wrap up with your recruiter, to shield questions and escort
+> you out of our HQ  
+
+Sure candidates will study ahead of time. But that's good! I'm betting that this
+should lead to higher-quality interviews overall, and better experience for
+candidates.
+
+# A final offering: my personal interviewing TODO list
+
+To conclude this blog post (yup that's the last section! Good job making it this
+far!), here is the precise list of things I did to prepare myself for interviews
+last year. Beware this is *my* list. Yours may vary widely, especially
+if you're interviewing for a different role or for a different set of companies.
 FYI: I was interviewing for performance/infrastructure/backend/full-stack
 software engineering positions, with Python as my language of choice whenever
 coding was needed.
@@ -505,7 +753,7 @@ Here are some TODO items that do not fit in the above categories:
     *   Read fearless salary negotiation free sample
     *   Read fearless salary negotiation book
 
-What I did not do (the items left on my giant TODO list basically). I will
+Finally, what I **did not do** (the items left on my giant TODO list basically). I will
 never know if these would have been useful to do or not...but here's the list
 anyway:
 
@@ -534,99 +782,4 @@ anyway:
 *   Read [Why Events Are A Bad Idea (for high-concurrency servers)](https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf) 
 *   Read [Paxos Made Live - An Engineering Perspective](http://www.cs.utexas.edu/users/lorenzo/corsi/cs380d/papers/paper2-1.pdf) 
 
-# Reflection on interviewing pipelines and processes
-
-When talking about interviewing processes the terms of "false positives" and
-"false negatives" are often used. What are they referring to?
-
-* a "*false positive*" is a person who is hired and isn't a good fit
-* a "*false negative*" is a person who is rejected but would've been a good fit
-
-Most interview processes are heavily skewed towards avoiding false positives at
-all cost. Why? A bad newhire on a software team is usually very costly. But
-rejecting somebody who might have been a good fit isn't. The assumption is that
-more capable candidates will flow through later. That's definitely true for
-Google, Facebook, Amazon, etc. That's why you should not feel bad if you're
-rejected. I've heard that Google employees going through the Google interview
-process have a success rate of 50%. Yup. Half of Google's employee didn't make
-it. Pat yourself in the back if you're rejected and move on to the next one.
-
-What's also crucial in the design of interview processes is the cost associated
-with each stage. Typically cost is multiplied by 10 for each step in the
-pipeline. Phone screen is cheap (tens of dollars, it's just 30mins of a
-recruiter's time). A 1hr Skype call with an engineer + debrief is more costly,
-because of the coordination (hundreds of dollars). A full round of on-site
-interviews, with all of the coordination and travel cost associated with it is
-in the thousands of dollars. Something to keep in mind when you're going through
-interviews and you're rejected: the company may not want to take the financial
-risk associated with on-site interviews, but you may still be a good engineer
-(this is also the result of "optimize for zero false positives")
-
-Having been through a few interviewing pipelines recently, below are some really
-good ideas I've seen.
-
-## Automatically graded coding test
-This saves a ton of time, and can often replace an expensive and biased (because
-it involves the judgment of a single person) "phone screen" or "video call" with
-an engineer.
-
-On that note, try to keep this under 1hr. The "take home assignments" that
-require more than 1.5hrs to complete will cause a lot of good candidates to lose
-interest.
-
-## On-site interviews
-During on-site interviews, focus on what's difficult to assess! In my opinion,
-on-site interviewers should steer clear of coding questions as much as possible.
-The best way to know whether a candidate would be good to work with is to
-simulate working with them! Try pair programming. Try whiteboarding systems. Try
-simulating the experience of finding/fixing a bug together! How about reviewing
-and discussing a piece of real code?
-
-Quite frankly I don't understand why this isn't more common. The fact that
-Google, a company I deeply admire for their ethos and ability to innovate,
-sticks to whiteboarded algorithm questions (for the most part...they do have
-design questions for senior engineers though) is baffling.
-
-## Communicate Expectations
-Interviews do not have to feel like taking an exam. Why not communicate the
-names and rough subjects of the interviews ahead of time? When I'm working on
-something new at work or when I'm called to go to a meeting with a new group,
-I'm given notice on the agenda and topic. I see no reason why interviews should
-be different.
-
-A bad schedule example:
-
-> * 9am: meet and greet  
-> * 9:15am-10am: coding interview  
-> * 10am-10:45am: coding interview  
-> * 10:45am-11:30am: design interview  
-> * 11:30am-12:30pm: lunch break  
-> * 12:30pm-1:15pm: coding interview  
-> * 1:15pm-2pm: coding interview  
-> * 2pm-2:15pm: wrap up  
-
-A better example:
-
-> * 9am: recruiter will meet you in the lobby and walk you to your room for the
-> day  
-> * 9:15am-10am: coding interview with Sarah, engineer on the Payments team.
-> This will focus on tree-like structures and performance  
-> * 10am-10:45am: coding interview with John, senior engineer on our
-> Infrastructure team. Focus will be on caches in the context of web
-> applications as well as code quality  
-> * 10:45am-11:30am: design interview with Jane from our data science team.
-> You'll get to talk about data pipelines and associated technical trade-offs  
-> * 11:30am-12:30pm: lunch break  
-> * 12:30pm-1:15pm: coding interview with Noah, engineer on the Platform team.
-> This interview will focus on finding a bug in one of our internal web
-> frameworks used in our microservices fleet  
-> * 1:15pm-1:30pm: wrap up with your recruiter, to shield questions and escort
-> you out of our HQ  
-
-Sure candidates will study ahead of time. And that's good! I'm betting that this
-should lead to higher-quality interviews overall, and better experience for
-candidates.
-
-# Wrap up
-
-You made it, that's the end!
+You made it. You're a hero. This is the end.
