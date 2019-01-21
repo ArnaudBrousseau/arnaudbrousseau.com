@@ -22,7 +22,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { margin: 0; font-size: 13px; line-height: 1.42; } /* Slighly bigger line height. Because 42 my friend! */
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: sans-serif; color: #3e3c35; }
 
 /* Links supercharged */
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -116,16 +116,16 @@ header, footer {
     font-family: 'PT Serif', Georgia, serif;
     font-size: 12px;
     text-align: center;
-    color: #222;
+    color: #3e3c35;
 }
 
 footer {
     font-weight: bold;
     padding: 9px;
-    border-bottom: 5px #222 solid;
+    border-bottom: 5px #3e3c35 solid;
 }
 footer h1 { font-size: 40px; line-height: 40px; margin: 0; }
-footer a:visited { color: #222; }
+footer a:visited { color: #3e3c35; }
 footer p { margin: 0; }
 
 /* Main section */
@@ -135,7 +135,7 @@ footer p { margin: 0; }
 }
 
 header {
-    border-top: 5px #222 solid;
+    border-top: 5px #3e3c35 solid;
     text-align: center;
 }
 .nav-container {
@@ -144,7 +144,7 @@ header {
 }
 
 .nav-link {
-    color: #222;
+    color: #3e3c35;
     font-family: 'PT Serif', Georgia, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
@@ -154,18 +154,18 @@ header {
     padding: 12px 24px;
     font-size: 24px;
     border-radius: 0 0 4px 4px;
-    border: 1px #222 solid;
+    border: 1px #3e3c35 solid;
     transition-property: background-color, color, text-shadow;
     transition-duration: .3s;
 }
 
-.nav-link:visited { color: #222; }
+.nav-link:visited { color: #3e3c35; }
 
 .nav-link:hover,
 .nav-link.active {
     color: #fff;
     background-color: #444;
-    text-shadow: 0 -2px #222;
+    text-shadow: 0 -2px #3e3c35;
     transition-property: background-color, color, text-shadow;
     transition-duration: .3s;
 }
@@ -320,7 +320,7 @@ a.offline {
 /* Link styles */
 a.content-link,
 a.content-link:visited {
-    color: #222;
+    color: #3e3c35;
     padding: 2px 4px;
     border-radius: 4px;
 }
@@ -349,7 +349,7 @@ a.content-link:hover {
     padding: 10px;
     background: #FFF;
     text-decoration: none;
-    color: #222;
+    color: #3e3c35;
     border-radius: 2px;
 }
 .labs-list-item .caption {
@@ -373,11 +373,11 @@ a.content-link:hover {
     font-size: 11px;
     line-height: 5px;
     text-align: right;
-    background: #222;
+    background: #3e3c35;
     padding-right: 11px;
     margin: 0;
 }
-.note-subtitle a { color: #222; }
+.note-subtitle a { color: #3e3c35; }
 .note-subtitle-content {
     display: inline-block;
     background: #fff;
@@ -390,10 +390,21 @@ a.content-link:hover {
     margin: 60px auto;
 }
 
-.note-content h1 {
-    font-size: 32px;
-    border-bottom: 1px solid #222;
+.note-content h1,
+.note-content h2,
+.note-content h3,
+.note-content h4,
+.note-content h5,
+.note-content h6 {
+  color: #3e3c35;
 }
+
+.note-content h1 { font-size: 32px; border-bottom: 1px solid #3e3c35; }
+.note-content h2 { font-size: 26px; }
+.note-content h3 { font-size: 24px; }
+.note-content h4 { font-size: 22px; }
+.note-content h5 { font-size: 20px; }
+.note-content h6 { font-size: 20px; }
 
 .note-content img {
     display: block;
