@@ -1,6 +1,5 @@
 .DS_Store
 .docpad.db
-*.swp
-*.swo
+*.sw[a-z]
 out
 node_modules
