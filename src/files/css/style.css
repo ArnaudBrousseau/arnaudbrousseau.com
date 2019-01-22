@@ -418,10 +418,11 @@ a.content-link:hover {
 
 .note-content h1 { font-size: 32px; border-bottom: 1px solid #3e3c35; }
 .note-content h2 { font-size: 26px; }
-.note-content h3 { font-size: 24px; }
-.note-content h4 { font-size: 22px; }
-.note-content h5 { font-size: 20px; }
-.note-content h6 { font-size: 20px; }
+.note-content h3 { font-size: 22px; color: #736f5f;}
+/* These header levels should be used...probably never? */
+.note-content h4 { font-size: 20px; color: #868379;}
+.note-content h5 { font-size: 20px; color: #868379;}
+.note-content h6 { font-size: 20px; color: #868379;}
 
 .note-content img {
     display: block;
