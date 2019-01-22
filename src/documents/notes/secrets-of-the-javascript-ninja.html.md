@@ -1,6 +1,5 @@
 ---
 title: "Secrets Of The JavaScript Ninja"
-featured: "true"
 date: 2013-10-18
 layout: "note"
 activeNavItem: "notes"

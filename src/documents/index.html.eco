@@ -4,49 +4,23 @@ layout: "base"
 activeNavItem: "home"
 ---
 <div class="home">
+  <h1 class="title">Hello.</h1>
   <p class="intro">
-    Welcome to my online home! I'm Arnaud. <br/>
-    I work at <a rel="noopener" href="https://www.coinbase.com">Coinbase</a>, in San Francisco. <br/>
-    I spent years working for <a rel="noopener" href="https://www.yelp.com">Yelp</a> Inc. <br/>
-    resolved to code, debug and think. <br/>
-    <br/>
-    I believe in the web being open.<br/>
-    I believe in the web being free.<br/>
-    "View Page Source"  <br/>
-    I fell in love with the web long ago <br/>
-    I tinker with JavaScript, HTML and CSS. <br/>
-    and since JavaScript  books, tea, and video games.</br>
-    and since JavaScript  books, tea, and video games.</br>
-    <br/>
-    and since JavaScript  books, tea, and video games.</br>
-    and since JavaScript  books, tea, and video games.</br>
-    and since JavaScript  books, tea, and video games.</br>
+    Welcome! I'm Arnaud.
+    I currently work at <a href="https://www.coinbase.com" target="_blank">Coinbase</a>.
+    I used to work at <a href="https://www.yelp.com" target="_blank">Yelp</a> and built a
+    <a href="https://www.yelp.com/developers/platform" title="Yelp Transaction Platform" target="_blank">bunch</a>
+    <a rel="noopener" href="https://engineeringblog.yelp.com/2018/03/caching-internal-service-calls-at-yelp.html" title="Caching Internal service calls at Yelp">of</a>
+    <a rel="noopener" href="https://engineeringblog.yelp.com/2017/07/generating-web-pages-in-parallel-with-pagelets.html" title="Generating Web Pages in Parallel with Pagelets">cool</a>
+    <a rel="noopener" href="https://engineeringblog.yelp.com/2013/01/mission-beyond-the-mobile-browser.html" title="Mission: beyond the mobile browser">things</a>
+    during the 6-and-a-half years I was there.
+
+    I'm part of the <a href="https://www.mailta.pe" target="_blank">MailTape</a> crew and advise <a href="https://alliage.io/" target="_blank">Alliage</a> on the side.
+    Someday I hope I can be a capable <a href="https://www.mozilla.org/en-US/" target="_blank">Mozilla</a> contributor.
+    I scuba dive, surf and swim.
+    I care about digital privacy, freedom, security and performance.
+    This site has some of <a href="/notes">my writings</a>. And some of <a href="/labs">my experiments</a> too.
   </p>
-
-  <h1 class="title">Popular Notes</h1>
-  <ul class="index notes-index">
-      <% for note in @getCollection('html').findAll({layout:'note', featured: 'true'}, [{date:-1}]).toJSON(): %>
-          <li class="notes-list-item">
-              <a rel="noopener" class="content-link" href="<%= note.url %>">
-                  <%= note.title %>
-              </a>
-          </li>
-      <% end %>
-      <br/>&rarr; <a rel="noopener noreferrer" class="content-link" href="/notes">See All Notes Published Here</a>
-  </ul>
-
-  <h1 class="title">Favorite Projects</h1>
-  <ul class="index labs-index">
-      <% for project in @getCollection('html').findAll({layout:'project', featured: 'true'}, [{date:-1}]).toJSON(): %>
-          <li class="labs-list-item">
-              <a rel="noopener noreferrer" href="<%= project.url %>">
-                  <img src="<%= project.caption %>" >
-                  <span class="caption"><%= project.title %></span>
-              </a>
-          </li>
-      <% end %>
-      <br/>&rarr; <a rel="noopener noreferrer" class="content-link" href="/labs">Visit my Labs for a complete list of projects</a>.
-  </ul>
 
   <h1 class="title">Find Me Online</h1>
   <p class="social">

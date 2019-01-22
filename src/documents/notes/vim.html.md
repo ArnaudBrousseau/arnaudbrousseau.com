@@ -1,6 +1,5 @@
 ---
 title: "Vim Tips"
-featured: "true"
 date: 2014-02-09
 layout: "note"
 activeNavItem: "notes"

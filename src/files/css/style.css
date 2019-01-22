@@ -181,17 +181,35 @@ header {
 }
 
 .home .title {
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #3e3c35;
+    margin-bottom: 0;
 }
 
 .home .intro {
-    font-family: monospace;
     text-align: left;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 200;
-    margin-top: 0px;
-    margin-bottom:18px;
-    background: #0000 url(/img/home-pic-oval.png) top right no-repeat;
+    margin-top: 10px;
+    margin-bottom:20px;
+    line-height: 40px;
+}
+.home .intro a {
+  color: #3e3c35;
+  display: inline-block;
+  font-size: 30px;
+  border: 1px #3e3c35 solid;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 0 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #ccc;
+  background: #f5f4f5;
+}
+.home .intro a:hover {
+  border: 1px #3e3c35 solid;
+  color: #f5f4f5;
+  background: #3e3c35;
+  box-shadow: none;
 }
 
 p.social {
