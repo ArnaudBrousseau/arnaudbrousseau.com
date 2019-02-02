@@ -112,7 +112,7 @@ As a software engineer you have a ton of options:
   and can't recommend it enough. If you're accepted in their program you'll get
   to go directly to the on-site interview stage with companies that are
   interested in your profile. That's a huge potential time saving! If you don't
-  get in it's still good practice, and it's free.
+  get accepted it's still good practice. And it's free.
 * [Underdog.io](https://underdog.io/): geared towards finding startups. I
   personally haven't had much success with this but the service seems high
   quality with quite a lot of startups to choose from.
@@ -147,8 +147,8 @@ don't know why Computer Science Fundamentals are such a big focus in our
 industry. The reality of interviewing is that they are the most common
 denominator across companies, roles, and level of experience. Love it or hate it,
 studying CS fundamentals is the most efficient thing you can do if you
-are prepping for technical interviews because a) it's probably been a while
-since you've done anything with binary trees or linked lists and b) these
+are prepping for technical interviews because 1) it's probably been a while
+since you've done anything with binary trees or linked lists and 2) these
 questions come up *all the time*.
 
 So what exactly is considered "CS fundamentals"? Here's my take on it:
@@ -211,7 +211,7 @@ Whether they're aware of it or not, interviewers will grade you based on:
 * How quickly/accurately you can react to a hint when given one
 * How well-spoken you are and how well you understand what they're
   saying (yup, native English speakers have a huge advantage here!)
-* How neat your handwriting is, and how well you manage the space on the
+* How neat your handwriting is and how well you manage the space on the
   whiteboard. Or if the interviewer is okay with a laptop: how fast you type,
   how familiar you are with the editor you use
 * How positive you are (are you smiling? Friendly?)
@@ -276,7 +276,8 @@ through interviews. Being prepared for those will get you 95% of the way there
 and you probably won't feel surprised by any "soft" questions anymore:
 
 *   Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome of that choice?
-*   When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow from that experience?
+*   When did you take a risk, make a mistake, or fail? How did you respond and
+    how did you grow from that experience?
 *   Describe a time you took the lead on a project.
 *   What did you do when you needed to motivate a group of individuals or promote collaboration on a particular project?
 *   How have you leveraged data to develop a strategy?
@@ -284,7 +285,8 @@ and you probably won't feel surprised by any "soft" questions anymore:
 *   What are you proud of?
 *   What could you have done better?
 *   What were some excellent collaborations you've had?
-*   Tell me about a time when you advocated for and pushed your own ideas forward despite opposition?
+*   Tell me about a time when you advocated for and pushed your own ideas
+    forward despite opposition?
 *   How do you deal with conflict?
 *   How do you like to give and receive feedback?
 *   Tell me about a time when you had to complete something in a limited amount of time of with a limited amount of resources
@@ -304,7 +306,7 @@ And two final obvious ones:
     to answer follow-up questions with greater detail. Select examples that
     highlight your unique skills.
 *   Have specific examples that showcase your experience, and demonstrate that
-    you've taken risks, succeeded, failed and grown in the process.
+    you've taken risks, succeeded, failed, and grown in the process.
 *   Specifics are key; avoid generalizations. Give a detailed account of one
     situation for each question you answer, and use data or metrics to support
     your example.
@@ -363,7 +365,6 @@ the stage. Here's a sample set of entries for a given company:
 > * Design interviews - 45mins - 1 to 2 of these
 >    Very open-ended, more of a discussion
 >    Eek out the requirements, drive the discussion
-> * Breadth and depth, be ready to talk about trade-offs (duh)
 > * Breadth > depth
 > * Performance aspect of systems is crucial
 > * Key aspects: Problem exploration, Components Responsability, Data handling, Tradeoff analysis
@@ -420,7 +421,7 @@ care about least first, and the ones that you care about most last.
 * Python pro-tip: you can drop a debugging statement, it'll work just fine
   (`import pdb; pdb.set_trace();`)
 * Get a headset! If you have one already great. Otherwise, pick a cheap one from
-  Amazon. This helps your interviewer hear you better, and this helps you hear
+  Amazon. This helps your interviewer hear you better and this helps you hear
   your interview better. Win-win.
 * Get a blank paper sheet and a pen near you to write things down. If the
   interviewer hears you typing they'll think you're cheating.
@@ -470,7 +471,7 @@ now (2018-2019) is as good as it gets. Don't be a jerk about it (obviously!) but
 be aware that you can ask for a lot. Asking nicely will get you most of what you
 want, so remember to ask! This is really important when it comes to...
 
-## 4.2. Offer, compensation and negotiation
+## 4.2. Offer, compensation, and negotiation
 
 A couple of links on the subject of negotiation:
 
@@ -503,7 +504,7 @@ consider this *very* carefully. A great compensation and a kick-ass brand
 won't save you from a lousy manager.
 
 Another piece of advice that I've heard from mentors and colleagues:
-focus on learning and growth early in your career and disregard compensation if
+focus on learning and growth early in your career. Disregard compensation if
 that's possible for you to do.
 
 That being said: how do you actually go about evaluating your future company,
@@ -591,7 +592,7 @@ transparency. See [this post](/notes/values.html) for my values overall.
 Now onto how to evaluate this in an interview setting. Some of these criteria
 are self-explanatory; others require that you ask specific questions to your
 interviewers. Most interviewers reserve some time at the end of their interviews
-specifically for this, and an immense majority of recruiters will be happy to
+specifically for this. An immense majority of recruiters are be happy to
 set up additional calls if you didn't have time to ask all your questions.
 Without further ado, the company you're interviewing for is likely to have a
 **bad culture** if:
@@ -652,13 +653,12 @@ pipeline. Phone screen is cheap (tens of dollars, it's just 30mins of a
 recruiter's time). A 1hr Skype call with an engineer + debrief is more costly,
 because of the coordination (hundreds of dollars). A full round of on-site
 interviews, with all of the coordination and travel cost associated with it is
-in the thousands of dollars. Something to keep in mind when you're going through
-interviews and you're rejected: the company may not want to take the financial
-risk associated with on-site interviews, but you may still be a good engineer
-(this is also the result of "optimize for zero false positives")
+in the thousands of dollars. Something to keep in mind if you're going through
+interviews and are being rejected: the company may not want to take the financial
+risk associated with on-site interviews, but you may still be a good fit if given the chance! (this is the result of "optimize for zero false positives")
 
-Having been through a few interviewing pipelines recently, below are some really
-good ideas I've seen.
+I've been through a few interviewing pipelines recently. Below are some really
+good ideas I've seen implemented in the wild.
 
 ### 4.4.1. Automatically graded coding test
 This saves a ton of time, and can often replace an expensive and biased (because
@@ -719,7 +719,7 @@ A better example:
 > you out of our HQ  
 
 Sure candidates will study ahead of time. But that's good! I'm betting that this
-should lead to higher-quality interviews overall, and better experience for
+should lead to higher-quality interviews overall and better experience for
 candidates.
 
 # 5. A final offering: my personal TODO list
@@ -750,7 +750,7 @@ Let's start with items related to CS fundamentals:
 *   (10) Linked List
     *   Implementation in Python
     *   Singly vs doubly
-    *   Big-o for insertion, deletion and retrieval by index
+    *   Big-o for insertion, deletion, and retrieval by index
 *   (8) Review how Dijkstra's algorithm work
 *   (8) Implement Dijkstra's algorithm in Python
 *   (8) Review A\* algorithm (path finding)
@@ -772,7 +772,7 @@ Let's start with items related to CS fundamentals:
     *   Implementation in Python
     *   Big-o for insert, popMin, getMin
     *   Know that binary heaps aren't usually faster than BSTs, but are faster in practice and consume less memory (why?)
-*   (10) Dynamic Array (ArrayList). Implement, and know how resizing works
+*   (10) Dynamic Array (ArrayList). Implement and know how resizing works
 *   (8) Implement quick sort ([reference](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html))
 *   (6) What are some techniques to balance BSTs?
 *   (6) What are B-trees?
@@ -810,8 +810,9 @@ Systems-y knowledge:
 *   (4) How do system calls work in general? [SO answer](https://stackoverflow.com/questions/499188/how-is-the-system-call-in-linux-implemented)
 *   (10) Threads vs processes: [SO answer](https://stackoverflow.com/questions/200469/what-is-the-difference-between-a-process-and-a-thread/200473#200473)
 *   (6) Database indices: how are they implemented?
-*   (8) Understand deadlock, livelock and how to avoid them.
-*   (6) how context switching works, how it's initiated by the operating system and underlying hardware
+*   (8) Understand deadlock, livelock, and how to avoid them.
+*   (6) how context switching works, how it's initiated by the operating
+    system, and underlying hardware
 *   (2) How does process scheduling work
 *   (4) Green threads: what are they? See [Green vs Native threads](http://wiki.c2.com/?GreenVsNativeThreads) and [gthreads/intro.html](https://c9x.me/articles/gthreads/intro.html) 
 *   (8) Use each one of the APIs described in https://docs.python.org/2/library/threading.html in a toy program to understand them better
