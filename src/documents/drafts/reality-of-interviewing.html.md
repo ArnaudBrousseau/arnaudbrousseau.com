@@ -498,7 +498,7 @@ I've used [this
 spreadsheet](https://docs.google.com/spreadsheets/d/1C8T8lO-OBhN9jMHz8q_2XNYIAyJkVteJghIdJXZajag/edit?usp=sharing)
 to be as rational about my choice as possible. The weights are obviously
 adjustable so feel free to tweak them to your linking. My personal opinion: a
-job is mostly made of **people**. Your manager, your teammates are crucial.
+job is mostly made of **people**. Your manager and teammates are crucial.
 You're going to spend 40hrs per week interacting with them. Make sure you
 consider this *very* carefully. A great compensation and a kick-ass brand
 won't save you from a lousy manager.
