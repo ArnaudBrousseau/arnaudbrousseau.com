@@ -7,10 +7,9 @@ activeNavItem: "notes"
 In October 2018 I quit my engineering job at Yelp. The 6.5 years I spent
 working there were amazing in many ways. The purpose of this post is to reflect
 on my interviewing experience (all of it: preparation phase, interviews,
-post-interview communication) and write down as many details/tips as I can
-while it's still fresh in my mind. Hopefully it's useful to somebody out there
-(you?) but if nothing else it'll surely be useful for me next time, when I'm on
-the job market again
+post-interview communication) and write down details/tips. Hopefully it's
+useful to somebody out there (you?) but if nothing else it'll surely be useful
+for me next time, when I'm on the job market again.
 
 Get cozy: this is a long read. Table of contents below:
 
@@ -32,7 +31,8 @@ Get cozy: this is a long read. Table of contents below:
 * [3. Interviewing tips and tricks](#3-interviewing-tips-and-tricks)
 * &nbsp;&nbsp;[3.1 The interaction Log](#3-1-the-interaction-log)
 * &nbsp;&nbsp;[3.2 Planning](#3-2-planning)
-* &nbsp;&nbsp;[3.3 The tech of tech interviews](#3-3-the-tech-of-tech-interviews)
+* &nbsp;&nbsp;[3.3 Tips on video or phone interviews](#3-3-tips-on-video-or-phone-interviews)
+* &nbsp;&nbsp;[3.4 Tips on on-site interviews](#3-4-tips-on-on-site-interviews)
 * [4. Interviews are over. Now what?](#4-interviews-are-over-now-what)
 * &nbsp;&nbsp;[4.1 Making the most out of your recruiters](#4-1-making-the-most-out-of-your-recruiters)
 * &nbsp;&nbsp;&nbsp;&nbsp;[4.1.1 Email tips](#4-1-1-email-tips)
@@ -60,24 +60,24 @@ your resume, your network, and other people's networks.
 There are a lot of strong opinions out there about what should and shouldn't go
 into your resume. My experience, both as someone who screened hundreds of
 resumes and as someone who applied to tens of job postings, is that **resumes
-are at best neutral**. If you have an awful resume you probably won't get
-responses when applying. If you fix your resume you'll probably get responses
-and that's the sweet spot. If you build an amazing resume you'll also get
+are at best neutral**. If you have an awful resume, you probably won't get
+responses when applying. If you fix your resume, you'll probably get responses
+and that's the sweet spot. If you build an amazing resume, you'll also get
 responses, but it won't help you in any other way.
 
-If you want to be effective with your time do not spend too much time on your
+If you want to be effective with your time, do not spend too much time on your
 resume. Give it the attention it deserves and move on quickly. It's much better
-to spend your time on generating leads, finding referrals or brushing up on your
+to spend your time on generating leads, finding referrals, or brushing up on your
 CS fundamentals (more on that later).
 
-That being said I'm not going to avoid answering. Here are the cardinal sins of
+That being said, I'm not going to avoid answering. Here are the cardinal sins of
 resumes in my book:
 
-* Proprietary formats. Not everyone has Microsoft Word installed! Stick to PDF.
-* Grammar or spelling mistakes. Given the small number of words on a resume,
+* **Proprietary formats**: not everyone has Microsoft Word installed! Stick to PDF.
+* **Grammar or spelling mistakes**: Given the small number of words on a resume,
   seeing a grammar or spelling mistake is a huge red flag.
-* Labels such as "ninja", "hardcore", "guru" are an immediate turn-off
-* Dead links. If it's on your resume, it should work!
+* **Pretentious labels**: "ninja", "hardcore", "guru" are an immediate turn-off
+* **Dead links**: if it's on your resume, it should work!
 
 Some other tips:
 
@@ -102,7 +102,7 @@ As a software engineer you have a ton of options:
   "sourcers" (recruiters). It feels like spam. Most of the time it is. I save
   the interesting ones into a folder. When my job search started I reached back
   out and I got interesting leads/contacts from this.
-* Referrals: by far the best, most effective lead-generation tool if you're
+* Referrals: by far the most effective lead-generation tool if you're
   already working as an engineer. Hit up your friend list on Facebook or lookup
   people on social media (Twitter, LinkedIn).  Most of the time companies have
   referral programs in place: if you get the job, the person referring you gets
@@ -145,7 +145,7 @@ In this section we're going over what's most important: preparation before your
 I've written about this [previously](/notes/tech-interviews.html): I really
 don't know why Computer Science Fundamentals are such a big focus in our
 industry. The reality of interviewing is that they are the most common
-denominator across companies, roles and level of experience. Love it or hate it,
+denominator across companies, roles, and level of experience. Love it or hate it,
 studying CS fundamentals is the most efficient thing you can do if you
 are prepping for technical interviews because a) it's probably been a while
 since you've done anything with binary trees or linked lists and b) these
@@ -204,8 +204,8 @@ remain the same):
 
 ### 2.1.3. Practice &amp; improve your coding skills
 
-You'll be judged on more than just "coding" during a coding interview. Whether
-they're aware of it or not, interviewers will grade you based on:
+You'll be judged on more than just pure "coding" during a coding interview.
+Whether they're aware of it or not, interviewers will grade you based on:
 
 * How quickly you spot mistakes on your own
 * How quickly/accurately you can react to a hint when given one
@@ -229,7 +229,7 @@ you might be unfamiliar with. Copy/paste the code you wrote into your editor/IDE
 only once you're damn sure it compiles/run. It probably won't and that's fine!
 Make a note of the mistakes (more on this in the following section)
 and come back to your Google doc to re-examine your code. Do this until your
-code runs! Finally, practice on paper or a whiteboard, to
+code runs! Finally, practice on paper or a whiteboard to
 practice handwriting and speaking out loud while you're coding.
 
 If you're interviewing with a company which does whiteboard coding only (Google,
@@ -237,14 +237,14 @@ Facebook, Amazon, others) try solving a few problems on the whiteboard
 first while talking out loud as if a person was listening and judging. And time
 yourself. Afterwards, take what you wrote on paper or whiteboard and type it in
 mindlessly in an editor/IDE. Does it compile/run? Does it do what you want? Make
-note of the mistakes, and repeat.
+note of the mistakes and repeat.
 
 ### 2.1.4. Your mistakes are your best assets
 Something worth buying: a nice notebook and a pen that you like. It's not that
 expensive and it should help you a ton. This notebook should be your "mistake"
 log. Every time you screw up (you expected your recursion to finish but it
-doesn't, you made a silly syntax error, maybe your loop is off by one) log that
-into the notebook, and move on.
+doesn't, you made a silly syntax error, maybe your loop was off by one), log that
+into the notebook and move on.
 
 Over time more mistakes will pile on. Regularly review the contents of your
 notebook to spot trends: are you making many syntax errors? Do you always
@@ -297,6 +297,7 @@ And two final obvious ones:
 
 ### 2.2.2. Tips for good long-form answers
 
+(TODO: example for each of these?)
 *   Ensure each answer has a beginning, middle, and end. Describe the situation
     or problem, the actions you took, and the outcome.
 *   Prepare short descriptions of a handful of different situations and be ready
@@ -413,7 +414,7 @@ notes!
 Another tip that I can give here: try your best to line up interviews that you
 care about least first, and the ones that you care about most last.
 
-## 3.3. The tech of tech interviews
+## 3.3. Tips on video or phone interviews
 
 * Get familiar with [Coderpad](https://coderpad.io/), play with the interface.
 * Python pro-tip: you can drop a debugging statement, it'll work just fine
@@ -423,6 +424,10 @@ care about least first, and the ones that you care about most last.
   your interview better. Win-win.
 * Get a blank paper sheet and a pen near you to write things down. If the
   interviewer hears you typing they'll think you're cheating.
+
+## 3.4. Tips on on-site interviews
+
+TODO
 
 # 4. Interviews are over. Now what?
 
@@ -497,7 +502,7 @@ You're going to spend 40hrs per week interacting with them. Make sure you
 consider this *very* carefully. A great compensation and a kick-ass brand
 won't save you from a lousy manager.
 
-Another piece of advice that I've heard from mentors and colleagues: try to
+Another piece of advice that I've heard from mentors and colleagues:
 focus on learning and growth early in your career and disregard compensation if
 that's possible for you to do.
 
@@ -508,12 +513,13 @@ awful to me might be a great fit for you. Below are **my personal** criteria to
 gauge these things. I encourage you to develop your own and write them down.
 
 ### 4.3.1. Evaluating your future manager
-I hate micromanagers. The absolute worst manager would be one who's constantly
+I hate micro-managers. The absolute worst manager would be one who's constantly
 looking over my shoulder and my teammates'. In a manager I'm also looking for
-somebody who's cool-headed and who can provide a good "shield". Concretely this
-means somebody who'll fight to keep the team focused on a minimum number of
-projects, and who will switch things up only when absolutely necessary. The
-third thing I'm looking for: someone who can coach, be understanding and listen.
+somebody who's 1) cool-headed and 2) who can provide a good "shield".
+Concretely this means somebody who'll fight to keep the team focused on a
+minimum number of projects, and who will switch things up only when absolutely
+necessary. The third thing I'm looking for: someone who can coach, be
+understanding, and listen.
 
 It's hard to probe for these things directly but I'll tell you my personal
 opinion on what you can look for *in an interview setting*.
@@ -551,7 +557,7 @@ ropes and obscure tips to boost my productivity. Somebody who's willing to say
 know. Somebody who'll happily take ownership of an idea that isn't their own.
 Somebody who says "hi" when you cross paths in the office or outside (a nod of
 acknowledgment and a smile goes a long way). Somebody who admits to making
-mistakes. No trying to cover them up.
+mistakes. Not trying to cover them up.
 
 How to evaluate this when you're talking 1-1 to someone? The person you are
 talking to is likely to be a **bad teammate** if they...:
@@ -602,7 +608,7 @@ Without further ado, the company you're interviewing for is likely to have a
   humorously (quick example: me: "when was the last time you took a long
   holiday? Where did you go?", them: "oh man I haven't taken a long vacation in
   years!...*chuckles*...yeah the work here is really intense you
-  see, so I tend to take one or two days here and there around long weekends)
+  see, so I tend to take one or two days here and there around long weekends")
 
 Conversely what I'm looking for; the company you're interviewing for is likely
 to have a **good culture** if:
@@ -659,9 +665,9 @@ This saves a ton of time, and can often replace an expensive and biased (because
 it involves the judgment of a single person) "phone screen" or "video call" with
 an engineer.
 
-On that note, try to keep this under 1hr. The "take home assignments" that
-require more than 1.5hrs to complete will cause a lot of good candidates to lose
-interest.
+On that note: try to keep coding tests under one hour. The "take home
+assignments" that require more time to complete will cause a lot of good
+candidates to lose interest.
 
 ### 4.4.2. Realistic interviews
 During on-site interviews, focus on what's difficult to assess! In my opinion,
