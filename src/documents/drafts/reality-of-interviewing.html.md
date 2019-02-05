@@ -299,18 +299,37 @@ And two final obvious ones:
 
 ### 2.2.2. Tips for good long-form answers
 
-(TODO: example for each of these?)
-*   Ensure each answer has a beginning, middle, and end. Describe the situation
-    or problem, the actions you took, and the outcome.
-*   Prepare short descriptions of a handful of different situations and be ready
-    to answer follow-up questions with greater detail. Select examples that
-    highlight your unique skills.
-*   Have specific examples that showcase your experience, and demonstrate that
-    you've taken risks, succeeded, failed, and grown in the process.
-*   Specifics are key; avoid generalizations. Give a detailed account of one
+These tips (in italic) are taken straight from Amazon's "in person" interview preparation guide that you can find [here](https://www.amazon.jobs/en/landing_pages/in-person-interview):
+*   _Ensure each answer has a beginning, middle, and end. Describe the
+    situation or problem, the actions you took, and the outcome._ More
+    specifically for engineering stories I've found that it works best to go
+    top-down. Start by explaining the broad context of your work, what you were
+    tasked with, then dig into the problem you want to discuss.
+*   _Prepare short descriptions of a handful of different situations and be
+    ready to answer follow-up questions with greater detail. Select examples
+    that highlight your unique skills._ That's gold. It's basically saying:
+    chop it up! Don't spill your whole story at once. Being able to deliver it
+    piece-by-piece is going to help you in behavioral interviews because small
+    pieces are generally composable and reusable.
+*   _Have specific examples that showcase your experience, and demonstrate that
+    you've taken risks, succeeded, failed, and grown in the process._ That's
+    just another way of saying that what happens doesn't matter. Usually in
+    behavioral interviews the interviewer is interested in how you choose to
+    react to situations and what you learn from them. So instead of stopping at
+    "we disagreed on how to use Jira", talk about what task management meant to
+    you, how disagreeing led you to reconsider your position on what that meant
+    at the time and what it means to you now (assuming that disagreeing on Jira
+    processes triggered that line of thought. Don't ever lie! Interviewers have
+    a pretty strong bullshit detector)
+*   _Specifics are key; avoid generalizations. Give a detailed account of one
     situation for each question you answer, and use data or metrics to support
-    your example.
-*   Be forthcoming and straightforward. Don't embellish or omit parts of the story.
+    your example._ That's also extremely important. Don't beat around the bush
+    by being generic. You may be in a behavioral interview but you're an
+    engineer still! Your interviewer will ask you for specifics if you don't
+    provide them in your first answer.  Your time is limited so it's best to
+    give those ahead of time.
+*   _Be forthcoming and straightforward. Don't embellish or omit parts of the
+    story_. Don't lie please.
 
 ### 2.2.3. Craft &amp; refine your story
 
