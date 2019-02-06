@@ -52,7 +52,7 @@ Get cozy: this is a long read. Table of contents below:
 
 # 1. Lead Generation
 
-First things first let's talk about how to get an interview. Two main parts:
+First things first let's talk about how to get an interview. Three main parts:
 your resume, your network, and other people's networks.
 
 ## 1.1. Build your resume
@@ -70,8 +70,7 @@ resume. Give it the attention it deserves and move on quickly. It's much better
 to spend your time on generating leads, finding referrals, or brushing up on your
 CS fundamentals (more on that later).
 
-That being said, I'm not going to avoid answering. Here are the cardinal sins of
-resumes in my book:
+That being said, here are the cardinal resume sins in my book:
 
 * **Proprietary formats**: not everyone has Microsoft Word installed! Stick to PDF.
 * **Grammar or spelling mistakes**: Given the small number of words on a resume,
