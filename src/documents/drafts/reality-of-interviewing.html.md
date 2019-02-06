@@ -419,7 +419,8 @@ pointing out:
   best to jot down quick thoughts during a call (that document was my main
   medium to take notes during recruiter calls)
 * It's important to log the date 
-* Write down as much as you can write after the call, interview or interaction happens.
+* Write down as much as you can write after the call, interview or interaction
+  happens.
 * Treat this as an append-only log. Don't erase anything! This will come in
   handy later on when you're trying to make a decision, and will keep you
   honest
@@ -447,7 +448,23 @@ care about least first, and the ones that you care about most last.
 
 ## 3.4. Tips on on-site interviews
 
-TODO
+* Aim to be 15 minutes early. Most of the time you'll actually be early. That's
+  a perfect opportunity to skim your "mistakes log" one more time before
+  starting your interview day and get in the mindset.
+* Print your resume, just in case. Even in this day and age it came in handy
+  a couple of times to have a printed copy of my resume ready to show.
+* If lunch is provided: eat light! There's a dip in energy when digestion kicks
+  in. Eating light helps with this.
+* In a similar spirit: try to limit your sugar/caffeine intake to a minimum to
+  prevent acute spikes/dips of energy.
+* After a full round of on-site interviews it's really tempting to relax.
+  Instead force yourself to write down notes about what happened. What were the
+  names of your interviewers? What were their positions/teams? Would you like
+  to work with them on a daily basis? Which questions did they ask? How do you
+  think you did?  What did you think of the culture overall? This is your
+  chance to be honest and record your unbiased opinion. Your future self will
+  thank you. When offers are on the table it helps to have a written record
+  to eliminate bias.
 
 # 4. Interviews are over. Now what?
 
@@ -455,7 +472,7 @@ So you've gone through your interviews and hopefully have gotten far enough in
 the process that you're stressed and unsure about what to do next. Negotiating
 your salary and committing to a decision is no easy task. Below I'm laying out
 my experience with both of these. I'm offering some of my personal criteria to
-evaluate each company, as well as some tips about offer negotiation. Ready?
+evaluate each company and some tips about offer negotiation. Ready?
 
 ## 4.1. Making the most out of your recruiters
 
@@ -480,8 +497,8 @@ Along the same lines: be very diligent about informing your recruiter(s) about
 changes along the way.
 I found that having a list of names/emails for each company helped immensely
 (you don't have to think hard about who to email when something changes if you
-have one place where everything is). See below, I kept track of this as part of
-my big "interaction log" document
+have one place where everything is). I kept track of this as part of
+my big "interaction log" document (described [above](#3-1-the-interaction-log)).
 
 
 ### 4.1.3. You have more power than you think
