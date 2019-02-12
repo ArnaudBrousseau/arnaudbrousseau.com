@@ -2,4 +2,4 @@
 echo 'Generating files...'
 ./node_modules/.bin/docpad generate
 echo 'rsyncing to VPS...'
-rsync -avzhr --delete out/ x61@vps363138.ovh.net:/home/x61/sites/arnaudbrousseau/
+rsync -avzhr --delete out/ x61@vps.x61.fr:/home/x61/sites/arnaudbrousseau/
