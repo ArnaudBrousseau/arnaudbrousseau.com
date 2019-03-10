@@ -1,15 +1,15 @@
 ---
-title: "The Reality of Interviewing"
+title: "A Plan to Win your Next Interviewing Battle"
 date: 2018-12-28
 layout: "draft"
 activeNavItem: "notes"
 ---
 In October 2018 I quit my engineering job at Yelp. The 6.5 years I spent
-working there were amazing in many ways. The purpose of this post is to reflect
-on my interviewing experience (all of it: preparation phase, interviews,
-post-interview communication) and write down details/tips. Hopefully it's
-useful to somebody out there (you?) but if nothing else it'll surely be useful
-for me next time, when I'm on the job market again.
+working there were amazing in many ways but it was time for me to move on. The
+purpose of this post is to reflect on my interviewing experience (all of it:
+preparation phase, interviews, post-interview communication) and write down
+details/tips. Hopefully it's useful to somebody out there (you?) but if nothing
+else it'll surely be useful for me next time, when I'm on the job market again.
 
 Get cozy: this is a long read. Table of contents below:
 
@@ -58,14 +58,14 @@ your resume, your network, and other people's networks.
 ## 1.1. Build your resume
 
 There are a lot of strong opinions out there about what should and shouldn't go
-into your resume. My experience, both as someone who screened hundreds of
+into a resume. My experience, both as someone who screened hundreds of
 resumes and as someone who applied to tens of job postings, is that **resumes
 are at best neutral**. If you have an awful resume, you probably won't get
 responses when applying. If you fix your resume, you'll probably get responses
 and that's the sweet spot. If you build an amazing resume, you'll also get
 responses, but it won't help you in any other way.
 
-If you want to be effective with your time, do not spend too much time on your
+To be effective with your time, do not spend too much time on perfecting your
 resume. Give it the attention it deserves and move on quickly. It's much better
 to spend your time on generating leads, finding referrals, or brushing up on your
 CS fundamentals (more on that later).
@@ -80,9 +80,9 @@ That being said, here are the cardinal resume sins in my book:
 
 Some other tips:
 
-* Keep it short! People reading your resumes have a limited amount of time
+* **Keep it short!** People reading resumes have a limited amount of time
   (typically 30 seconds to 1 minute per resume)
-* Check your online presence (Google yourself!). Time to freshen up your
+* **Check your online presence** (Google yourself!). Time to freshen up your
   personal site if you have one, make sure to dust off old-looking things in
   your public Twitter, cleanup your Github, etc.
 
@@ -97,22 +97,23 @@ if you spot something off ;)
 Once you have a resume and a web presence it's time to actually apply for jobs!
 As a software engineer you have a ton of options:
 
-* Passive recruiter outreach: we all have these annoying emails from technical
-  "sourcers" (recruiters). It feels like spam. Most of the time it is. I save
-  the interesting ones into a folder. When my job search started I reached back
-  out and I got interesting leads/contacts from this.
+* Passive recruiter outreach: we've all received cold emails from technical
+  "sourcers" (recruiters). They feels like spam. Most of the time they are.
+  Regardless, I save the interesting ones into a folder. When my job search
+  started I reached back out and I got interesting leads/contacts from this.
 * Referrals: by far the most effective lead-generation tool if you're
   already working as an engineer. Hit up your friend list on Facebook or lookup
   people on social media (Twitter, LinkedIn).  Most of the time companies have
   referral programs in place: if you get the job, the person referring you gets
-  a fixed amount of money. By reaching out they're doing you a favor, and you're
-  potentially doing them a favor!
+  a cash reward. By referring you they're doing you a favor, but you're
+  potentially doing them a favor if you land the job! Win-win.
 * [TripleByte](https://triplebyte.com/): I've used their service successfully
   and can't recommend it enough. If you're accepted in their program you'll get
-  to go directly to the on-site interview stage with companies that are
-  interested in your profile. That's a huge potential time saving! If you don't
-  get accepted it's still good practice. And it's free.
-* [Underdog.io](https://underdog.io/): geared towards finding startups. I
+  to go directly on-site with companies interested in your profile. That's a
+  huge potential time saving! If you don't get accepted it's still good
+  practice to go through TripleByte's interviews. Treat it like training. It's
+  100% free to apply.
+* [Underdog.io](https://underdog.io/): geared towards finding small startups. I
   personally haven't had much success with this but the service seems high
   quality with quite a lot of startups to choose from.
 * [Hired](https://hired.com/): surprisingly effective for me. Maybe that was
@@ -122,15 +123,19 @@ As a software engineer you have a ton of options:
 
 It should be clear from the list above: your professional network is going to
 be a strong asset when looking for a job. A "professional network" doesn't have
-to mean colleagues in the strict sense. It means everyone you've worked or
-interacted with doing some kind of work. For instance: professors, TAs,
-classmates for students. Contractors, vendors or people you've met at
-conferences for people working at small startups. Before you say "meh": I've
-gotten my first internship at Google thanks to a professor of mine who was
-well-connected. The timing worked out. Yes I got lucky. What I want you to
-consider: please take more chances. Go talk to people around you even when you
-think the odds aren't in your favor. You only need one of these to work out to
-make it worth your while!
+to mean colleagues in the strict sense. Think wider.
+
+* For students: think professors, TAs, classmates.
+* For engineers at small startups: think contractors, support people from
+  vendors, people you've met at conferences or meetups.
+* For engineers at bigger companies: all of the above plus your colleagues if
+  you're comfortable opening up about looking for new opportunities.
+
+I've gotten my first internship at Google thanks to a well-connected professor
+of mine. The timing worked out. Yes I got lucky. What I want you to consider:
+please take more chances. Go talk to people around you even when you think the
+odds aren't in your favor. You only need one of these to work out to make it
+worth your while!
 
 # 2. Interview preparation
 
@@ -153,14 +158,15 @@ questions come up *all the time*.
 So what exactly is considered "CS fundamentals"? Here's my take on it:
 
 * Big-O analysis
-* Hashmaps: implementation, runtime
+* Hashmaps: implementation (be able to implement this data structure from scratch in your language of choice), runtime (know the main operations and their big-o complexity)
 * Dynamic Arrays: implementation, runtime
 * Linked List: implementation, runtime
 * (Binary Search) Trees: implementation, runtime, algorithms to traverse them
   (BFS, DFS)
 * Search Algorithms: quicksort, bubble sort, insertion sort, heapsort.  What to
-  study: implementation, runtime, worst case, best case, and type of inputs
-  which fits them.
+  study: implementation, runtime, worst case, best case. Bonus: know  which
+  type of inputs performs best/worst on each of the different sorting
+  algorithms.
 * Graphs: representations in memory and basic algorithms for traversal (BFS,
   DFS should be a no-brainer to code!)
 * (Bonus) Tries, Bloom Filters: no need to know the implementation. Look into
@@ -175,23 +181,25 @@ heard directly from an interviewer. I think it's an accurate statement.
 
 The good news is that no IQ test is perfect and you can "game" the system
 provided that you know what's expected of you. What it comes down to is: **save
-as many "CPU cycles" as possible** and use those wisely.
+as much brain power as possible**. The more resources you have to think about
+the problem itself the more likely you are to succeed in interviews.
 
-Picking a language that you're fluent in saves you a lot of cycles. Instead of
-thinking about the best way (or how) to write a class, or trying to avoid
-off-by-one errors, practice ahead of time so that a high percentage of cycles is
-allocated to thinking about the problem during an actual interview.
+Picking a language that you're fluent in saves you a lot of mental energy.
+Instead of thinking about the best way (or how) to write a class, or trying to
+avoid off-by-one errors, practice ahead of time so that a high percentage of
+your time is allocated to thinking about the problem during an actual
+interview.
 
-Here is a non-exhaustive list of things to practice applicable to Python (if you
-pick Java or C++ the specifics between parenthesis vary but the base concepts
-remain the same):
+Here is a non-exhaustive list of things to practice applicable to Python (my
+interviewing language of choice). If you pick another language the specifics
+between parenthesis vary but the concepts remain the same:
 
-* **Write assertions** (use `assert` and use assertion messages!)
-* **Write basic "closed" loops** (`for i in range(begin, end)`). Make sure you won't get surprised by `range`'s behavior. `begin` is **inclusive**, `end` is **exclusive** so to loop through with i taking values 1, 2, and 3: `for i in range(1, 4)`
-* **Write backward loops** (`for i in range(end-1, begin-1, -1)`)
-* **Write "open" loops** (`while some_condition`). Make sure you know how to terminate loops with `break`. Make sure you're familiar with `continue` and its behavior
-* **Write a new class** (class declaration, `__init__`, magic methods, inheritance)
-* **Instantiate a class, run code** (memorize `if __name__ == "__main__"` for instance)
+* **Basic "closed" loops** (`for i in range(begin, end)`). Make sure you won't get surprised by `range`'s behavior. `begin` is **inclusive**, `end` is **exclusive** so to loop through with i taking values 1, 2, and 3: `for i in range(1, 4)`
+* **Backward loops** (`for i in range(end-1, begin-1, -1)`)
+* **"open" loops** (`while some_condition`). Make sure you know how to terminate loops with `break`. Make sure you're familiar with `continue` and its behavior
+* **Class syntax** (class declaration, `__init__`, magic methods, inheritance)
+* **Code execution** (memorize `if __name__ == "__main__"` for instance)
+* **Assertions** (use `assert` and use assertion messages!)
 * (Python specific) List comprehensions: don't *over*use them, but definitely
   know how they work and where to use them (typically when you want to do
   complex destructuring or filtering). They can save a ton of time
@@ -228,15 +236,16 @@ you might be unfamiliar with. Copy/paste the code you wrote into your editor/IDE
 only once you're damn sure it compiles/run. It probably won't and that's fine!
 Make a note of the mistakes (more on this in the following section)
 and come back to your Google doc to re-examine your code. Do this until your
-code runs! Finally, practice on paper or a whiteboard to
-practice handwriting and speaking out loud while you're coding.
+code runs! Then solve the same problem on paper or a whiteboard to
+practice handwriting and space management.
 
-If you're interviewing with a company which does whiteboard coding only (Google,
-Facebook, Amazon, others) try solving a few problems on the whiteboard
-first while talking out loud as if a person was listening and judging. And time
-yourself. Afterwards, take what you wrote on paper or whiteboard and type it in
-mindlessly in an editor/IDE. Does it compile/run? Does it do what you want? Make
-note of the mistakes and repeat.
+Finally, if you're interviewing with a company which does whiteboard coding
+only (Google, Facebook, Amazon, probably others -- unfortunately!) try solving
+a few problems on the whiteboard first while talking out loud as if a person
+was listening and judging. And time yourself. Afterwards, copy what you wrote
+on paper or whiteboard and type it in mindlessly in an editor/IDE. Does it
+compile/run? Does it do what you want? Make note of the mistakes and repeat.
+Speaking of mistakes...
 
 ### 2.1.4. Your mistakes are your best assets
 Something worth buying: a nice notebook and a pen that you like. It's not that
@@ -264,16 +273,19 @@ mistakes/bugs are gone!
 ## 2.2. Don't forget about "soft" skills!
 
 This was prompted by my preparation for Amazon's and Facebook's interview
-processes. Soft skills are really important. Most engineers underestimate the
+processes. Soft skills are really important. Most candidates underestimate the
 importance of soft skills in coding interviews and do not prepare effectively as
-a result. Preparing just a little bit puts you ahead of the pack.  It's
-definitely worth investing an afternoon don't you think?
+a result. That's good news for you: preparing _just a little bit_ puts you
+ahead of the pack. It's definitely worth investing an afternoon or two don't you
+think?
 
 ### 2.2.1. Questions to prepare for
 Here's a list of questions/prompts to prepare. I gathered this list as I went
 through interviews. Being prepared for those will get you 95% of the way there
 and you probably won't feel surprised by any "soft" questions anymore:
 
+*   What brings you here? (most common soft question by far)
+*   So what don't you tell me about yourself? (probably second most common!)
 *   Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome of that choice?
 *   When did you take a risk, make a mistake, or fail? How did you respond and
     how did you grow from that experience?
@@ -290,28 +302,27 @@ and you probably won't feel surprised by any "soft" questions anymore:
 *   How do you like to give and receive feedback?
 *   Tell me about a time when you had to complete something in a limited amount of time of with a limited amount of resources
 
-And two final obvious ones:
-*   Why COMPANY?
-*   Prepare a big list of questions for non-technical folks and technical folks.
-    You should have enough questions to last a whole lunch break with either
-    type of people (I've found that 10 questions is generally more than enough)
+Finally, prepare a big list of questions for non-technical folks and technical
+folks. You should have enough questions to last a whole lunch break with
+either type of people (I've found that 10 questions is generally more than
+enough).
 
 ### 2.2.2. Tips for good long-form answers
 
 These tips (in italic) are taken straight from Amazon's "in person" interview preparation guide that you can find [here](https://www.amazon.jobs/en/landing_pages/in-person-interview):
-*   _Ensure each answer has a beginning, middle, and end. Describe the
-    situation or problem, the actions you took, and the outcome._ More
+*   "_Ensure each answer has a beginning, middle, and end. Describe the
+    situation or problem, the actions you took, and the outcome_". More
     specifically for engineering stories I've found that it works best to go
     top-down. Start by explaining the broad context of your work, what you were
     tasked with, then dig into the problem you want to discuss.
-*   _Prepare short descriptions of a handful of different situations and be
+*   "_Prepare short descriptions of a handful of different situations and be
     ready to answer follow-up questions with greater detail. Select examples
-    that highlight your unique skills._ That's gold. It's basically saying:
+    that highlight your unique skills_". That's gold. It's basically saying:
     chop it up! Don't spill your whole story at once. Being able to deliver it
     piece-by-piece is going to help you in behavioral interviews because small
     pieces are generally composable and reusable.
-*   _Have specific examples that showcase your experience, and demonstrate that
-    you've taken risks, succeeded, failed, and grown in the process._ That's
+*   "_Have specific examples that showcase your experience, and demonstrate that
+    you've taken risks, succeeded, failed, and grown in the process_". That's
     just another way of saying that what happens doesn't matter. Usually in
     behavioral interviews the interviewer is interested in how you choose to
     react to situations and what you learn from them. So instead of stopping at
@@ -320,24 +331,24 @@ These tips (in italic) are taken straight from Amazon's "in person" interview pr
     at the time and what it means to you now (assuming that disagreeing on Jira
     processes triggered that line of thought. Don't ever lie! Interviewers have
     a pretty strong bullshit detector)
-*   _Specifics are key; avoid generalizations. Give a detailed account of one
+*   "_Specifics are key; avoid generalizations. Give a detailed account of one
     situation for each question you answer, and use data or metrics to support
-    your example._ That's also extremely important. Don't beat around the bush
+    your example_". That's also extremely important. Don't beat around the bush
     by being generic. You may be in a behavioral interview but you're an
     engineer still! Your interviewer will ask you for specifics if you don't
     provide them in your first answer.  Your time is limited so it's best to
     give those ahead of time.
-*   _Be forthcoming and straightforward. Don't embellish or omit parts of the
-    story_. Don't lie please.
+*   "_Be forthcoming and straightforward. Don't embellish or omit parts of the
+    story_". Yup. Don't lie please.
 
 ### 2.2.3. Craft &amp; refine your story
 
-This should be part of your "soft skills" training but it's worth calling out on its own: you should have an answer to the dreaded, classic question: "So why don't you
-tell me about yourself?".
+This has already been mentioned in the previous section but it's worth calling
+out on its own: you should have an answer to the dreaded, classic questions:
+"What brings you here?" and "So why don't you tell me about yourself?".
 
-This is worth investing some time in. Look at yourself in the mirror,
-ask a friend to tell you what they think, and perfect this until you feel
-confident.
+This deserves special attention. Look at yourself in the mirror, ask a friend
+to tell you what they think, and perfect your answers until you feel confident.
 
 If you're transitioning from one role to another (say backend to iOS
 development, or from marketing analytics to engineering), it's worth crafting a
@@ -347,8 +358,7 @@ to Y?"
 Important note: crafting a story is different from lying. Don't say things that
 aren't true. Don't try to embellish what happened. Do think about where you're
 going to start, what you want to convey, and how: what do you want the listener
-to take away from your answer to their question?
-
+to take away from your answer to these question?
 
 # 3. Interviewing tips and tricks
 
@@ -357,7 +367,7 @@ to take away from your answer to their question?
 I kept a log of all the communications I had with every company, regardless of
 the stage. Here's a sample set of entries for a given company:
 
-> [$INTERVIEWSTAGE] $COMPANY - <$priority>
+> [$INTERVIEWSTAGE] $COMPANY - <$PRIORITY>
 > 
 > **$date**: Talked to a lot of people: REDACTED@company.com -- firstname, REDACTED@company.com -- firstname, REDACTED@company.com -- firstname
 > 
@@ -437,11 +447,12 @@ care about least first, and the ones that you care about most last.
 ## 3.3. Tips on video or phone interviews
 
 * Get familiar with [Coderpad](https://coderpad.io/), play with the interface.
-* Python pro-tip: you can drop a debugging statement, it'll work just fine
+  Python pro-tip: you can drop a debugging statement, it'll work just fine
   (`import pdb; pdb.set_trace();`)
-* Get a headset! If you have one already great. Otherwise, pick a cheap one from
-  Amazon. This helps your interviewer hear you better and this helps you hear
-  your interview better. Win-win.
+* Don't use the built-in microphone from your laptop. Get a headset! If you
+  have one already great. Otherwise, pick a cheap one from Amazon. This helps
+  your interviewer hear you better and this helps you hear your interview
+  better. Win-win.
 * Get a blank paper sheet and a pen near you to write things down. If the
   interviewer hears you typing they'll think you're cheating.
 
@@ -477,10 +488,12 @@ evaluate each company and some tips about offer negotiation. Ready?
 
 ### 4.1.1. Email tips
 
-* Be as concise as possible.
-* Be aware that your recruiter is juggling between multiple
-  candidates. Keep your emails short and precise. Instead of saying "when are
-  you free?", say when you're free in the next 3 days
+* Generally, be as concise as possible. Stay to-the-point while staying cordial.
+* Be aware that your recruiter is juggling between multiple candidates. Keep
+  your emails short and precise. Instead of saying "When are you free to chat
+  this week? I'm free Monday or Tuesday", say "I'm free to talk this week on
+  Monday from 12pm to 2pm or on Tuesday from 2pm to 5pm (all times PT). Would
+  this work on your end?". This saves one email round-trip.
 * State time zones. Always.
 
 ### 4.1.2. Expectation management
@@ -504,63 +517,73 @@ my big "interaction log" document (described [above](#3-1-the-interaction-log)).
 You have a lot of power as an engineer looking for a new job. The market right
 now (2018-2019) is as good as it gets. Don't be a jerk about it (obviously!) but
 be aware that you can ask for a lot. Asking nicely will get you most of what you
-want, so remember to ask! This is really important when it comes to...
+want, so remember to ask! This is especially important when it comes to...
 
 ## 4.2. Offer, compensation, and negotiation
 
 A couple of links on the subject of negotiation:
 
-* [Salary Negotiation](https://www.kalzumeus.com/2012/01/23/salary-negotiation/)
-* [Fearless salary negotiations](https://www.amazon.com/Fearless-Salary-Negotiation-step-step/dp/0692568689/)
+* [Salary Negotiation](https://www.kalzumeus.com/2012/01/23/salary-negotiation/) (online article)
+* [Fearless salary negotiations](https://www.amazon.com/Fearless-Salary-Negotiation-step-step/dp/0692568689/) (book)
 
-From personal experience I wouldn't follow the advice "never be the first to
-give a number". I found that asking for an aggressive target works better. The
-best thing you can do is ask a few people who work at the company for
-compensation ranges and shoot slightly above.
+The above resources will do a far better job than I can at teaching you about
+salary negotiation. A few things I'd like to stress:
 
-And on the subject of competing offers: it really depends on companies. Some
-will budge quite a bit if you tell them you have competing offers. Some only
-budge if the offer is from a big name such as Facebook or Google. And some don't
-respond at all. So I wouldn't attach too much importance to competing offers.
-It's way more important to crush your interviews and ask for the right
-compensation target. And remember: your recruiter is your side!
-(they may have an incentive to make you sign with the minimum salary possible,
-but at the end of the day what matters to them is that you sign at all!)
-
+* From personal experience: "never be the first to give a number" doesn't work
+  well. I found that asking for an aggressive target works better. The best
+  thing you can do is ask a few people who work at the company for compensation
+  ranges and shoot slightly above.
+* About competing offers: their importance really depends on companies. Some
+  will budge quite a bit if you tell them you have competing offers. Some only
+  budge if the offer is from a big name such as Facebook or Google. And some
+  don't respond at all. So I wouldn't attach too much importance to competing
+  offers. It's way more important to crush your interviews and ask for the
+  right compensation.
+* Remember: your recruiter is your side! They may have an incentive to make
+  you sign with the minimum salary possible, but at the end of the day what
+  matters to them most is that you sign at all!
 
 ## 4.3. Making a decision
-I've used [this
+There's a ton of criteria to evaluate when picking a job. It can get emotional
+and overwhelming so I've used [this
 spreadsheet](https://docs.google.com/spreadsheets/d/1C8T8lO-OBhN9jMHz8q_2XNYIAyJkVteJghIdJXZajag/edit?usp=sharing)
-to be as rational about my choice as possible. The weights are obviously
-adjustable so feel free to tweak them to your linking. My personal opinion: a
-job is mostly made of **people**. Your manager and teammates are crucial.
-You're going to spend 40hrs per week interacting with them. Make sure you
-consider this *very* carefully. A great compensation and a kick-ass brand
-won't save you from a lousy manager.
+to be as rational as possible. Columns are criteria you care about
+(compensation, quality of manager, technical stack, etc). Each of them is of a
+certain importance to you and that's reflected by a weight (from 1 to
+infinity). Rows are companies you're considering, and each company gets a 0-10
+score for each column. The rightmost column displays a weighted sum to help you
+compare easily and see which company comes at the top.
+
+What should you care about even? What should the weights be set to? Well that's
+personal. But here's my opinion: a job is mostly made of **people**. Your
+manager and teammates are crucial. You're going to spend 40hrs+ per week
+interacting with them. Make sure you consider this *very* carefully. A great
+compensation and a kick-ass brand won't save you from a lousy manager or a
+toxic team. So weight this accordingly.
 
 Another piece of advice that I've heard from mentors and colleagues:
-focus on learning and growth early in your career. Disregard compensation if
-that's possible for you to do.
+focus on learning and growth early in your career. Weight compensation lightly
+if that's possible for you to do.
 
-That being said: how do you actually go about evaluating your future company,
-manager or teammates during your interviews? Obviously it depends. Teammates,
+Now how do you actually go about evaluating your future company,
+manager, or teammates during your interviews? Obviously it depends. Teammates,
 managers and engineering cultures are all made of people. A manager who feel
-awful to me might be a great fit for you. Below are **my personal** criteria to
+awful to me might be a great fit for you. Below are my **personal** criteria to
 gauge these things. I encourage you to develop your own and write them down.
 
 ### 4.3.1. Evaluating your future manager
 I hate micro-managers. The absolute worst manager would be one who's constantly
 looking over my shoulder and my teammates'. In a manager I'm also looking for
-somebody who's 1) cool-headed and 2) who can provide a good "shield".
+somebody who's 1) cool-headed and 2) who can be a good "shield".
 Concretely this means somebody who'll fight to keep the team focused on a
-minimum number of projects, and who will switch things up only when absolutely
+minimum number of projects, and who will switch priorities only when absolutely
 necessary. The third thing I'm looking for: someone who can coach, be
 understanding, and listen.
 
 It's hard to probe for these things directly but I'll tell you my personal
 opinion on what you can look for *in an interview setting*.
 
-The person you are talking to is more likely to be a **bad manager** if they...:
+The person you are talking to is more likely to be a **bad manager** if they...
 
 * have a tendency to talk a lot
 * get animated easily, are overly enthusiastic
@@ -570,7 +593,7 @@ The person you are talking to is more likely to be a **bad manager** if they...:
 * are first-time managers (sorry, I have to put this in here!)
 
 And here are some positive attributes. The person you are talking to is more
-likely to be a **good manager** if they...:
+likely to be a **good manager** if they...
 
 * ask good questions
 * look interested in the answers. Bonus points for taking notes during interviews
@@ -586,24 +609,24 @@ likely to be a **good manager** if they...:
   multiple companies. Extra bonus points if they have a non-CS background.
 
 ### 4.3.2. Interviewing teammates
-Teammates are a bit easier to judge provided that you interview them. What makes
+Teammates are a bit easier to gauge. What makes
 an ideal teammate to me? Somebody who's willing to spend time to show me the
 ropes and obscure tips to boost my productivity. Somebody who's willing to say
 "I don't know" and learn from me when I can teach them something they don't
 know. Somebody who'll happily take ownership of an idea that isn't their own.
 Somebody who says "hi" when you cross paths in the office or outside (a nod of
 acknowledgment and a smile goes a long way). Somebody who admits to making
-mistakes. Not trying to cover them up.
+mistakes without trying to cover them up.
 
 How to evaluate this when you're talking 1-1 to someone? The person you are
-talking to is likely to be a **bad teammate** if they...:
+talking to is likely to be a **bad teammate** if they...
 
 * interrupt you at any point
 * are easily distracted and don't pay attention to what you're saying/writing
 * take the interview process or themselves too seriously
 
 Conversely the person you are talking to is likely to be a **good teammate** if
-they...:
+they...
 
 * smile; are enthusiastic when they talk about their job and the team
 * are more interested in hearing about your technical expertise than explaining
@@ -619,10 +642,11 @@ across teams. Heck, *you* may change and consider a culture "cool" now and
 "awful" in a few years. That's certainly happened to me.
 
 At the time of writing my ideal work culture offers a good work-life balance. I
-want to be able to sleep and spend weekends in the woods when I feel like it. I
-value work cultures with an emphasis on social good will (help each other, be
-positive, teach/learn from your neighbors, etc), (self)-education and
-transparency. See [this post](/notes/values.html) for my values overall.
+want to be able to sleep and spend weekends 100% disconnected when I feel like
+it (if I'm on-call, fine -- that's a planned thing). I value work cultures with
+an emphasis on social good will (help each other, be positive, teach/learn from
+your neighbors, etc), (self)-education and transparency. See [this
+post](/notes/values.html) for my values overall.
 
 Now onto how to evaluate this in an interview setting. Some of these criteria
 are self-explanatory; others require that you ask specific questions to your
@@ -640,11 +664,7 @@ Without further ado, the company you're interviewing for is likely to have a
   take it off you)
 * there are very few senior engineers and a lot of first-time managers
 * the leadership team has seen a lot of departures in the recent past
-* people pride themselves on working long hours or not taking vacation, even
-  humorously (quick example: me: "when was the last time you took a long
-  holiday? Where did you go?", them: "oh man I haven't taken a long vacation in
-  years!...*chuckles*...yeah the work here is really intense you
-  see, so I tend to take one or two days here and there around long weekends")
+* people pride themselves on working long hours or not taking vacation
 
 Conversely what I'm looking for; the company you're interviewing for is likely
 to have a **good culture** if:
@@ -657,7 +677,7 @@ to have a **good culture** if:
   usually runbooks, calendars, and incident response procedures!
 * No code goes to production unless reviewed (cowboy shipping is usually
   indicative of a brash engineering culture)
-* The company has a good number of non-engineers employees. In my experience
+* The company has a good number of non-engineering employees. In my experience
   this helps balance egos and somewhat limit the nonsense sometimes generated by
   engineering-first cultures. That's only valid if non-engineers employees
   interact meaningfully with the rest of the company!  Say if there's a large
@@ -667,45 +687,24 @@ to have a **good culture** if:
 
 ## 4.4. Reflection on interviewing pipelines and processes
 
-When talking about interviewing processes the terms of "false positives" and
-"false negatives" are often used. What are they referring to?
-
-* a "*false positive*" is a person who is hired and isn't a good fit
-* a "*false negative*" is a person who is rejected but would've been a good fit
-
-Most interview processes are heavily skewed towards avoiding false positives at
-all cost. Why? A bad newhire on a software team is usually very costly. But
-rejecting somebody who might have been a good fit isn't. The assumption is that
-more capable candidates will flow through later. That's definitely true for
-Google, Facebook, Amazon, etc. That's why you should not feel bad if you're
-rejected. I've heard that Google employees going through the Google interview
-process have a success rate of 50%. Yup. Half of Google's employee didn't make
-it. Pat yourself in the back if you're rejected and move on to the next one.
-
-What's also crucial in the design of interview processes is the cost associated
-with each stage. Typically cost is multiplied by 10 for each step in the
-pipeline. Phone screen is cheap (tens of dollars, it's just 30mins of a
-recruiter's time). A 1hr Skype call with an engineer + debrief is more costly,
-because of the coordination (hundreds of dollars). A full round of on-site
-interviews, with all of the coordination and travel cost associated with it is
-in the thousands of dollars. Something to keep in mind if you're going through
-interviews and are being rejected: the company may not want to take the financial
-risk associated with on-site interviews, but you may still be a good fit if given the chance! (this is the result of "optimize for zero false positives")
-
 I've been through a few interviewing pipelines recently. Below are some really
-good ideas I've seen implemented in the wild.
+good ideas I've seen implemented in the wild. If you're a recruiter or an
+engineer in charge of some part of a recruiting pipeline, this section is for
+you!
 
 ### 4.4.1. Automatically graded coding test
 This saves a ton of time, and can often replace an expensive and biased (because
 it involves the judgment of a single person) "phone screen" or "video call" with
 an engineer.
 
-On that note: try to keep coding tests under one hour. The "take home
-assignments" that require more time to complete will cause a lot of good
-candidates to lose interest.
+While we're on the subject of coding tests: some companies opt for a "take home
+assignment". In my experience this can be a good idea but make sure to set a
+strict time limit (target under an hour -- if longer than that a lot of good
+candidates will lose interest) and grade the test based on objective criteria
+established ahead of time.
 
 ### 4.4.2. Realistic interviews
-During on-site interviews, focus on what's difficult to assess! In my opinion,
+During on-site interviews: focus on what's difficult to assess! In my opinion,
 on-site interviewers should steer clear of coding questions as much as possible.
 The best way to know whether a candidate would be good to work with is to
 simulate working with them! Try pair programming. Try whiteboarding systems. Try
@@ -753,23 +752,36 @@ A better example:
 > * 1:15pm-1:30pm: wrap up with your recruiter, to shield questions and escort
 > you out of our HQ  
 
-Sure candidates will study ahead of time. But that's good! I'm betting that this
-should lead to higher-quality interviews overall and better experience for
-candidates.
+Sure candidates will study ahead of time. But that a good outcome! I'm betting
+that this would lead to higher-quality interviews overall and a better
+experience for both candidates and interviewers.
 
 # 5. A final offering: my personal TODO list
 
 To conclude this blog post (that's the last section! Good job making it this
 far!) here is the precise list of things I did to prepare myself for interviews
-at the end of 2018. Beware this is *my* list. Yours may vary widely especially
-if you're interviewing for a different role or for a different set of companies.
-FYI: I interviewed for performance/infrastructure/backend/full-stack
-software engineering positions, with Python as my language of choice whenever
-coding was needed.
+at the end of 2018. I interviewed for backend/full-stack software engineering
+positions, with Python as my language of choice whenever coding was needed.
+This list may not be as useful if you're interviewing for something vastly
+different.
 
-Below I graded each item with the power of hindsight. All things considered, was it useful? (1 to 10).
+Below I graded each item from 1 to 10 with the power of hindsight ("Looking back, was this
+item useful for my interviews?").
 
-Let's start with items related to CS fundamentals:
+Items related to **interview prep in general**:
+*   (4) Watch [What to Expect During the Recruiting Process](https://www.facebook.com/Engineering/videos/10152735806862200/) -- Facebook specific, but generally applicable
+*   (10) Go through [InterviewCake](https://www.interviewcake.com/). Yes it's paid content but it's worth your money. Especially:
+    *   [InterviewCake's "Cake Thief" question](https://www.interviewcake.com/question/python/cake-thief?section=dynamic-programming-recursion&course=fc1)
+    *   [InterviewCake's "Binary Tree balancing" question](https://www.interviewcake.com/question/python/balanced-binary-tree?section=dynamic-programming-recursion&course=fc1)
+    *   [InterviewCake's "Making change" question](https://www.interviewcake.com/question/python/coin?section=dynamic-programming-recursion&course=fc1)
+    *   [InterviewCake's "URL Shortener" design question](https://www.interviewcake.com/question/python/url-shortener)
+*   (4) Read through Google's interviewing guide
+*   (5) For Amazon application, review [https://www.amazon.jobs/en/landing_pages/in-person-interview](https://www.amazon.jobs/en/landing_pages/in-person-interview) 
+*   (8) Oldie but goodie: read [Get That Job At Google](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html) by Steve Yegge
+*   (10) Prepare answers to behavioral questions (see "Softskills" above)
+*   (4) Watch [How to Crush Your Coding Interview](https://www.facebook.com/Engineering/videos/10152735777427200/) -- Facebook specific, but generally applicable
+
+Items related to **CS fundamentals**:
 *   (4) [https://mrpandey.github.io/d3graphTheory](https://mrpandey.github.io/d3graphTheory) 
 *   (10) How are hashmaps implemented?
     *   Array of linked lists. Each list maps to a "bucket"
@@ -814,20 +826,8 @@ Let's start with items related to CS fundamentals:
 *   (2) Read about treaps: https://en.wikipedia.org/wiki/Treap
 *   (4) LeetCode (931 Todo, 12 Solved, 2 Attempted)
 
-General items:
-*   (4) Watch [What to Expect During the Recruiting Process](https://www.facebook.com/Engineering/videos/10152735806862200/) -- Facebook specific, but generally applicable
-*   (10) Go through [InterviewCake](https://www.interviewcake.com/). Yes it's paid content but it's worth your money. Especially:
-    *   [InterviewCake's "Cake Thief" question](https://www.interviewcake.com/question/python/cake-thief?section=dynamic-programming-recursion&course=fc1)
-    *   [InterviewCake's "Binary Tree balancing" question](https://www.interviewcake.com/question/python/balanced-binary-tree?section=dynamic-programming-recursion&course=fc1)
-    *   [InterviewCake's "Making change" question](https://www.interviewcake.com/question/python/coin?section=dynamic-programming-recursion&course=fc1)
-    *   [InterviewCake's "URL Shortener" design question](https://www.interviewcake.com/question/python/url-shortener)
-*   (4) Read through Google's interviewing guide
-*   (5) For Amazon application, review [https://www.amazon.jobs/en/landing_pages/in-person-interview](https://www.amazon.jobs/en/landing_pages/in-person-interview) 
-*   (8) Oldie but goodie: read [Get That Job At Google](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html) by Steve Yegge
-*   (10) Prepare answers to behavioral questions (see "Softskills" above)
-*   (4) Watch [How to Crush Your Coding Interview](https://www.facebook.com/Engineering/videos/10152735777427200/) -- Facebook specific, but generally applicable
 
-Systems-y knowledge:
+To prepare for **backend/systems** questions:
 *   (8) Reader/writer locks
 *   (8) Files in linux, file descriptors
 *   (8) What's a socket?
@@ -854,7 +854,7 @@ Systems-y knowledge:
 *   (8) Write a C program using epoll or kqueue
 *   (4) Know about nginx's main blocks/configuration
 
-To prepare for design interviews:
+To prepare for **design interviews**:
 *   (10) Have an answer for NoSQL vs SQL
 *   (8) Design question primer: [donnemartin/system-design-primer#system-design-interview-questions-with-solutions](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions) 
 *   (10) distributed hash table system -- how to design one
@@ -867,16 +867,16 @@ To prepare for design interviews:
 *   (5) Read [The Log: What every software engineer should know about real-time data's unifying abstraction](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) 
 *   (10) Read a bit about Nginx's architecture ([link](https://www.aosabook.org/en/nginx.html))
 
-Here are some TODO items that do not fit in the above categories:
+Do not fit in the above categories (**miscellaneous**):
 *   (10) Go through the [TripleByte](https://triplebyte.com/) interviewing process
 *   (10) SQL review (JOINs especially)
 *   (7) Fearless salary negotiations ([Amazon link](https://www.amazon.com/Fearless-Salary-Negotiation-step-step/dp/0692568689/))
     *   Read fearless salary negotiation free sample
     *   Read fearless salary negotiation book
 
-Finally, what I **did not do** (the items left on my giant TODO list basically). I will
-never know if these would have been useful to do or not...but here's the list
-anyway:
+Finally, what I **did not do** (the items left on my giant TODO list
+basically). I will never know if these would have been useful to do or
+not...but here they are anyway:
 
 *   Complete [this sysadmin focused quizz](https://github.com/trimstray/test-your-sysadmin-skills#simple-questions)
 *   How to deal with nested state problems with Redux?
