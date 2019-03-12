@@ -1,7 +1,7 @@
 ---
 title: "A Plan to Win your Next Interviewing Battle"
-date: 2018-12-28
-layout: "draft"
+date: 2019-03-11
+layout: "note"
 activeNavItem: "notes"
 ---
 In October 2018 I quit my engineering job at Yelp. The 6.5 years I spent
@@ -365,69 +365,26 @@ to take away from your answer to these question?
 ## 3.1. The interaction Log
 
 I kept a log of all the communications I had with every company, regardless of
-the stage. Here's a sample set of entries for a given company:
+the stage. Here's an exerpt for a company didn't move forward with:
 
-> [$INTERVIEWSTAGE] $COMPANY - <$PRIORITY>
-> 
-> **$date**: Talked to a lot of people: REDACTED@company.com -- firstname, REDACTED@company.com -- firstname, REDACTED@company.com -- firstname
-> 
-> Next step: phone call with a performance engineering manager at $company
-> 
-> Other system-level optimizations: webserver (uwsgi)
-> 
-> 1-2 other team managers will give calls. Tooling, profiling, monitoring: 6 eng,
-> strong tech lead.
-> 
-> **$date**: Applied through $firstname, let’s see how this goes.
-> 
-> **$date**: $firstname said that she’d be in touch with next steps for
-> on-site interviews! Yay
-> 
-> **$date**: prep call for my interview loop
-> * Coding interviews - 45mins -- 2 each
->    Either 2 medium problems or 1 hard
-> * Algorithms and data structure
->    Speed, accuracy and problem solving
->    Make sure you try test cases and big-o analysis
-> * Don’t ignore hints
-> * Design interviews - 45mins - 1 to 2 of these
->    Very open-ended, more of a discussion
->    Eek out the requirements, drive the discussion
-> * Breadth > depth
-> * Performance aspect of systems is crucial
-> * Key aspects: Problem exploration, Components Responsability, Data handling, Tradeoff analysis
-> *  Career and coding interviews (45mins) -- 1 to 2 of these
-> * Career - 20mins career, resume, growth path, stories, dealing with feedback. Example of failures and what I learned. Should answer with precise examples
-> * Coding - standard coding section
-> * Lunch break
-> 
-> **$date**: Had my on-site interview with $company!
-> 
-> Interviewer 1: $firsname was some guy who’s been with $company for X
-> years. Really nice, but a bit overly nerdy, hard to connect with. That was
-> the design interview round. His interview question: REDACTED
-> 
-> Interviewer 2: ....
-> etc
+![Interaction Log Excerpt](/img/interaction-log.png)
 
 I had to redact a lot of it, but the general structure holds. Some things worth
 pointing out:
 
-* "$INTERVIEWSTAGE" indicates the stage but is pretty loose -- different
-  companies have different processes ("pre-on-site", "contacted", "scheduled
-  for video call", "offer!", etc)
-* "$PRIORITY" maps to how badly I wanted that job:
+* "priority" maps to how badly I wanted that job:
   * P0: I’d take a pay cut to work there
   * P1: Given a good offer and a decent team I’d work there
   * P2: Given an excellent offer and the right team, I’d work there
   * P3: Good for training/exploration only, would never accept an offer unless it’s truly exceptional
-* I had these in a Google Doc to be able to access it from anywhere (esp.  from
-  my phone -- this came in handy more than once!), and color-coded by priority.
+* As you can see I had this in a Google Doc to be able to access it from
+  anywhere (esp.  from my phone -- this came in handy more than once!), and
+  color-coded by priority.
 * Putting random TODOs in there is also useful
 * I initially started with a spreadsheet but I found that freeform text worked
   best to jot down quick thoughts during a call (that document was my main
   medium to take notes during recruiter calls)
-* It's important to log the date 
+* It's important to log the date!
 * Write down as much as you can write after the call, interview or interaction
   happens.
 * Treat this as an append-only log. Don't erase anything! This will come in
@@ -904,3 +861,7 @@ not...but here they are anyway:
 *   Read [Paxos Made Live - An Engineering Perspective](http://www.cs.utexas.edu/users/lorenzo/corsi/cs380d/papers/paper2-1.pdf) 
 
 You made it. You're a hero. ♫ [This is the end](https://www.youtube.com/watch?v=JSUIQgEVDM4) ♪.
+
+<hr/>
+To Ryan N. and Jon L.: thank you so much for the valuable feedback on early
+version of this article! You rock ❤
