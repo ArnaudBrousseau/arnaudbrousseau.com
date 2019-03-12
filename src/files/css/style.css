@@ -196,13 +196,15 @@ header {
 .home .intro a {
   color: #3e3c35;
   display: inline-block;
-  font-size: 30px;
+  font-size: 28px;
+  height: 32px;
   border: 1px #3e3c35 solid;
   border-radius: 4px;
   text-decoration: none;
-  padding: 0 5px;
+  padding: 2px 4px;
   cursor: pointer;
   box-shadow: 1px 1px 2px #ccc;
+  text-shadow: 0px -1px 2px #666, 0px 1px 2px #666;
   background: #f5f4f5;
 }
 .home .intro a:hover {
@@ -210,6 +212,24 @@ header {
   color: #f5f4f5;
   background: #3e3c35;
   box-shadow: none;
+}
+
+.home a.coinbase {
+  background: rgb(22, 82, 240);
+  color: white;
+}
+.home a.mailtape {
+  background: #e7237b;
+  background: linear-gradient(90deg, #ea4d3f 0%, #ea4d3f 19%, #e7237b 20%, #e7237b 39%, #18a9e2 40%, #18a9e2 59%, #f3df2b 60%, #f3df2b 79%, #3eae5f 80%, #3eae5f 99%);
+  color: white;
+}
+.home a.alliage {
+  background: #f46f08;
+  color: white;
+}
+.home a.mozilla {
+  background: #000;
+  color: white;
 }
 
 p.social {
