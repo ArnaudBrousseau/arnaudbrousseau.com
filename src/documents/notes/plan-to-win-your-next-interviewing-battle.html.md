@@ -163,7 +163,7 @@ So what exactly is considered "CS fundamentals"? Here's my take on it:
 * Linked List: implementation, runtime
 * (Binary Search) Trees: implementation, runtime, algorithms to traverse them
   (BFS, DFS)
-* Search Algorithms: quicksort, bubble sort, insertion sort, heapsort.  What to
+* Sorting Algorithms: quicksort, bubble sort, insertion sort, heapsort.  What to
   study: implementation, runtime, worst case, best case. Bonus: know  which
   type of inputs performs best/worst on each of the different sorting
   algorithms.
