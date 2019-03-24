@@ -107,12 +107,13 @@ As a software engineer you have a ton of options:
   referral programs in place: if you get the job, the person referring you gets
   a cash reward. By referring you they're doing you a favor, but you're
   potentially doing them a favor if you land the job! Win-win.
-* [TripleByte](https://triplebyte.com/): I've used their service successfully
-  and can't recommend it enough. If you're accepted in their program you'll get
-  to go directly on-site with companies interested in your profile. That's a
-  huge potential time saving! If you don't get accepted it's still good
-  practice to go through TripleByte's interviews. Treat it like training. It's
-  100% free to apply.
+* [TripleByte](https://triplebyte.com/iv/Vzk8gi2/cp) (this is my own referral
+  link.  Here is a [link without affiliation](https://triplebyte.com) if you
+  prefer): I've used their service successfully and can't recommend it enough.
+  If you're accepted in their program you'll get to go directly on-site with
+  companies interested in your profile. That's a huge potential time saving! If
+  you don't get accepted it's still good practice to go through TripleByte's
+  interviews.  Treat it like training. It's 100% free to apply.
 * [Underdog.io](https://underdog.io/): geared towards finding small startups. I
   personally haven't had much success with this but the service seems high
   quality with quite a lot of startups to choose from.
