@@ -568,7 +568,12 @@ In py3 you can do:
 # JavaScript
 
 Good resources for a short, practical review of the key concepts:
-[Best Frontend JS interview questions](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-(Written-by-a-Frontend-Engineer).
+[Best Frontend JS interview
+questions](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-(Written-by-a-Frontend-Engineer).
+To practice coding in JavaScript and improve how you use the language, I highly
+recommend taking a look at [Computer Science in
+JavaScript](https://github.com/humanwhocodes/computer-science-in-javascript)
+and re-implement some of the data structures yourself.
 
 ## What's a closure?
 
