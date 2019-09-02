@@ -35,7 +35,7 @@
             <nav class="nav-container">
                 <a rel="noopener" href="/" class="nav-link <%= if @document.activeNavItem is 'home' then 'active' %>" title="Go back home">Home</a>
                 <a rel="noopener" href="/labs" class="nav-link <%= if @document.activeNavItem is 'labs' then 'active' %>" title="Check out what I've been cooking">Labs</a>
-                <a rel="noopener" href="/notes" class="nav-link <%= if @document.activeNavItem is 'notes' then 'active' %>" title="Check out what I've been writting">Notes</a>
+                <a rel="noopener" href="/notes" class="nav-link <%= if @document.activeNavItem is 'notes' then 'active' %>" title="Check out what I've been writing">Notes</a>
             </nav>
         </header>
 
