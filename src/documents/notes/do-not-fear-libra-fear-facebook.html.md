@@ -22,13 +22,13 @@ Facebook. No matter what (crypto)currency Facebook adopts.
 ### Main Components
 
 Libra is a permissioned proof-of-stake blockchain. "Permissioned" because only
-Libra Association members can run validator nodes, for the modest cost of $10
-million USD. "Validators" are nodes which produce new blocks. A block
-is an aggregation of user transactions. User accounts are public/private key
-pairs, and transactions are based on smart contracts. Smart contracts are based
-on a new Language, Mova.
+Libra Association members can run validator nodes (long-term Libra might shift
+towards a permission-less system, but that's not the case right now).
 
-Long-term Libra might shift towards a permissionless system.
+"Validators" are nodes which produce new blocks. A block is an aggregation of
+user transactions. User accounts are backed by public/private key pairs, and
+transactions are based on smart contracts. Smart contracts use a new Language
+called "Move".
 
 ### Libra Blockchain vs Protocol vs Core
 In the paper we see a distinction drawn between "Libra Blockchain", "Libra
