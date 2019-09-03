@@ -485,6 +485,14 @@ blockquote {
 }
 blockquote p { margin: 5px; }
 
+.thanks p {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px #dbd5d5 solid;
+  padding: 12px;
+  margin: 0;
+}
+
 /* Print styles */
 @media print {
     body { background: white; }
