@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>keys.deconstructed</title>
+  <meta name="description" content="Bitcoin keys, deconstructed. Inspired by keys.lol">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <canvas id="canvas" height="260" width="1024"></canvas>
+  <label class="input-page">
+      Page <a href="" target="_blank" rel="noopener" id="page-link">keys.lol</a>
+      <input type="text" id="page" value="42"/>
+  </label>
+  <label class="input-offset">
+      Offset
+      <input type="text" id="offset" value="13"/>
+  </label>
+
+  <div class="action action-generate-seed">
+    <button class="rev" id="generate-seed-rev">&larr; REV</button>
+    <span class="content">Generate seed</span>
+    <button class="run" id="generate-seed-run">RUN &rarr;</button>
+  </div>
+
+  <label class="input-seed">
+      Seed
+      <input type="text" id="seed"/>
+  </label>
+
+  <div class="action action-encode-to-private-key">
+    <button class="rev" id="encode-to-private-key-rev">&larr; REV</button>
+    <span class="content">Encode to private key</span>
+    <button class="run" id="encode-to-private-key-run">RUN &rarr;</button>
+  </div>
+
+  <div class="action action-derive-pubkey">
+    <button class="rev faded" id="derive-pubkey-rev">&larr; REV</button>
+    <span class="content">Derive pubkey</span>
+    <button class="run" id="derive-pubkey-run">RUN &rarr;</button>
+  </div>
+
+  <label class="input-private-key extra-long">
+      Private Key
+      <input type="text" id="private-key"/>
+  </label>
+
+  <label class="input-public-key extra-long">
+      Pubkey (uncompressed) <a href="" target="_blank" rel="noopener" class="hidden" id="pubkey-uncompressed-link">blockchain.com</a>
+      <input type="text" id="public-key"/>
+  </label>
+  <label class="input-public-key-compressed extra-long">
+      Pubkey (compressed) <a href="" target="_blank" rel="noopener" class="hidden" id="pubkey-compressed-link">blockchain.com</a>
+      <input type="text" id="public-key-compressed"/>
+  </label>
+
+  <script src="keys.deconstructed.js"></script>
+  <script src="ui.js"></script>
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-19545721-1', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+body {
+  font-family: system-ui;
+  font-size: 12px;
+  color: #222;
+  background: #fff
+}
+canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -100;
+}
+input {
+  background: #fff;
+  border: 1px solid #2b3746;
+  border-radius: 2px;
+  color: #222;
+  display: block;
+  height: 20px;
+  line-height: 16px;
+  outline: 0;
+  padding: 4px 8px;
+}
+
+label {
+  display: block;
+  padding: 8px;
+}
+label input {
+  display: block;
+  width: 80px;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+label a {
+   float: right;
+   margin-right: 3px;
+   color: #3891e0;
+   text-decoration: none;
+}
+
+label a::before {
+  content: '» '
+}
+
+.hidden {
+  display: none !important;
+}
+
+label.extra-long input {
+  width: 360px;
+}
+
+.action {
+  display: block;
+  width: 120px;
+  border-radius: 2px;
+  border: 1px #2b3746 solid;
+}
+.action .rev, .action .run {
+  display: block;
+  background: #e8ebef;  
+  border: 1px solid #e8ebef;
+  color: #2b3746;
+  width: 90px;
+  height: 24px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.action .rev {
+    position: relative;
+    top: -12px;
+    left: 14px;
+}
+
+.action .run {
+    position: relative;
+    top: 12px;
+    left: 14px;
+}
+.action .run {
+
+}
+.action .content {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 4px 0;
+}
+
+.input-page {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  z-index: 1;
+}
+.input-offset {
+  position: absolute;
+  top: 110px;
+  left: 30px;
+}
+
+.action-generate-seed {
+  position: absolute;
+  top: 87px;
+  left: 180px;
+}
+
+.input-seed {
+  position: absolute;
+  top: 85px;
+  left: 320px;
+}
+
+.action-encode-to-private-key {
+  position: absolute;
+  top: 30px;
+  left: 470px;
+}
+
+.action-derive-pubkey {
+  position: absolute;
+  top: 140px;
+  left: 470px;
+}
+
+.input-private-key {
+  position: absolute;
+  top: 30px;
+  left: 620px;
+}
+.input-public-key {
+  position: absolute;
+  top: 115px;
+  left: 620px;
+}
+.input-public-key-compressed {
+  position: absolute;
+  top: 170px;
+  left: 620px;
+}
+
+#derive-pubkey-rev {
+  color: #8e2745;
+  border-color: #f9e5dc;
+  background-color: #f9e5dc;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #e8ebef !important;
+  background-color: #2b3746 !important;
+  border-color: #2b3746 !important;
+  box-shadow: 0px 3px 2px #a9b6dc, 0px -3px 2px #a9b6dc, 3px 0px 2px #a9b6dc, -3px 0px 2px #a9b6dc;
+}
