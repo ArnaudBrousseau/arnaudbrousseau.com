@@ -99,17 +99,9 @@ subset of it!) and keys.lol's functionality in JavaScript. Enters:
 `keys.deconstructed`, a webapp which works offline and has **zero external
 dependencies**.
 
-<style>
-  #deconstructed {
-    transform:scale(0.6);
-    transform-origin: left center;
-    /* Unsure why, but CSS `transform`ing an iframe creates margins on top/bottom... */
-    margin: -60px 0;
-  }
-</style>
-<iframe frameborder="0" width="1024" height="260" src="/labs/keys.deconstructed" id="deconstructed"></iframe>
-<br>
-<small style="display: block; text-align: center; font-weight: bold">&rarr; See the above full-page at <a href="/labs/keys.deconstructed" target="_blank" title="keys.deconstructed">/labs/keys.deconstructed</a> &larr;</small>
+![keys.deconstructed UI](/img/keys.deconstructed-ui.png)
+
+&rarr; [keys.deconstructed][keys.deconstructed]
 
 Coding the above toy app I learned that keys.lol generates seed from page and
 offset using `seed = (page - 1) * 128 + offset`. From that seed, an
@@ -150,4 +142,5 @@ or tweet at me if you see something!
 [bitcoin-top-100]: https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html
 [keys.lol]: https://keys.lol/
 [coinb.in]: https://coinb.in/#newTransaction
+[keys.deconstructed]: /labs/keys.deconstructed
 [keys.deconstructed.js]: https://github.com/ArnaudBrousseau/arnaudbrousseau.com/blob/master/src/files/labs/keys.deconstructed/keys.deconstructed.js
