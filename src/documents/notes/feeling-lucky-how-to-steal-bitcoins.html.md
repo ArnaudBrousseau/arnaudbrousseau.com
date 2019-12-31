@@ -115,7 +115,7 @@ Coding the above toy app I learned that keys.lol generates seed from page and
 offset using `seed = (page - 1) * 128 + offset`. From that seed, an
 uncompressed private key is generated, and two public keys (both compressed and
 uncompressed are generated). This sounds complex but it can be done in ~500
-LOC!
+lines of code! Here's the code: [keys.deconstructed.js][keys.deconstructed.js].
 
 Another feature I built is going the reverse route: from a known WIF
 uncompressed private key, recover the seed, then compute the page/offset on
@@ -150,3 +150,4 @@ or tweet at me if you see something!
 [bitcoin-top-100]: https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html
 [keys.lol]: https://keys.lol/
 [coinb.in]: https://coinb.in/#newTransaction
+[keys.deconstructed.js]: https://github.com/ArnaudBrousseau/arnaudbrousseau.com/blob/master/src/files/labs/keys.deconstructed/keys.deconstructed.js
