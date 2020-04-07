@@ -1,0 +1,4 @@
+#!/bin/bash
+echo 'Tip: do not forget to run ./fix_totally_bizarre_and_insane_ugly_url_behavior to fix directory paths (run in a separate shell)'
+echo 'Starting local hugo server...'
+hugo server --renderToDisk --destination public --disableLiveReload

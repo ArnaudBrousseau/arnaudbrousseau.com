@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        {{`<!--
+        ***********************************************************************
+        ArnaudBrousseau.com || v6 || Copyright © Arnaud Brousseau 2009-2020
+        ***********************************************************************
+        Are you reading this? You're awesome. You're reading the source.
+
+        Feel free to look around. If you spot something interesting, weird or
+        awesome or outright wrong don't hesitate to contact me. I don't bite.
+        I'm <first-name>.<last-name>@gmail.com.
+
+        Oh and if you're wondering: this site is static, built with Hugo.
+        Check out how: https://github.com/ArnaudBrousseau/arnaudbrousseau.com
+
+        FYI this site was last generated on:
+        {{ hugo.BuildDate }} (how precise! I know.)
+        ***********************************************************************
+        -->
+        ` | safeHTML }}
+        <meta name="author" content="Arnaud Brousseau" />
+        <meta name="viewport" content="width=720px">
+        <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+        {{ `<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->` | safeHTML }}
+        <title>{{ .Title }} | Arnaud Brousseau</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/style.css?v=3.2.17" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav-container">
+                {{ $currentPage := . }}
+                <a rel="noopener" href="/" class="nav-link {{ if .IsHome }}active{{ end }}" title="Go back home">Home</a>
+                <a rel="noopener" href="/labs/" class="nav-link {{ if (eq .Type "labs") }}active{{ end }}" title="Check out what I've been cooking">Labs</a>
+                <a rel="noopener" href="/notes/" class="nav-link {{ if (eq .Type "notes") }}active{{ end }}" title="Check out what I've been writing">Notes</a>
+            </nav>
+        </header>
+
+        <section id="main">
+            {{ block "main" . }}
+            {{ end }}
+        </section>
+
+        <footer>
+          <h1>The End.</h1>
+          <p>
+            &mdash; &#10084; &mdash;
+            <br />
+            This is an open website.
+            <a rel="noopener" class="view-source" href="https://github.com/ArnaudBrousseau/arnaudbrousseau.com" target="_blank" title="Feeling brave enough?">
+              Check out its source.
+            </a>
+          </p>
+        </footer>
+
+        <!-- Google analytics - asynchronous mode -->
+        <script>
+          var _gaq = [['_setAccount', 'UA-19545721-1'], ['_trackPageview']];
+          (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = 'https://www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+          })(document, 'script');
+        </script>
+    </body>
+</html>

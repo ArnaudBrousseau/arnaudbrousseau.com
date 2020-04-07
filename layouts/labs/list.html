@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <ul class="index labs-index">
+    {{ range .Pages }}
+      <li class="labs-list-item">
+        <a rel="noopener noreferrer" href="{{ .RelPermalink }}">
+          <img src="{{ .Params.caption }}" >
+          <span class="caption">{{ .Title }}</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

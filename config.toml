@@ -1,0 +1,11 @@
+baseURL = "https://arnaudbrousseau.com/"
+languageCode = "en-us"
+title = "Arnaud Brousseau"
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+
+[markup.goldmark.renderer]
+  unsafe= true
+
+[uglyURLs]
+  notes = true
+  labs = true

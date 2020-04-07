@@ -1,0 +1,499 @@
+
+/**
+ * CSS based on H5BP, slightly edited.
+ * Credits to the whole H5BP team.
+ * You guys rock <3
+ */
+
+
+/****************************************
+*********** CSS Normalizing *************
+*****************************************
+** CSS normalizing fills the small gaps
+** between browser's default stylesheets.
+** This approach is better than CSS reset
+** since it keeps the default styles.
+****************************************/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering: optimizeLegibility;}
+body { margin: 0; font-size: 13px; line-height: 1.42; } /* Slighly bigger line height. Because 42 my friend! */
+body, button, input, select, textarea { font-family: sans-serif; color: #3e3c35; }
+
+/* Links supercharged */
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul ul, ol ul, ul ol, ol ol { margin: 0; }
+dd { margin: 0 0 0 0; } /* no right margin for def lists */
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+/* Forms */
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Clearfix on steroids */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/******************
+Let's style baby !
+*******************/
+
+body {
+    font: 16px/1.42 sans-serif;
+    background-color: #ffffff;
+    /**
+     * And SVG background credits goes to:
+     * http://svgeneration.com/generate/Zags?width=66&background=ffffff&color1=f6f6f6&color2=fcfcfc&color3=f9f9f9&
+     **/
+    background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjYnIGhlaWdodD0nMzMnPgoJPGRlZnM+CgkJPGcgaWQ9J2xpbmVzJz4KCQkJPGxpbmUgeDE9JzAnIHkxPScwJyB4Mj0nMTMuMicgeTI9JzE2LjUnIHN0cm9rZS13aWR0aD0nMScgc3Ryb2tlPScjZjZmNmY2Jy8+CgkJCTxsaW5lIHgxPSc5LjknIHkxPScwJyB4Mj0nMjMuMScgeTI9JzE2LjUnIHN0cm9rZS13aWR0aD0nMScgc3Ryb2tlPScjZmNmY2ZjJy8+CgkJCTxsaW5lIHgxPScxOS44JyB5MT0nMCcgeDI9JzMzJyB5Mj0nMTYuNScgc3Ryb2tlLXdpZHRoPScxJyBzdHJva2U9JyNmOWY5ZjknLz4KCQk8L2c+Cgk8L2RlZnM+Cgk8cmVjdCB4PSctMTAlJyB5PSctMTAlJyB3aWR0aD0nMTIwJScgaGVpZ2h0PScxMjAlJyBmaWxsPScjZmZmZmZmJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgeD0nMzMnIHk9JzE2LjUnIC8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgeD0nMzMnIHk9Jy0xNi41JyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAtMSAwIDApJy8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgIC8+Cgk8dXNlIHhsaW5rOmhyZWY9JyNsaW5lcycgeD0nMCcgeT0nLTMzJyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAtMSAwIDApJy8+ICAKPC9zdmc+');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', Georgia, serif;
+}
+
+header, footer {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 12px;
+    text-align: center;
+    color: #3e3c35;
+}
+
+footer {
+    font-weight: bold;
+    padding: 9px;
+    border-bottom: 5px #3e3c35 solid;
+}
+footer h1 { font-size: 40px; line-height: 40px; margin: 0; }
+footer a:visited { color: #3e3c35; }
+footer p { margin: 0; }
+
+/* Main section */
+#main {
+    width: 680px;
+    margin: 60px auto;
+}
+
+header {
+    border-top: 5px #3e3c35 solid;
+    text-align: center;
+}
+.nav-container {
+    width: 680px;
+    margin: auto;
+}
+
+.nav-link {
+    color: #3e3c35;
+    font-family: 'PT Serif', Georgia, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: -1px 9px 0 9px;
+    background: #fff;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 0 0 4px 4px;
+    border: 1px #3e3c35 solid;
+    transition-property: background-color, color, text-shadow;
+    transition-duration: .3s;
+}
+
+.nav-link:visited { color: #3e3c35; }
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+    background-color: #444;
+    text-shadow: 0 -2px #3e3c35;
+    transition-property: background-color, color, text-shadow;
+    transition-duration: .3s;
+}
+
+.title {
+    font-size:40px;
+    font-weight: bold;
+    font-family: 'PT Serif', Georgia, serif;
+}
+
+.home {
+  text-align: center;
+}
+
+.home .title {
+    border-bottom: 1px solid #3e3c35;
+    margin-bottom: 0;
+}
+
+.home .intro {
+    text-align: left;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom:20px;
+    line-height: 40px;
+}
+.home .intro a {
+  color: #3e3c35;
+  display: inline-block;
+  font-size: 28px;
+  height: 32px;
+  border: 1px #3e3c35 solid;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #ccc;
+  text-shadow: 0px -1px 2px #666, 0px 1px 2px #666;
+  background: #f5f4f5;
+}
+.home .intro a:hover {
+  border: 1px #3e3c35 solid;
+  color: #f5f4f5;
+  background: #3e3c35;
+  box-shadow: none;
+}
+
+.home a.coinbase {
+  background: rgb(22, 82, 240);
+  color: white;
+}
+.home a.mailtape {
+  background: #e7237b;
+  background: linear-gradient(90deg, #ea4d3f 0%, #ea4d3f 19%, #e7237b 20%, #e7237b 39%, #18a9e2 40%, #18a9e2 59%, #f3df2b 60%, #f3df2b 79%, #3eae5f 80%, #3eae5f 99%);
+  color: white;
+}
+.home a.alliage {
+  background: #f46f08;
+  color: white;
+}
+.home a.mozilla {
+  background: #000;
+  color: white;
+}
+
+p.social {
+    clear:both;
+    text-align:center;
+    padding: 18px;
+    margin: 0 0 18px 0;
+}
+.social a {
+  display: inline-block;
+  width: 88px;
+  height: 54px;
+  margin: 0 9px;
+}
+.social a span {
+  display:none;
+}
+.social .github {
+  background: transparent url('/img/social-github.png') top center no-repeat;
+}
+.social .linkedin {
+  background: transparent url('/img/social-linkedin.png') top center no-repeat;
+}
+.social .flickr {
+  background: transparent url('/img/social-flickr.png') top center no-repeat;
+}
+.social .twitter {
+  background: transparent url('/img/social-twitter.png') top center no-repeat;
+}
+.lab-details {
+    position:relative;
+    margin-top: 54px;
+}
+.lab-details h1 {
+    height:34px;
+    margin-bottom: 27px;
+    font-size:20px;
+    line-height:34px;
+    padding-left:1em;
+    color: #fff;
+    background: transparent url('/img/articleH1BG.png') top left no-repeat;
+}
+.lab-details aside {
+    background: transparent url('/img/sectionTopLinkBG.png') top right no-repeat;
+    height:34px;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+a.online, a.offline {
+    display:block;
+    font-size: 12px;
+    color:#333;
+    width: 55px;
+    font-weight: bold;
+    text-decoration:none;
+    text-align:center;
+    border-bottom:2px solid #333;
+    border-top:2px solid #333;
+    margin-top:-2px;
+}
+a.online:hover {
+    border-width:4px;
+    margin-top:-4px;
+    color: #333;
+}
+a.online:active {
+    border-color:#000;
+    color: #333;
+}
+a.offline {
+  cursor:default;
+  border: none;
+}
+
+.lab-details .story {
+    font-size: 20px;
+    width: 420px;
+    padding-left: 40px;
+    margin-bottom: 27px;
+}
+
+.lab-details dl {
+    position:absolute;
+    font-size: 12px;
+    top: 62px;
+    line-height: 18px;
+    left : 490px;
+    width: 180px;
+    padding-left: 10px;
+    border-left: 5px solid #333;
+}
+.lab-details dt { font-weight: bold;}
+
+/* Illustration section : general settings */
+.illustration { width: 640px;  margin: 0 auto; padding: 10px 0; }
+.illustration span, .illustration img { display: block; }
+.illustration img { border: 9px #fff solid;}
+.illustration span { border: 1px #999 solid; }
+
+/* Very very basic grid system to display images */
+.grid, .grid-2 { clear: both; overflow: hidden; margin-bottom: 20px; }
+.cell { float: left; display: inline; margin: 0 10px; position: relative; }
+.grid .cell { width: 620px; }
+.grid-2 .cell { width: 300px; }
+
+.index {
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/* Notes index list */
+.notes-index {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 24px;
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/* Link styles */
+a.content-link,
+a.content-link:visited {
+    color: #3e3c35;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+a.content-link:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #444;
+}
+
+.notes-list-item em {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+/* Labs index */
+.labs-list-item {
+    display: inline-block;
+    margin: 10px;
+}
+.labs-list-item a {
+    border: 1px #999 solid;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    background: #FFF;
+    text-decoration: none;
+    color: #3e3c35;
+    border-radius: 2px;
+}
+.labs-list-item .caption {
+    font-size: 16px;
+    padding-top: 10px;
+    display: block;
+}
+
+/* Now let's style out notes */
+.note-title {
+    margin-bottom: 0px;
+    text-align: center;
+}
+.note-subtitle {
+    font-size: 11px;
+    line-height: 5px;
+    text-align: right;
+    background: #3e3c35;
+    padding-right: 11px;
+    margin: 0;
+}
+.note-subtitle a { color: #3e3c35; }
+.note-subtitle-content {
+    display: inline-block;
+    background: #fff;
+    padding: 0 11px;
+}
+
+.note-content {
+    font-size: 20px;
+    margin: 60px auto;
+}
+
+.note-content h1,
+.note-content h2,
+.note-content h3,
+.note-content h4,
+.note-content h5,
+.note-content h6 {
+  color: #3e3c35;
+}
+
+.note-content h1 { font-size: 32px; border-bottom: 1px solid #3e3c35; }
+.note-content h2 { font-size: 26px; }
+.note-content h3 { font-size: 22px; color: #736f5f;}
+/* These header levels should be used...probably never? */
+.note-content h4 { font-size: 20px; color: #868379;}
+.note-content h5 { font-size: 20px; color: #868379;}
+.note-content h6 { font-size: 20px; color: #868379;}
+
+.note-content img {
+    display: block;
+    max-width: 100%;
+    border: 1px #999 solid;
+    border-radius: 2px;
+}
+
+.note-content .syntaxhighlighter {
+    font-size: 16px !important;
+    border-radius: 4px;
+    padding: 4px 0;
+    margin-left: -10px;
+    border: 1px #fff solid;
+}
+.note-content .syntaxhighlighter .toolbar { display: none !important; }
+
+/**
+ * <code> tags are generated by the markdown `here is some code` syntax.
+ * When updating this, don't forget to update shCoreMidnight so that code style
+ * stays consistent.
+ */
+.note-content code {
+  background-color: #dcdcdc;
+  background-color: #dcdcdc80;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 2px 2px;
+  font-family: "PT Mono", Menlo, "Consolas", "Courier New", monospace;
+}
+
+blockquote {
+    background: #fff;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    font-style: italic;
+    border: 1px solid #999;
+    border-left: 5px solid #0f192a;
+    border-radius: 2px;
+}
+blockquote p { margin: 5px; }
+
+.thanks p {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px #dbd5d5 solid;
+  padding: 12px;
+  margin: 0;
+}
+
+/* Print styles */
+@media print {
+    body { background: white; }
+    * { color: black !important; }
+    a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; } /* h5bp.com/t */
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+}

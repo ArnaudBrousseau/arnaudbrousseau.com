@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <ul class="index notes-index">
+    {{ range .Pages }}
+      <li class="notes-list-item">
+        <a rel="noopener" class="content-link" href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+          <em>&mdash; <time>{{ .Date.Format "Monday, January 2, 2006" }}</time> &mdash;</em>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

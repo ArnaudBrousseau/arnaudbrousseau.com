@@ -2,4 +2,6 @@
 .docpad.db
 *.sw[a-z]
 out
+public
+build
 node_modules

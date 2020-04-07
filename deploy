@@ -1,5 +1,8 @@
 #!/bin/bash
 echo 'Generating files...'
-./node_modules/.bin/docpad generate
+hugo
+echo 'Fixing index pages'
+mv public/notes.html public/notes/index.html
+mv public/labs.html public/labs/index.html
 echo 'rsyncing to VPS...'
-rsync -avzhr --delete out/ x61@vps.x61.fr:/home/x61/sites/arnaudbrousseau/
+rsync -avzhr --delete public/ x61@vps.x61.fr:/home/x61/sites/arnaudbrousseau/

@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article class="lab-details">
+    <h1>{{ .Title }}</h1>
+      <aside>
+        {{ if .Params.externalLink }}
+        <a rel="noopener" href="{{ .Params.externalLink }}" target="_blank" title="See this project online!" class="online">See it ONLINE</a>
+        {{ else }}
+              <a rel="noopener" href="#" title="Whoops, this is not online anymore. Sorry." class="offline">Currently OFFLINE</a>
+        {{ end }}
+      </aside>
+      {{ .Content }}
+  </article>
+{{ end }}

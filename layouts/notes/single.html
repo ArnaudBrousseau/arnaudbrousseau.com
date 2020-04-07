@@ -1,0 +1,31 @@
+{{ define "main" }}
+<h1 class="title note-title">{{ .Title }}</h1>
+  <p class="note-subtitle">
+      <em class="note-subtitle-content">
+        <time datetime="{{ .Date }}">{{ .Date.Format "Monday, January 2, 2006" }}</time>
+      </em>
+  </p>
+
+  <div class="note-content">
+    {{ .Content }}
+  </div>
+
+  <div class="thanks">
+    <p>
+    Do you want to show your support? Like what you're reading? <br />
+    Tip me at <a href="/img/cryptosafu.eth.png" target="_blank">cryptosafu.eth</a> or <a href="https://twitter.com/intent/tweet?{{ (querify "text" .Permalink) | safeURL }}" target="_blank">spread the word on Twitter!</a></p>
+  </div>
+
+  <link href="/css/shCoreMidnight.css" rel="stylesheet" type="text/css" />
+  <script src="/js/shCore.js" type="text/javascript"></script>
+  <script src="/js/shAutoloader.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      SyntaxHighlighter.autoloader(
+          'js jscript javascript  /js/shBrushJScript.js',
+          'python                 /js/shBrushPython.js',
+          'plain                  /js/shBrushPlain.js',
+          'css                    /js/shBrushCss.js'
+      );
+      SyntaxHighlighter.all();
+  </script>
+{{ end }}

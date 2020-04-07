@@ -1,0 +1,7 @@
+#!/bin/bash
+# See https://github.com/gohugoio/hugo/issues/4428 for the reasoning behind
+# this filename. Gotta love Hugo.
+echo 'Fixing index pages...'
+mv public/notes.html public/notes/index.html
+mv public/labs.html public/labs/index.html
+echo '...done'
