@@ -53,6 +53,18 @@
             <a rel="noopener" class="view-source" href="https://github.com/ArnaudBrousseau/arnaudbrousseau.com" target="_blank" title="Feeling brave enough?">
               Check out its source.
             </a>
+
+            <br />
+            <br />
+            <div id="vitals" class="hidden">
+              &#x26A1; Perf vitals for nerds &#x26A1;
+              <br />
+              <span class="hidden" id="TTFB" title="Time To First Byte"></span>
+              <span class="hidden" id="FCP" title="First Contentful Paint"></span>
+              <span class="hidden" id="LCP" title="Largest Contentful Paint"></span>
+              <span class="hidden" id="CLS" title="Cumulative Layout Shift"></span>
+              <span class="hidden" id="FID" title="First Input Delay"></span>
+            </div>
           </p>
         </footer>
 
@@ -66,6 +78,27 @@
             g.src = 'https://www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g, s);
           })(document, 'script');
+        </script>
+
+        <!-- Performance numbers -->
+        <script defer src="/js/vitals.js"></script>
+        <script>
+          var displayVital = function(eltId) {
+            var element = document.getElementById(eltId);
+            var vitals = document.getElementById('vitals');
+            return function(result) {
+              element.innerText = `${eltId}: ${Math.floor(result.value)}ms`;
+              element.classList.remove('hidden');
+              vitals.classList.remove('hidden');
+            }
+          }
+          addEventListener('DOMContentLoaded', function() {
+            webVitals.getCLS(displayVital('CLS'));
+            webVitals.getFID(displayVital('FID'));
+            webVitals.getFCP(displayVital('FCP'));
+            webVitals.getLCP(displayVital('LCP'));
+            webVitals.getTTFB(displayVital('TTFB'));
+          });
         </script>
     </body>
 </html>

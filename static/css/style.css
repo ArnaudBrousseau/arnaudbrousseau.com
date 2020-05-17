@@ -127,6 +127,7 @@ footer {
 footer h1 { font-size: 40px; line-height: 40px; margin: 0; }
 footer a:visited { color: #3e3c35; }
 footer p { margin: 0; }
+footer #vitals span + span:before { content: '—'; }
 
 /* Main section */
 #main {
