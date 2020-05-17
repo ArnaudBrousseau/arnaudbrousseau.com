@@ -7,7 +7,7 @@ The site used to be a simple static HTML page. It now uses [Hugo](https://gohugo
 
 ```
 brew install hugo
-hugo -D
+hugo server
 ```
 
 ## Deployment
