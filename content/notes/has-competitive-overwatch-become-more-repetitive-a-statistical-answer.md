@@ -3,13 +3,8 @@ title: "Has Overwatch become more repetitive? A statistical answer"
 date: 2020-01-12
 ---
 
-<style>
-.formula { height: 60px; position: relative; }
-.formula span { position: absolute; }
-.up, .down { font-weight: bold; }
-.up { color: green; }
-.down { color: red; }
-</style>
+<script> MathJax = { loader: { load: ['input/asciimath', 'output/chtml'] } }; </script>
+<script type="text/javascript" src="/js/mathjax/tex-chtml.js" id="MathJax-script" async></script>
 
 I'm a big fan of [Overwatch][overwatch], Blizzard's FPS. Something about it
 keeps calling me back to play, season after season. I've been playing since the
@@ -39,31 +34,11 @@ with a _multicombination_ (in early competitive overwatch, a team of 6
 Winstons was allowed!). In mathematical terms we have a **6-multicombination
 from a 21-set**. Formula for this:
 
-<div class="formula">
-<span style="top: 0px; left: -2px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 0px; left: 3px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 4px; left: 20px;">n</span>
-<span style="top: 27px; left: 20px;">k</span>
-<span style="top: 0px; left: 34px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 0px; left: 40px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 16px; left: 56px;">=</span>
-<span style="top: 0px; left: 70px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 4px; left: 85px;">n + k - 1</span>
-<span style="top: 27px; left: 115px;">k</span>
-<span style="top: 0px; left: 157px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 16px; left: 173px;">=</span>
-<span style="top: 4px; left: 196px;">(n + k - 1)!</span>
-<span style="top: 31px; left: 190px; border-top: 1px solid #222">(k! × (n - 1)!)</span>
-</div>
+\`(:(:(n),(k):):)=(:(n+k-1),(k):)=((n+k-1)!)/(k!xx(n-1)!)\`
 
-We can compute this for `k=6` and `n=21`:
+We can compute this for \`k=6\` and \`n=21\`:
 
-<div class="formula">
-<span style="top: 4px; left: 5px;">(21 + 6 - 1)!</span>
-<span style="top: 31px; left: 0px; border-top: 1px solid #222">(6! × (21 - 1)!)</span>
-<span style="top: 16px; left: 130px;">=</span>
-<span style="top: 16px; left: 156px; font-weight: bold">230,230 different teams</span>
-</div>
+\`((21 + 6 - 1)!)/(6! xx (21-1)!) = \` **230,230 different teams**
 
 ## One hero per team
 On July 19th 2016 we went from a system which allowed to pick multiple of the
@@ -71,24 +46,11 @@ same heroes to one hero per team. This is actually a fairly significant change!
 We are going from multicombination to simple combination with no repetition.
 The formula becomes:
 
-<div class="formula">
-<span style="top: 0px; left: 0px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 4px; left: 20px;">n</span>
-<span style="top: 27px; left: 20px;">k</span>
-<span style="top: 0px; left: 34px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 16px; left: 56px;">=</span>
-<span style="top: 4px; left: 114px;">n!</span>
-<span style="top: 31px; left: 77px; border-top: 1px solid #222">k! × (n - k)!</span>
-</div>
+\`(:(n),(k):) = ((n!)/(k! xx (n-k)!))\`
 
-Computing this for `k=6` and `n=21`:
+Computing this for \`k=6\` and \`n=21\`:
 
-<div class="formula">
-<span style="top: 4px; left: 43px;">21!</span>
-<span style="top: 31px; left: 0px; border-top: 1px solid #222">6! × (21 - 6)!</span>
-<span style="top: 16px; left: 122px;">=</span>
-<span style="top: 16px; left: 145px; font-weight: bold">54,264 different teams</span>
-</div>
+\`((21!)/(6! xx (21-6)!)) = \` **54,264 different teams**
 
 Substantial difference indeed! We've lost 76% of the possible teams compared to what we started with.
 
@@ -132,28 +94,9 @@ The 31 heroes are divided as follow:
 A competitive team is now defined by 3 sub-teams. Each sub-team is a
 2-combination. And the 3 sub-teams can be combined independently (no
 restriction). So, if X, Y and Z are the number of sub-teams for each hero
-class, the number of competitive teams is X × Y × Z.
+class, the number of competitive teams is \`X xx Y xx Z\`.
 
-
-<div class="formula">
-<span style="top: 16px; left: 0px;">Number of teams =</span>
-<span style="top: 0px; left: 174px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 4px; left: 190px;">8</span>
-<span style="top: 27px; left: 190px;">2</span>
-<span style="top: 0px; left: 203px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 16px; left: 219px;">×</span>
-<span style="top: 0px; left: 232px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 4px; left: 245px;">16</span>
-<span style="top: 27px; left: 252px;">2</span>
-<span style="top: 0px; left: 267px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 16px; left: 281px;">×</span>
-<span style="top: 0px; left: 293px; font-size: 40px; font-weight: 100;">⟨</span>
-<span style="top: 4px; left: 307px;">7</span>
-<span style="top: 27px; left: 307px;">2</span>
-<span style="top: 0px; left: 318px; font-size: 40px; font-weight: 100;">⟩</span>
-<span style="top: 16px; left: 334px;">=</span>
-<span style="top: 16px; left: 350px;">70,560 (-70%)</span>
-</div>
+Number of teams \` = (:(8),(2):) xx (:(16),(2):) xx (:(7),(2):) = \` 70,560 (-70%)
 
 Pretty big dip in complexity!
 
