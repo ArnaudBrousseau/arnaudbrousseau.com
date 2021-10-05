@@ -1,13 +1,15 @@
 {{ define "main" }}
   <article class="lab-details">
-    <h1>{{ .Title }}</h1>
+    <h1>
+      {{ .Title }}
       <aside>
         {{ if .Params.externalLink }}
-        <a rel="noopener" href="{{ .Params.externalLink }}" target="_blank" title="See this project online!" class="online">See it ONLINE</a>
+          <a rel="noopener" href="{{ .Params.externalLink }}" target="_blank" title="See this project online!" class="online">Live</a>
         {{ else }}
-              <a rel="noopener" href="#" title="Whoops, this is not online anymore. Sorry." class="offline">Currently OFFLINE</a>
+          <a rel="noopener" href="#" title="Whoops, this is not online anymore. Sorry." class="offline">(retired)</a>
         {{ end }}
       </aside>
+    </h1>
       {{ .Content }}
   </article>
 {{ end }}
