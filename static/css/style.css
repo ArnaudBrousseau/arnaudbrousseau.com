@@ -217,10 +217,6 @@ header {
   transition-duration: .1s;
 }
 
-.home a.coinbase {
-  background: rgb(22, 82, 240);
-  color: #1552f0;
-}
 .home a.mailtape {
   background: #e7237b;
   background: linear-gradient(90deg, #ea4d3f 0%, #ea4d3f 19%, #e7237b 20%, #e7237b 39%, #18a9e2 40%, #18a9e2 59%, #f3df2b 60%, #f3df2b 79%, #3eae5f 80%, #3eae5f 99%);
