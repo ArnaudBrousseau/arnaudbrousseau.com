@@ -71,6 +71,8 @@ Ready to improve? Good! Here is a list of resources I've come across over the ye
 * Writing Cultures Win: https://founder-fodder.ghost.io/writing-cultures-win/
 * How to Write More Clearly, Think More Clearly, and Learn Complex Material More Easily (slides): http://www.covingtoninnovations.com/mc/WriteThinkLearn.pdf
 * Writing for engineers (some really good tips in there!): https://www.heinrichhartmann.com/posts/writing
+* How to write docs loved by other developers: https://thenewstack.io/an-engineers-best-tips-for-writing-documentation-devs-love
+* Writing better docs (1-pagers, design docs, postmortems): https://eugeneyan.com/writing/writing-docs-why-what-how/
 
 Now, here are some resources which I have not read/vetted yet, but I've seen recommended by people I trust:
 
