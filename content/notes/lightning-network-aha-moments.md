@@ -1,6 +1,6 @@
 ---
 title: "Lightning Network: 7 \"Aha!\" moments to make it click"
-date: 2022-08-21T11:40:52-05:00
+date: 2022-08-28T11:40:52-05:00
 ---
 
 <center><span style="color:red">Important: this text is currently under review!</span></center>
@@ -67,14 +67,17 @@ Bitcoin transactions (also called "commitment transactions") come in.
 
 **Committing**. Agreeing on who owns what share of the fund pool is done via
 _pre-signed_ offline Bitcoin transactions. These transactions are called
-"commitment transactions", or "commitments" for short.  They spend funds out of
+"commitment transactions", or "commitments" for short. They spend funds out of
 the multisig address and split them across the two channel partners. They
 provide an important guarantee: in case things go wrong, the commitment
 transactions can be broadcast and funds are sent out of the multisig address,
 back to the channel partners, according to the agreed upon split. Therefore,
 it's crucial to put this guarantee in place before sending funds to the
-multisig address! How is this agreement put in place? Well, here are the
-messages exchanged to open a Lightning channel:
+multisig address! <small>(if you're wondering how that's possible, the next section on
+SegWit has answers for you!)</small>
+
+How are commitments put in place? Well, here are the messages exchanged to open
+a Lightning channel:
 * [[`open_channel`][open_channel]] "Hey, I want to open a channel with you, you down?" 
 * [[`accept_channel`][accept_channel]] "Sure, sounds good to me!"
 * [[`funding_created`][funding_created]] "Before I sent funds to this new
@@ -103,22 +106,25 @@ broadcast it on-chain. As a result chaining signed transactions without
 broadcasting them was risky. 
 
 SegWit solves this by excluding (or, **seg**regating) signatures (or,
-**wit**nesses) from the data hashed to produce a transaction ID. A different
-valid signature thus doesn't change the transaction ID and unlocks safe
-offline transaction chaining. This is fundamental for the Lightning network
-since commitment transactions have to be signed _before_ funding transactions
-are broadcast, yet commitment transactions need the funding transaction ID to
-be constructed. In other words, the Lightning Network would not be able to
-function without SegWit and offline transaction chaining.
+**wit**nesses) from the data hashed to produce a transaction ID. As a result, a
+change in the signature won't change the transaction ID. This is why it's safe
+to rely on this ID to construct another transaction using it, even if it's not
+broadcast on-chain.
+
+This is fundamental for the Lightning network since commitment transactions
+(remember, they're our "insurance") have to be signed before funding
+transactions are broadcast, yet commitment transactions need the funding
+transaction ID to be constructed. In other words, the Lightning Network would
+not be able to function without SegWit and offline transaction chaining.
 
 # Aha! Bitcoin script and game theory to harden commitment outputs!
 
 To update the channel balances, old commitments need to be revoked and a new one
 established. This is done with a simple exchange of messages:
 * [`commitment_signed`][commitment_signed]
-contains a new partially signed commitment (missing one signature)
-* [`revoke_and_ack`][revoke_and_ack] sends the fully signed commitment back and
-  revokes the last valid one
+contains a new partially signed commitment (missing the recipient's signature)
+* [`revoke_and_ack`][revoke_and_ack] acknowledges the commitment and revokes
+  the last valid one
 
 Commitment transactions are sophisticated, to prevent cheating. The idea is
 that if I cheat by broadcasting an old commitment, you should have some time to
@@ -128,14 +134,16 @@ other party's share. That's the financial incentive not to broadcast old
 commitments.
 
 In order to implement punishment, commitments are non-symmetrical. The
-"punishment" outputs have different amounts and beneficiaries: you can punish
+"punishment" outputs have different amounts and beneficiaries: you can punish me
 and claim my share if I broadcast an old commitment of mine to you, and I can
-punish and take your share if you broadcast an old commitment of yours to me.
+punish you and take your share if you broadcast an old commitment of yours to me.
 
-To allow for cheating detection and enforcement, commitments output
-are delayed so that the party crafting them is forced to wait for a window
-of time to get their fair share. This is to ensure the other party has time to
-detect cheating and use their revocation secret if they so choose.
+To allow for cheating detection and enforcement, commitments output are delayed
+so that the party crafting them is forced to wait for a window of time to get
+their fair share. This is to ensure the other party has time to detect cheating
+and use their revocation secret if they so choose. The time delay is not
+dictated by the protocol: it is agreed upon when the channel is open
+(`to_self_delay` in [`open_channel`][open_channel])
 
 To illustrate this, let's take a concrete example. If A and B have a
 channel opened (split with 0.5 BTC for A, and 2.5 BTC for B), here are the
@@ -169,8 +177,9 @@ There you have it, game theory and Bitcoin primitives coming together in this
 commitment transaction output!
 
 Now let's dive one layer deeper: how do revocation secrets work exactly?
-Remember that revocation secrets are powerful, you can take my portion of the
-channel balance with it! How are they generated and how do they revoke commitments?
+Remember that revocation secrets are powerful, you can claim my portion of the
+channel balance with it! How are they generated and how do they "revoke"
+commitments exactly?
 
 # Aha! Revoking a commitment is done by revealing a secret!
 
@@ -180,7 +189,7 @@ through it together!
 
 _Warning: this requires some knowledge of elliptic curve cryptography._
 <details>
-<summary>Click/Tap to view a quick primer.</em></summary>
+<summary>Click/Tap for a quick primer.</em></summary>
 Here are the important concepts to grasp:
 <ul>
 <li> What are elliptic curves?<br>
@@ -213,11 +222,10 @@ reading [The Animated Elliptic Curve](https://curves.xargs.org/).
 Back to the lightning network and revocation secrets!
 </details>
 
-If you and I open a channel, we exchange two elliptic curve points as part of
-the flow: `revocation_basepoint` and `first_per_commitment_point`. These are
-fields in the [`open_channel`][open_channel] and
-[`accept_channel`][accept_channel] messages. Revocation public keys are composed
-from these two points:
+If two parties (let's call them "A" and "B") open a channel, they exchange two
+(public) elliptic curve points as part of the flow: `revocation_basepoint` and
+`per_commitment_point`. Revocation public keys (`revocation_pubkey`) are
+composed from these two points:
 
 ![ECC trick](/img/lightning-ecc-trick.png)
 
@@ -233,10 +241,7 @@ revocation_pubkey =
 _(In the above, `||` represents byte concatenation and `*` is ECC point
 multiplication)_
 
-Both parties can compute this shared point for which neither of them know the
-private key. However (and that's the beauty of this scheme), the
-associated secret key is not random! It's computed from the two secrets,
-`revocation_secret` and `per_commitment_secret`:
+The associated private key is given by:
 <pre class="brush:plain">
 revocation_privkey = 
     revocation_secret
@@ -271,31 +276,57 @@ G * revocation_privkey
 </pre>
 </details>
 
-A party who knows `revocation_secret` needs the `per_commitment_secret` to
-compute `revocation_privkey`. And vice-versa: a party who knows
-`per_commitment_secret` needs the `revocation_secret` to compute
-`revocation_privkey`.
+`revocation_pubkey` can be computed by anyone since it's composed of 2 public
+points. The interesting piece is the `revocation_privkey`, composed of two
+secrets spread across channel partners: `revocation_secret` and
+`per_commitment_secret`.
+* `revocation_secret` is generated once upon channel opening. The associated
+  public point (`revocation_basepoint`) stays the same during the lifetime of
+  the channel.
+* `per_commitment_secret` values are specific to each commitment. <br><small>To make this
+  fast, they're based on a single seed computed at the beginning. The
+  derivation of subsequent secrets (one for each commitment) is explained in
+  [BOLT#3: Per-commitment Secret Requirements][bolt-3-per-commitment-secret]</small>
 
-It turns out "revoking" a commitment is the act of _revealing the
+It turns out "revoking" a commitment is the act of _revealing its
 per-commitment secret_. The reveal is done with a field named
-`per_commitment_secret` in the [`revoke_and_ack`][revoke_and_ack] message.
+`per_commitment_secret` in the [`revoke_and_ack`][revoke_and_ack] message. This
+message also contains `next_per_commitment_point` such that the other party can
+compute the next `revocation_pubkey` and use it to craft the next commitment
+transaction. To make this more concrete, let's illustrate this with our 2
+channel partners, A and B:
+* A generates a `revocation_basepoint` during channel opening
+* B sends `per_commitment_point_1`
+* A crafts commitment #1 using `revocation_basepoint` and `per_commitment_point_1`, and sends it to B
+* B sends `per_commitment_secret_1` (thereby revoking commitment #1), and sends `per_commitment_point_2` to A
+* A crafts commitment #2, using `revocation_basepoint` and `per_commitment_point_2`, and sends it to B
+* B sends `per_commitment_secret_2` (thereby revoking commitment #2), and sends `per_commitment_point_3` to A
+* ...and so on and so forth
 
-Now it should be clear why the commitment transaction itself never changes, yet
-it's "revoked": when the revocation secret is revealed, the other party can
-suddently compute `revocation_privkey` and redeem the "punishment" output of
-the associated commitment transaction if it was broadcast. This is a strong
-enough financial incentive to make this commitment transaction moot.
+<small>
+Note: the above only describes how A creates commitments for B. When B wants to
+create commitments for A, it uses its own <code>revocation_basepoint</code> and
+A's series of <code>per_commitment_point</code> values.
+</small>
+
+Now it should be clear why commitment transactions never change, yet they're
+"revoked": when the `per_commitment_secret` for a given commitment is revealed,
+the other party can suddently compute the associated `revocation_privkey` and
+redeem the commitment's "punishment" output if it was ever broadcast on-chain.
+This strong financial incentive is enough to keep old commitment transactions
+offline for good.
 
 # Aha! Multi-hop, atomic payments with HTLCs!
 We've seen how the Lightning Network enables peer-to-peer payments. Now let's
 move to _indirect_ or "multi-hop" payments. If A has a channel open with B, and
 B has a channel opened with C, can A pay C?
 
-Yes it can! Not only can A pay C, it can do so _atomically_: either all legs of
-the payment (`A->B`, `B->C`) succeed, or all legs fail. This is
-possible at scale, even with 10, 15, or 20+ intermediaries. If you're used to
-the traditional financial system where intermediaries cause hard-to-debug
-failures and long settlement delays...isn't this mind-blowing?
+Yes it can! Provided that there is a route with enough capacity from A to C,
+not only can A pay C, it can do so _atomically_. Either all legs of the payment
+(e.g. `A->B`, `B->C`) succeed, or all legs fail. This is possible at scale,
+even with 10, 15, or 20+ intermediary nodes. If you're used to the traditional
+financial system where intermediaries cause hard-to-debug failures and long
+settlement delays...isn't this mind-blowing?
 
 The Lightning Network does this with **Hash-Time-Lock-Contracts ("HTLCs")**.
 These contracts are "just" valid Bitcoin scripts. The basic premise is that an
@@ -311,7 +342,10 @@ point-of-view of the recipient, or Time-locked contract from the point-of-view
 of the issuer.
 
 How are HTLCs helping with instant, atomic payments? Here's how a payment from
-A to B to C happens in practice:
+A to B to C happens in practice: <br><small>(note: if you're wondering
+why "B" was picked as an intermediary, we'll see later that path
+discovery isn't explicitly part of the BOLT specs! Another interesting
+aspect of the Lightning Network design)</small>
 * C creates a lightning "invoice" to A for 100,000 satoshis (0.001 BTC). This
   could be communicated over an email, through a web-based checkout flow, via
   an in-person QR code, etc.  At the core of this invoice is a hash H. The
@@ -355,7 +389,7 @@ For the curious reader: what's the incentive not to broadcast HTLCs on-chain
 after off-chain settlement is done?
 </summary>
 You may have noticed an incentive problem in the previous example: why would C
-not broadcast the HTLC on-chain _after_ the channel balance is updated? After all, C has
+not broadcast the HTLC on-chain <em>after</em> the channel balance is updated? After all, C has
 the pre-image so why not take the money twice? Once from the off-chain settlement
 through B's balance update, the second on-chain with the HTLC broadcast!
 
@@ -364,9 +398,9 @@ transactions. In other words, B doesn't simply send an HTLC to C. B and C
 actually exchange _commitment transactions_ which include the HTLC as an extra output.
 
 Specifically, the commitment transaction from B to C has the following outputs:
-* output to B for B's balance - 100,000 satoshis (delayed)
+* output to B for B's balance minus 100,000 satoshis (delayed)
 * output to C for C's balance (immediate)
-* output to C for B's balance - 100,000 satoshis (immediate with revocation key)
+* output to C for B's balance minus 100,000 satoshis (immediate with revocation key)
 * output to HTLC for 100,000 satoshis
 
 And the commitment transaction from C to B has the following outputs:
@@ -396,14 +430,15 @@ implemented on the Lightning Network" (taken from the Mastering the Lightning
 Network's glossary)
 
 # Bonus: Choosing NOT to design payment routing
-Designing is making choices. It's also choosing NOT to make a choice (so that
-developers can experiment and innovate within the boundary of protocol rules).
+Designing is making choices. It's also choosing NOT to make a choice, to leave
+room for experimentation and innovation within the protocol boundary.
 
 I was a bit shocked to learn that there is no standard on how to route payments
 in lightning. The probing for channel balances happens independently, through
-trial and error. Some papers have been written on how to do this independently.
-There's also, in the same category, innovation on how to manage channel
-liquidity. For example: [Loop](https://lightning.engineering/loop/).
+trial and error. [Some][ln-routing-paper-1] [papers][ln-routing-paper-2] have
+been written on how to do this independently.  There's also, in the same
+category, innovation on how to manage channel liquidity. For example:
+[Loop](https://lightning.engineering/loop/).
 
 This is how lightning "scales". The protocol itself doesn't mandate anything,
 actors within the lightning community are coming up with bottom-up solutions
@@ -469,3 +504,6 @@ worth dissecting. I hope you'll get as much satisfaction as I did while diving i
 [taro-presentation]: https://docs.google.com/presentation/d/1GU4dtNLdT92lzb5Z2FR-dPY88zVPg7R7tlxRKJ7uMnQ/
 [taro-eng]: https://docs.lightning.engineering/the-lightning-network/taro
 [bolts]: https://github.com/lightning/bolts/blob/master/00-introduction.md
+[bolt-3-per-commitment-secret]: https://github.com/lightning/bolts/blob/master/03-transactions.md#per-commitment-secret-requirements
+[ln-routing-paper-1]: https://arxiv.org/abs/2107.05322
+[ln-routing-paper-2]: https://arxiv.org/abs/2103.08576

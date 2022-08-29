@@ -496,6 +496,10 @@ a.content-link:hover {
   font-size: 1.3rem;
 }
 
+.note-content small code {
+  font-size: 1.14rem;
+}
+
 blockquote {
     background: #fff;
     margin: 1.5rem 10px;
