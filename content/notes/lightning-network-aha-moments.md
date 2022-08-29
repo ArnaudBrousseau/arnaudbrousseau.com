@@ -3,8 +3,6 @@ title: "Lightning Network: 7 \"Aha!\" moments to make it click"
 date: 2022-08-28T11:40:52-05:00
 ---
 
-<center><span style="color:red">Important: this text is currently under review!</span></center>
-
 I recently finished reading _Mastering the Lighning Network_ ([Amazon
 link][lnbook-amazon], [Github link][lnbook-github]). This book does a great job
 explaining the design of the Lightning Network and the details of the protocol.
@@ -485,6 +483,8 @@ I highly recommend reading the full version of _Mastering the Lighning Network_
 ([Amazon link][lnbook-amazon], [Github link][lnbook-github]) if you're looking
 to learn more about the Lightning Network. The design principles behind it are
 worth dissecting. I hope you'll get as much satisfaction as I did while diving in!
+
+<center><small><em>Thanks to Rob S. and Alex M. for their valuable feedback on previous versions of this text.</em></small></center>
 
 [lnbook-amazon]: https://www.amazon.com/Mastering-Lightning-Network-Blockchain-Protocol-dp-1492054860/dp/1492054860/
 [lnbook-github]: https://github.com/lnbook/lnbook
