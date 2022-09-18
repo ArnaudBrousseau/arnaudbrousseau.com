@@ -74,6 +74,7 @@ Ready to improve? Good! Here is a list of resources I've come across over the ye
 * How to write docs loved by other developers: https://thenewstack.io/an-engineers-best-tips-for-writing-documentation-devs-love
 * Writing better docs (1-pagers, design docs, postmortems): https://eugeneyan.com/writing/writing-docs-why-what-how/
 * Don't think to write, write to think: https://herbertlui.net/dont-think-to-write-write-to-think/
+* Handbook for Writers: https://saylordotorg.github.io/text_handbook-for-writers/index.html
 
 Now, here are some resources which I have not read/vetted yet, but I've seen recommended by people I trust:
 
