@@ -36,8 +36,8 @@ address, your odds are: 1 over...
 
 <code style="font-size:11px">
 115,792,089,237,316,195,423,570,985,008,687,907,853,269,984,665,640,564,039,457,584,007,913,129,639,936
-</code>
-(that's the decimal notation for 2^256)
+</code><br>
+<small>(that's the decimal notation for 2^256)</small>
 
 This number is big. Mind-boggling big. The following YouTube video attempts to explain this:
 
@@ -67,7 +67,7 @@ listed on keys.lol, you know the associated private key. Hence you can "steal"
 the associated coins (aka UTXOs) and move them under the control of another
 private key only you know.
 
-Do do this you need to send a transaction to the Bitcoin network, signed by the
+To do this you need to send a transaction to the Bitcoin network, signed by the
 initial private key (the one you found on keys.lol), which moves one or more
 UTXOs to a new public key. Naturally, this new public key will be controlled by
 another private key, and known only by you!
@@ -136,9 +136,11 @@ key so you can monitor this with me:
 If we see these coins move: keys.lol is rigged. Time will tell. Please email
 or tweet at me if you see something!
 
+<center><em>(2022-09-18) Update, 3+ years later: the coins have not moved yet! Hence keys.lol is most likely not rigged.</em></center>
+
 [bitcoin]: https://bitcoin.org/en/
 [bitcoin-top-100]: https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html
 [keys.lol]: https://keys.lol/
 [coinb.in]: https://coinb.in/#newTransaction
 [keys.deconstructed]: /labs/keys.deconstructed
-[keys.deconstructed.js]: https://github.com/ArnaudBrousseau/arnaudbrousseau.com/blob/master/src/files/labs/keys.deconstructed/keys.deconstructed.js
+[keys.deconstructed.js]: https://github.com/ArnaudBrousseau/arnaudbrousseau.com/blob/master/static/labs/keys.deconstructed/keys.deconstructed.js
