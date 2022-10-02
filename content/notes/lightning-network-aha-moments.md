@@ -463,8 +463,10 @@ This makes the design of the Lightning Network applicable broadly:
 * Other chains could (actually: [already have!][raiden]) implemented the same
   ideas to power peer-to-peer payments on top of their base layer.
 * Taro (Taproot-Native Asset Overlay) is another promising proposal to onboard
-  foreign assets into Lightning. See [this presentation][taro-presentation]
-  from Bitcoin 2022 for more information, or [this page][taro-eng].
+  foreign assets into Lightning. To learn more, see [this
+  presentation][taro-presentation] from Bitcoin 2022, [this wiki from Lightning
+  Labs][taro-lightning-labs], or [this excellent explainer by River
+  Financial][taro-river-financial].
 
 # Conclusion
 
@@ -502,7 +504,8 @@ worth dissecting. I hope you'll get as much satisfaction as I did while diving i
 [btc-whitepaper]: https://bitcoin.org/bitcoin.pdf
 [raiden]: https://github.com/raiden-network/raiden
 [taro-presentation]: https://docs.google.com/presentation/d/1GU4dtNLdT92lzb5Z2FR-dPY88zVPg7R7tlxRKJ7uMnQ/
-[taro-eng]: https://docs.lightning.engineering/the-lightning-network/taro
+[taro-lightning-labs]: https://docs.lightning.engineering/the-lightning-network/taro
+[taro-river-financial]: https://river.com/learn/what-is-taro-in-bitcoin/
 [bolts]: https://github.com/lightning/bolts/blob/master/00-introduction.md
 [bolt-3-per-commitment-secret]: https://github.com/lightning/bolts/blob/master/03-transactions.md#per-commitment-secret-requirements
 [ln-routing-paper-1]: https://arxiv.org/abs/2107.05322
