@@ -1,0 +1,63 @@
+---
+title: "Satoshi Signatures"
+caption: "/img/caption-satoshi-signatures.png"
+externalLink: "/labs/satoshi-signatures"
+date: 2023-06-13
+---
+<p class="story">
+This mini app produces "valid" Satoshi signatures. More specifically, it
+produces a message hash and a signature that verify when checked against the
+public key for the genesis Bitcoin address.
+</p>
+
+<p class="story">
+Of course this isn't real: I do not possess the private key behind the Bitcoin
+genesis address! This app constructs a valid hash and associated ECDSA signature
+with simple math (<a href="https://github.com/RustCrypto/traits/issues/1323#issuecomment-1587803872" target="_blank" rel="noopener">see details here</a>).
+</p>
+
+<p class="story">
+We cannot construct a valid **message** to verify
+against because it'd require us to find a valid pre-image for that constructed
+hash. And that would mean breaking sha256.
+</p>
+
+<p class="story">
+The lesson here: ECDSA is constructed with a hash function acting as a Random
+Oracle. If this assumption is violated (in this case, I'm choosing the hash so
+it's definitely not random!) ECDSA breaks catastrophically; <a
+href="https://en.wikipedia.org/wiki/Digital_signature_forgery#Existential_forgery"
+rel="noopener" target="_blank">existential forgery attacks</a> become trivial
+</p>
+
+<p class="story">
+This is an easy mistake to make when verifying signature. When verifying an
+ECDSA signature, a verifier **must** compute the message hash themselves.
+Otherwise they're not verifying anything of value,as this mini-demo
+demonstrates. I'm clearly not Satoshi!
+</p>
+
+
+<dl>
+  <dt>Design: </dt>
+  <dd>In-Browser</dd>
+
+  <dt>Coded with: </dt>
+  <dd>Devtools</dd>
+
+  <dt>Architecture made of: </dt>
+  <dd>HTML, CSS &amp; JavaScript</dd>
+
+</dl>
+<div class="illustration" style="text-align: center">
+    <div class="grid-1">
+        <p class="cell">
+            <span><img src="/img/satoshi-signature-generate.png" alt="Generate"/></span>
+        </p>
+    </div>
+    <div class="grid-1">
+        <p class="cell">
+            <span><img src="/img/satoshi-signature-result.png" alt="Sample signature"/></span>
+        </p>
+    </div>
+</div>
