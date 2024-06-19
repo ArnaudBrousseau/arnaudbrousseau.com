@@ -415,7 +415,7 @@ the revocation key if C decides to broadcast it on-chain!
 </details>
 
 
-# Bonus: Significance of Taproot upgrade and Schnoor signatures
+# Bonus: Significance of Taproot upgrade and Schnorr signatures
 
 I've never connected Schnorr signatures with the Lightnint Network before. The
 relationship is that Schnorr signatures unlock Point Time-Locked Contracts
