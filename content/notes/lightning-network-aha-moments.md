@@ -374,7 +374,7 @@ is publicly revealed, or **none** of them do.
 In practice broadcasting on the Bitcoin network isn't efficient because it
 incurs fees. Instead, C can send the pre-image to B, thereby
 prooving it _could_ redeem the HTLC if it wanted (by going on-chain). This
-is enough for B to get confortable and update the (B,C) channel balance,
+is enough for B to get comfortable and update the (B,C) channel balance,
 sending 100,000 satoshis to C.
 
 Once B has updated the (B,C) channel balance, B can send the pre-image to A.
