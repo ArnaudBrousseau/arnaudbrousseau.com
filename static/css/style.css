@@ -133,6 +133,9 @@ footer #vitals span + span:before { content: '—'; }
   margin: 0 auto;
   padding: 0 1rem;
   word-break: break-word;
+}
+
+#main:has(.note-content) {
   background: #fbfbfd;
   border-radius: 8px;
   box-shadow: 0 -2px 10px #ece9f0;
