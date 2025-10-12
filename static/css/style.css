@@ -61,7 +61,7 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul, ol { margin: 0.8em 0; padding: 0 0 0 40px; }
 ul ul, ol ul, ul ol, ol ol { margin: 0; }
 dd { margin: 0 0 0 0; } /* no right margin for def lists */
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
@@ -84,7 +84,6 @@ input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-b
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; resize: vertical; }
-input:valid, textarea:valid {  }
 input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 table { border-collapse: collapse; border-spacing: 0; }
@@ -134,6 +133,9 @@ footer #vitals span + span:before { content: '—'; }
   margin: 0 auto;
   padding: 0 1rem;
   word-break: break-word;
+  background: #fbfbfd;
+  border-radius: 8px;
+  box-shadow: 0 -2px 10px #ece9f0;
 }
 
 header {
@@ -251,8 +253,6 @@ p.social {
 .social .twitter {
   background: transparent url('/img/social-twitter.png') top center no-repeat;
 }
-.lab-details {
-}
 .lab-details h1 {
     font-size:2.2rem;
     line-height: 1.2;
@@ -277,6 +277,7 @@ a.online::before {
   background: -moz-radial-gradient(center, #27ff00, #25482a);
   background: radial-gradient(ellipse at center, #27ff00, #25482a);
   -webkit-background-clip: text;
+  background-clip: text;
   color: #0000;
   width: 1.4rem;
   height: 3.6rem;
@@ -420,6 +421,8 @@ a.content-link:hover {
 /* Now let's style out notes */
 .note-title {
     margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
     text-align: center;
 }
 .note-subtitle {
@@ -440,6 +443,8 @@ a.content-link:hover {
 .note-content {
     font-size: 1.42rem;
     padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .note-content h1,
@@ -459,6 +464,9 @@ a.content-link:hover {
 .note-content h4 { font-size: 1.6rem; color: #868379;}
 .note-content h5 { font-size: 1.6rem; color: #868379;}
 .note-content h6 { font-size: 1.6rem; color: #868379;}
+
+.note-content ul { margin: 0; margin-top: -0.35em }
+.note-content li { margin-top: 0.35em; }
 
 .note-content img {
     display: block;
@@ -490,9 +498,16 @@ a.content-link:hover {
   border-radius: 4px;
   padding: 2px 2px;
   font-family: "PT Mono", Menlo, "Consolas", "Courier New", monospace;
-  font-size: 1.3rem;
 }
 
+.note-content h1 code { font-size: 2rem; }
+.note-content h2 code { font-size: 1.7rem; }
+.note-content h3 code { font-size: 1.5rem; }
+.note-content h4 code, .note-content h5 code, .note-content h6 code { font-size: 1.4rem; }
+
+.note-content p code {
+  font-size: 1.3rem;
+}
 .note-content small code {
   font-size: 1.14rem;
 }
