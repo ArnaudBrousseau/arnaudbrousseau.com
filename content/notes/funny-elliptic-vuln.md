@@ -1,5 +1,5 @@
 ---
-title: "What's \"funny\"? Filling the missing piece of a critical elliptic vuln"
+title: "What's \"funny\"? The missing piece of a critical elliptic vuln"
 date: 2026-08-14T09:03:56-05:00
 draft: false
 ---
