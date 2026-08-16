@@ -146,6 +146,7 @@ table td {
     padding: 0.65rem 1rem;
     text-align: center;
     vertical-align: middle;
+    white-space: nowrap;
 }
 
 table tbody tr:nth-child(even) {
