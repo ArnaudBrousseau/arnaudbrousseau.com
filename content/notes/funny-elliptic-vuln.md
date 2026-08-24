@@ -196,7 +196,7 @@ What we want to prove:
 
 Recall what `truncateToN` does on a negative hex string `s = "-..."`:
 
-* It reads a **synthetic byte length** \`L\` from the character count: \`L = floor((\l\e\n(s) + 1)/2)\`, where \`\l\e\n(s)\` counts the leading `"-"`.
+* It reads a **synthetic byte length** \`L\` from the character count: \`L = floor((\text{len}(s) + 1)/2)\`, where \`\text{len}(s)\` counts the leading `"-"`.
 * It parses `s` as a BN with `new BN(s, 16)` (let's call this number `M`)
 * It right-shifts `M` by \`∂ = 8L - b\`
 
@@ -231,7 +231,7 @@ Luckily the function to invert is the same: `truncateToN`. We now apply it to a 
 
 **Two disjoint bands for ed25519**
 
-Let's use ed25519 here (so `b = 253`). For a standard 32-byte digest, `L` is 32, which means `∂ = 8*32 - 253 = 3`. \`truncateToN\` computes \`floor({\m\s\g}/8)\` (right-shift by 3 is a division by 8), then subtracts `N` if the result still exceeds `N`. A digest is exploitable when that value lands in \`(0, 2^{249})\` (see proof above), and there are **two** separate ways to get there:
+Let's use ed25519 here (so `b = 253`). For a standard 32-byte digest, `L` is 32, which means `∂ = 8*32 - 253 = 3`. \`truncateToN\` computes \`floor(\text{msg}/8)\` (right-shift by 3 is a division by 8), then subtracts `N` if the result still exceeds `N`. A digest is exploitable when that value lands in \`(0, 2^{249})\` (see proof above), and there are **two** separate ways to get there:
 
 * If \`msg < 2^{252}\`, then \`floor({msg}/8) < 2^{249}\` already; the subtraction branch never fires, and we land in range directly. This band is \`(0, 2^{252})\`, trivially.
 * If \`floor({msg}/8)\` overshoots the curve order, the subtraction pulls it back down into range. That happens for `msg` in \`(8n, 8n + 2^{252})\`, our second band of width `2^{252}`, sitting up near `2^{255}`.
@@ -243,8 +243,8 @@ The same construction on secp256k1 yields `∂ = 0` (standard digests have 64 ch
 **Likelihood of a vulnerable signature**
 
 We've done a lot of hard work, now it's smooth sailing. Just need to count the bands!
-* For ed25519, two disjoint bands each of width \`2^{252}\` sit inside the \`2^{256}\` digest space: \`P_{\v\u\l\n\e\r\a\b\l\e} = (2*2^{252})/2^256 = 1/8 = 12.5%\`
-* For secp256k1, only one band: \`P_{\v\u\l\n\e\r\a\b\l\e} = 2^{252}/2^256 = 1/16 = 6.25%\`
+* For ed25519, two disjoint bands each of width \`2^{252}\` sit inside the \`2^{256}\` digest space: \`P_{\text{vulnerable}} = (2*2^{252})/2^256 = 1/8 = 12.5%\`
+* For secp256k1, only one band: \`P_{\text{vulnerable}} = 2^{252}/2^256 = 1/16 = 6.25%\`
 
 So the bottom line, for a standard 256-bit digest, **only a portion of pre-existing signatures are exploitable by our `funny` function: `6.25%` for secp256k1, `12.5%` for ed25519**. To be clear, that is *catastrophically* high. A one-in-sixteen chance of full private-key recovery per signature is not a chance worth taking. But it contradicts the GHSA's claim that "a message can be constructed for any already known message/signature pair".
 
