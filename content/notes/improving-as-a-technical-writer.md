@@ -81,6 +81,7 @@ Ready to improve? Good! Here is a list of resources I've come across over the ye
 * Software Technical Writing, A Guidebook: https://jamesg.blog/book.pdf
 * How to Write Blog Posts that Developers Read: https://refactoringenglish.com/chapters/write-blog-posts-developers-read/
 * The Golden Rule for Becoming a Better Writer: https://nappertime.com/the-golden-rule-of-becoming-a-better-writer
+* How To Write With An LLM: https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm
 
 Now, here are some resources which I have not read/vetted yet, but I've seen recommended by people I trust:
 
